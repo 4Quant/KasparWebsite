@@ -4,13 +4,13 @@
   %meta{ content: 'ie=edge', 'http-equiv' => 'x-ua-compatible' }
   %meta{ content: '', name: 'description' }
   - if config[:environment] == :development
-    %link{ href: 'images/favicon.png', rel: 'shortcut icon', type: 'image/png' }
+    %link{ href: '/images/favicon.png', rel: 'shortcut icon', type: 'image/png' }
   - else
-    %link{ href: 'favicon.ico', rel: 'icon', type: 'image/ico' }
-    %link{ href: 'favicon.png', rel: 'icon', type: 'image/png' }
-    %link{ href: 'apple-touch-icon-precomposed.png', rel: 'apple-touch-icon-precomposed' }
+    %link{ href: '/favicon.ico', rel: 'icon', type: 'image/ico' }
+    %link{ href: '/favicon.png', rel: 'icon', type: 'image/png' }
+    %link{ href: '/apple-touch-icon-precomposed.png', rel: 'apple-touch-icon-precomposed' }
     %meta{ content: '#FFFFFF', name: 'msapplication-TileColor' }
-    %meta{ content: 'mstile-144x144.png', name: 'msapplication-TileImage' }
+    %meta{ content: '/mstile-144x144.png', name: 'msapplication-TileImage' }
     %meta{ content: 'Name', name: 'application-name' }
     %meta{ content: 'Tooltip', name: 'msapplication-tooltip' }
     %meta{ content: 'ieconfig.xml', name: 'msapplication-config' }
@@ -18,7 +18,5 @@
   %title
     #{data.site.company.name} | #{current_page.data.title || data.site.company.claim}
   %style
-    - if config[:environment] == :development
-      = partial '../../.tmp/dist/stylesheets/site.css'
-    - else
-      = partial '../../.tmp/dist/stylesheets/site.min.css'
+    = partial '../../.tmp/dist/stylesheets/site.css' if config[:environment] == :development
+    = partial '../../.tmp/dist/stylesheets/site.min.css' if config[:environment] == :production

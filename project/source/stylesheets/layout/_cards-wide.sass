@@ -1,12 +1,40 @@
 .cards-wide
   width: 100vw
   overflow-x: scroll
+  -webkit-overflow-scrolling: touch
+
   .container
     width: 165vw
     padding-right: 5vw
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    padding-bottom: 2rem
 
     .card
+      flex: 0 0 auto
+      margin-top: .5rem
+      margin-bottom: .5rem
+      background-color: $c-white
+      padding: 1rem 1rem 1.7rem 1rem
       width: 77.5vw
 
       &:nth-child(odd)
         margin-right: 5vw
+
+      h3
+        margin-top: 0
+        margin-bottom: .5rem
+        font-weight: 800
+
+      p
+        margin-top: 0
+        margin-bottom: 0
+        font-size: .875rem
+
+      a
+        color: $c-black
+        text-decoration: none
+        margin-top: 0
+        font-size: .875rem
+        font-weight: 800

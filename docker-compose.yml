@@ -3,7 +3,6 @@ version: '3.0'
 services:
   middleman:
     image: casaper/docker-middleman:0.1
-    container_name: docker-middleman
     user: middleman
     volumes:
       - ./project:/middleman/app

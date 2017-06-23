@@ -25,7 +25,7 @@ const config = {
     src: 'source/stylesheets/**/*.sass',
     dstDirname: '.tmp/dist/stylesheets',
     includepaths: [
-      // include sass libs for import
+      'node_modules/css-reset-and-normalize-sass/scss'
     ]
   },
   fonts: {

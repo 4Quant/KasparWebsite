@@ -7,8 +7,8 @@ html
 
 html,
 body
-  background-color: $white
-  color: $black
+  background-color: $c-main-background
+  color: $c-main-foreground
   flex-direction: row
   flex-wrap: wrap
   height: 100%
@@ -27,24 +27,18 @@ body,
 
 main
   width: 100%
-  padding: $header-height 0 0
+  padding: $v-header-height 0 0
   margin: 0
 
 article
-  padding: 0 2rem
+  padding: 0
+  margin: 0
 
-article.lead
-  background: linear-gradient(to bottom, $gradient-top 0%, $gradient-bottom 100%);
-
-  img.hero
-    max-width: 30%
-    width: 100px
-    margin: 0 auto
-    padding-top: 26px
-    display: block
-
-  .signup-button
-    padding-bottom: 20px
+  &>*
+    padding-left: 1rem
+    padding-right: 1rem
 
 @import 'header'
+@import lead
 @import 'footer'
+@import 'blockquote'

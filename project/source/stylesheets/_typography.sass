@@ -1,36 +1,39 @@
 html
-  font-size: 16px
-  line-height: 1.4
+  font-size: $v-base-font-size
+  line-height: $v-base-line-height
 
 html,
 body
-  font-family: "Lato", sans-serif
+  font-family: 'Lato', sans-serif
 
 
 h1
-  font-size: 26px
-  font-weight: bold
-
-h1.hero,
-p.hero-sub
-  color: $bubbles
-
+  font-size: $v-h1-font-size
+  font-weight: $v-h1-font-weight
 
 h2
-  font-size: 18px
-  font-weight: bold
+  font-size: $v-h2-font-size
+  font-weight: $v-h2-font-weight
 
 h3
-  font-size: 18px
-  font-weight: normal
+  font-size: $v-h3-font-size
+  font-weight: $v-h3-font-weight
 
 p
-  font-size: 16px
-  font-weight: normal
+  font-size: $v-p-font-size
+  font-weight: $v-p-font-weight
 
 p.small
-  font-size: 14px
+  font-size: $v-p-small-font-size
+
+// hero action stuff
+h1.hero
+  color: $c-hero-h1
+  margin-bottom: 0
 
 p.hero-sub
-  font-size: 18px
+  color: $c-hero-sub
+  margin-top: .1875rem
+  font-size: 1.125rem
   font-weight: 300
+

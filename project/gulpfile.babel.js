@@ -31,7 +31,8 @@ const config = {
   fonts: {
     src: 'source/fonts/**/*.{eot,svg,ttf,woff,woff2}',
     npmFonts: [
-      'node_modules/lato-webfont/fonts/Lato-*.{eot,svg,woff,woff2,ttf}'
+      'node_modules/lato-webfont/fonts/Lato-*.{eot,svg,woff,woff2,ttf}',
+      'node_modules/typeface-playfair-display/files/*.{eot,svg,woff,woff2,ttf}'
     ],
     dstDirname: '.tmp/dist/fonts',
   },

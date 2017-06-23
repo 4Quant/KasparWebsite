@@ -31,7 +31,7 @@ const config = {
   fonts: {
     src: 'source/fonts/**/*.{eot,svg,ttf,woff,woff2}',
     npmFonts: [
-    // 'node_modules/typeface-oswald/files/*.{eot,svg,woff,woff2}', // Include a typeface from npm
+      'node_modules/lato-webfont/fonts/Lato-*.{eot,svg,woff,woff2,ttf}'
     ],
     dstDirname: '.tmp/dist/fonts',
   },
@@ -104,6 +104,10 @@ gulp.task('scripts', ['browserify'], () => (
 // Executions
 gulp.task('default', () => {
   runSequence(['sass', 'browserify', 'fonts', 'jquery']);
+});
+
+gulp.task('sass-watch', () => {
+  gulp.watch(config.sass.src, ['sass']);
 });
 
 gulp.task('watch', () => {

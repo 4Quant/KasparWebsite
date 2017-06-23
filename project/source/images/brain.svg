@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="193px" viewBox="0 0 200 193" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Brain</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="2.5666255%" y1="49.7500002%" x2="99.6112489%" y2="49.7500002%" id="linearGradient-1">
+            <stop stop-color="#7654F5" offset="0%"></stop>
+            <stop stop-color="#00DCD0" offset="50.6178253%"></stop>
+            <stop stop-color="#F3E200" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Brain" transform="translate(0.000000, 1.000000)">
+            <polygon id="Path" fill="url(#linearGradient-1)" points="142.929293 191.411469 138.888889 161.455828 125.252525 138.608305 109.59596 123.884346 96.4646465 133.023355 75.7575758 134.038801 57.5757576 122.361178 50.5050505 106.621773 32.8282828 112.206723 11.6161616 107.637219 0 88.343755 6.06060606 66.5116776 8.08080808 50.2645503 17.6767677 40.6178184 29.2929293 23.3552456 48.989899 17.2625728 61.1111111 8.12356368 77.2727273 2.03089092 85.3535354 3.04633638 102.525253 0 121.212121 1.01544546 146.969697 9.64673187 163.636364 23.3552456 182.323232 35.0328684 189.89899 59.4035594 200 76.6661322 190.909091 99.0059323 195.959596 118.299396 183.333333 131.500187 176.262626 146.224146 154.545455 149.270483 152.525253 160.440383 155.050505 191.919192"></polygon>
+            <g id="Dots" transform="translate(18.181818, 8.080808)" fill="#FFFFFF">
+                <g id="BrainDot" transform="translate(0.000000, 63.131313)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(29.603222, 57.575758)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(54.690698, 38.383838)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(29.603222, 9.090909)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(55.192447, 0.000000)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(75.262428, 11.616162)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(114.900640, 6.060606)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(120.419885, 24.747475)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(100.851654, 27.777778)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(84.795669, 54.545455)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(109.883145, 63.131313)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(139.988116, 51.515152)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(145.507361, 81.313131)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(148.016109, 98.989899)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(122.928633, 102.020202)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(100.851654, 101.515152)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(67.234436, 111.616162)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+                <g id="BrainDot" transform="translate(57.701195, 84.343434)">
+                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                </g>
+            </g>
+            <g id="Lines" opacity="0.186480978" transform="translate(2.020202, 0.000000)" stroke="#FFFFFF" stroke-linecap="square">
+                <path d="M50.3720752,68.614909 L28.819844,24.0531969" id="Line"></path>
+                <path d="M19.7979798,74.185123 L50.3720752,68.614909" id="Line"></path>
+                <path d="M75.4328091,48.8659684 L50.3720752,68.614909" id="Line"></path>
+                <path d="M74.9315944,48.8659684 L49.8708605,20.5085152" id="Line"></path>
+                <path d="M74.4303797,49.3723515 L74.4303797,10.8872365" id="Line"></path>
+                <path d="M74.4303797,10.3808534 L95.4813962,23.0404307" id="Line"></path>
+                <path d="M95.4813962,23.0404307 L135.077356,16.9638336" id="Line"></path>
+                <path d="M135.578571,16.4574505 L140.590717,36.2063911" id="Line"></path>
+                <path d="M140.590717,36.2063911 L120.54213,39.2446896" id="Line"></path>
+                <path d="M120.54213,39.2446896 L95.4813962,22.5340476" id="Line"></path>
+                <path d="M95.4813962,22.5340476 L105.004475,66.0829935" id="Line"></path>
+                <path d="M105.004475,66.0829935 L130.566424,74.6915061" id="Line"></path>
+                <path d="M130.065209,74.6915061 L159.636875,62.5383119" id="Line"></path>
+                <path d="M159.636875,62.0319288 L165.150237,92.4149143" id="Line"></path>
+                <path d="M165.150237,92.4149143 L169.159954,111.657472" id="Line"></path>
+                <path d="M168.658739,111.657472 L143.598005,113.176621" id="Line"></path>
+                <path d="M143.598005,113.176621 L121.043345,111.657472" id="Line"></path>
+                <path d="M121.043345,111.657472 L77.9388825,94.4404467" id="Line"></path>
+                <path d="M77.9388825,94.9468298 L87.4619614,123.304283" id="Line"></path>
+                <path d="M87.9631761,123.304283 L74.4303797,133.938328" id="Line"></path>
+                <path d="M76.9364531,94.4404467 L56.3866513,121.785134" id="Line"></path>
+                <path d="M77.4376678,94.9468298 L49.3696458,106.593641" id="Line"></path>
+                <path d="M49.3696458,106.593641 L49.3696458,69.1212921" id="Line"></path>
+                <path d="M49.8708605,69.1212921 L32.3283468,110.644706" id="Line"></path>
+                <path d="M20.2991945,74.185123 L31.3259174,111.657472" id="Line"></path>
+                <path d="M19.7979798,74.185123 L11.2773303,107.100024" id="Line"></path>
+                <path d="M19.2967651,74.185123 L0.250607339,87.8574665" id="Line"></path>
+                <path d="M20.2991945,73.6787399 L8.27004219,49.3723515" id="Line"></path>
+                <path d="M8.27004219,49.8787346 L49.3696458,68.614909" id="Line"></path>
+                <path d="M49.8708605,67.0957597 L49.8708605,17.4702167" id="Line"></path>
+                <path d="M73.9291651,10.3808534 L48.3672165,16.9638336" id="Line"></path>
+                <path d="M74.4303797,9.8744703 L74.4303797,2.27872391" id="Line"></path>
+                <path d="M74.9315944,11.3936196 L99.9923283,0.253191546" id="Line"></path>
+                <path d="M95.4813962,22.0276645 L99.9923283,0.253191546" id="Line"></path>
+                <path d="M95.4813962,23.0404307 L120.040915,1.77234082" id="Line"></path>
+                <path d="M136.079785,16.4574505 L145.602864,10.3808534" id="Line"></path>
+                <path d="M140.089503,35.700008 L180.186677,35.700008" id="Line"></path>
+                <path d="M139.087073,35.700008 L187.704897,60.0063964" id="Line"></path>
+                <path d="M160.13809,62.0319288 L197.729191,76.2106554" id="Line"></path>
+                <path d="M161.140519,62.0319288 L140.089503,35.700008" id="Line"></path>
+                <path d="M120.54213,39.2446896 L131.067638,75.7042723" id="Line"></path>
+                <path d="M130.566424,74.6915061 L168.658739,111.151089" id="Line"></path>
+                <path d="M142.595576,112.163855 L129.563994,73.6787399" id="Line"></path>
+                <path d="M129.563994,74.185123 L121.043345,113.176621" id="Line"></path>
+                <path d="M121.043345,39.7510727 L160.13809,63.044695" id="Line"></path>
+                <path d="M166.152666,92.9212974 L197.227976,76.7170385" id="Line"></path>
+                <path d="M165.150237,92.9212974 L188.206112,97.4787452" id="Line"></path>
+                <path d="M168.658739,111.657472 L188.707326,98.4915114" id="Line"></path>
+                <path d="M168.658739,110.644706 L193.218259,118.240452" id="Line"></path>
+                <path d="M168.157525,111.657472 L173.670886,146.597905" id="Line"></path>
+                <path d="M167.65631,111.151089 L152.61987,149.636204" id="Line"></path>
+                <path d="M152.118655,149.129821 L143.096791,112.670238" id="Line"></path>
+                <path d="M142.595576,111.657472 L137.082215,160.270249" id="Line"></path>
+                <path d="M123.549418,137.48301 L143.096791,113.176621" id="Line"></path>
+                <path d="M120.54213,111.151089 L123.048204,137.989393" id="Line"></path>
+                <path d="M107.510549,124.317049 L123.048204,110.644706" id="Line"></path>
+                <path d="M106.508119,124.823432 L86.459532,122.7979" id="Line"></path>
+                <path d="M88.4643907,122.7979 L95.4813962,131.912796" id="Line"></path>
+                <path d="M88.4643907,122.291517 L121.043345,112.670238" id="Line"></path>
+                <path d="M77.9388825,93.9340636 L130.566424,75.7042723" id="Line"></path>
+                <path d="M78.4400972,96.4659791 L106.006904,65.5766104" id="Line"></path>
+                <path d="M77.9388825,95.4532129 L50.3720752,66.5893766" id="Line"></path>
+                <path d="M77.9388825,95.4532129 L75.4328091,49.8787346" id="Line"></path>
+                <path d="M74.9315944,49.3723515 L106.006904,66.0829935" id="Line"></path>
+                <path d="M73.9291651,49.3723515 L95.4813962,22.5340476" id="Line"></path>
+                <path d="M136.581,159.763866 L152.118655,191.666" id="Line"></path>
+                <path d="M136.581,159.763866 L153.121084,148.117054" id="Line"></path>
+                <path d="M136.581,160.776632 L150.615011,158.751099" id="Line"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,50 @@
+
+html
+  box-sizing: border-box
+
+*, *:before, *:after
+  box-sizing: inherit
+
+html,
+body
+  background-color: $white
+  color: $black
+  flex-direction: row
+  flex-wrap: wrap
+  height: 100%
+  min-height: 100vh
+
+html,
+body,
+.main-container
+  width: 100%
+  display: flex
+  margin: 0
+  padding: 0
+
+.main-container
+  align-self: flex-start
+
+main
+  width: 100%
+  padding: $header-height 0 0
+  margin: 0
+
+article
+  padding: 0 2rem
+
+article.lead
+  background: linear-gradient(to bottom, $gradient-top 0%, $gradient-bottom 100%);
+
+  img.hero
+    max-width: 30%
+    width: 100px
+    margin: 0 auto
+    padding-top: 26px
+    display: block
+
+  .signup-button
+    padding-bottom: 20px
+
+@import 'header'
+@import 'footer'

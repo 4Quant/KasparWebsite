@@ -2,5 +2,10 @@ source 'https://rubygems.org'
 
 gem 'middleman'
 gem 'middleman-autoprefixer'
+gem 'middleman-blog'
+gem 'middleman-favicon-maker', '4.0.3'
+gem 'middleman-google-analytics', '~> 3.0'
+gem 'middleman-livereload'
+gem 'middleman-pry'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', platforms: [:mswin, :mingw]

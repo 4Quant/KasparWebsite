@@ -18,21 +18,21 @@ article
   padding: 0
   margin: 0
 
-  &>*
-    padding-left: 1rem
-    padding-right: 1rem
+  .container
+    padding: 1rem
+
+    +respond-to(md)
+      max-width: 640px
+      margin: 0 auto
 
 article.geyser
   background-color: $c-geyser
-  padding-top: 1rem
-  padding-bottom: 1rem
 
 article.reinforcement
   background-color: $c-geyser
-  padding-top: 1rem
-  padding-bottom: 1rem
 
-
+article.blockquote
+  background-color: $c-blockquote-background
 
 @import 'header'
 @import lead

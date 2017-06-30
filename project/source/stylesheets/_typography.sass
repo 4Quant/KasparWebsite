@@ -2,6 +2,10 @@ html
   font-size: $v-base-font-size
   line-height: $v-base-line-height
 
+  +respond-to(lg)
+    font-size: $v-base-font-size*1.2
+    line-height: $v-base-line-height*1.1
+
 html,
 body
   font-family: 'Lato', sans-serif
@@ -10,6 +14,8 @@ body
 h1
   font-size: $v-h1-font-size
   font-weight: $v-h1-font-weight
+  line-height: 1.15em
+  max-width: 40rem
 
   &.reinforcement
     font-size: 1.4rem

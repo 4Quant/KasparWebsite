@@ -14,27 +14,7 @@ main
   padding: $v-header-height 0 0
   margin: 0
 
-article
-  padding: 0
-  margin: 0
-
-  > .container
-    padding: 1rem
-
-    +respond-to(md)
-      max-width: 640px
-      margin: 0 auto
-      padding: 1rem 0
-
-article.geyser
-  background-color: $c-geyser
-
-article.reinforcement
-  background-color: $c-geyser
-
-article.blockquote
-  background-color: $c-blockquote-background
-
+@import article
 @import 'header'
 @import lead
 @import 'footer'

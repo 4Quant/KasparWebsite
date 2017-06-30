@@ -1,0 +1,53 @@
+.article
+  padding: 0
+  margin: 0
+
+  &__container
+    padding: 1rem
+
+    +respond-to(md)
+      max-width: 640px
+      margin: 0 auto
+      padding: 1rem 0
+
+  &--lead
+    background: linear-gradient(to bottom, $gradient-top 0%, $gradient-bottom 100%);
+    padding-bottom: 5px
+
+    img.hero
+      width: 35%
+      max-width: $v-hero-image-max-width
+      margin: 0 auto
+      padding-top: $v-hero-image-padding-top
+      display: block
+
+    .signup-button
+      margin: 0 0 20px
+
+      a
+        border: solid 1px $c-hero-signup
+        border-radius: $v-signup-button-height * .5
+        height: $v-signup-button-height
+        width: $v-signup-button-width
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+
+        span
+          color: $c-hero-signup
+          display: block
+          font-size: $v-signup-button-font-size
+          height: $v-signup-button-font-size
+          line-height: 0.8
+          font-weight: bold
+
+
+  &--reinforcement
+    background-color: $c-geyser
+
+  &--geyser
+    background-color: $c-geyser
+
+  &--blockquote
+    background-color: $c-blockquote-background

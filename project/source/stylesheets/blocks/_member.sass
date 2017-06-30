@@ -1,18 +1,25 @@
 .member
   display: flex
+  text-decoration: none
+
+  &:hover
+    text-decoration: none
 
   &__photo
     margin-right: 0.5rem
-
-  &__info
+    overflow: hidden
+    border-radius: 100%
+    width: 60px
+    height: 60px
 
   &__name
-    margin: 0
+    margin: 0.25rem 0 0 0
+    display: inline-block
 
   &__company
-    margin-bottom: 0.5rem
+    display: inline-block
+    color: $c-gun-powder
+    margin-left: 0.25rem
 
   &__description
-
-  &__links
-    margin-top: 0.5rem
+    color: $c-gun-powder

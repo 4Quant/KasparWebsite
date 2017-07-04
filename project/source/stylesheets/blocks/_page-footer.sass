@@ -1,8 +1,12 @@
 .page-footer
   background: $c-jungle-green
   padding: 2rem 1rem
-  color: $c-gainsboro
-  text-align: right
+  color: lighten($c-jungle-green, 40%)
+  text-align: center
+
+  +respond-to(md)
+    text-align: left
+    font-size: 0.8rem
 
   a, a:active, a:visited, a:hover
     color: $c-gainsboro

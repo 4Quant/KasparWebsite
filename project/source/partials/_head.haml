@@ -18,6 +18,8 @@
     %meta{ name: 'google-site-verification', content: 'i9FQ_D37vjeDRJNDVzs-YnEWNwGj0lSgJeURQbhgd-E' }
   %title
     #{data.site.company.name} | #{current_page.data.title || data.site.company.claim}
-  %style
-    = partial '../../.tmp/dist/stylesheets/site.css' if config[:environment] == :development
-    = partial '../../.tmp/dist/stylesheets/site.min.css' if config[:environment] == :production
+  -# %style
+  -#   = partial '../../.tmp/dist/stylesheets/site.css' if config[:environment] == :development
+  -#   = partial '../../.tmp/dist/stylesheets/site.min.css' if config[:environment] == :production
+  = stylesheet_link_tag :site if config[:environment] == :development
+  = stylesheet_link_tag :site if config[:environment] == :production

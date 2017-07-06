@@ -17,8 +17,13 @@ page '/index.html', layout: :layout
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
+# We need to disable HAML warnings, since templating engine for HAML are setting some
+# settings, which are no longer available in HAML. More info here:
+# https://github.com/middleman/middleman/issues/2087
+Haml::TempleEngine.disable_option_validator!
+
 # General configuration
-set :haml, ugly: true, format: :html5
+set :haml, { format: :html5 }
 set :markdown_engine, :kramdown
 set :markdown, auto_ids: false
 
@@ -26,19 +31,14 @@ activate :google_analytics do |ga|
   ga.tracking_id = 'UA-xxx-xxx-xx'
 end
 
+activate :autoprefixer
+activate :sprockets
+
 # Reload the browser automatically whenever files change
 configure :development do
   config[:host] = 'http://localhost:4567'
   activate :livereload
   activate :pry
-end
-
-gulp_binary = './node_modules/gulp/bin/gulp.js'
-activate :external_pipeline do |pipe|
-  pipe.name = :gulp
-  pipe.command = build? ? "#{gulp_binary} build" : "#{gulp_binary} watch"
-  pipe.source = '.tmp/dist'
-  pipe.latency = 1
 end
 
 ###

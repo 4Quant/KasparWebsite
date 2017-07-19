@@ -3,14 +3,12 @@ image: ruby:2.3
 before_script:
   - apt-get update -qy
   - apt-get install -y nodejs # middleman requires JS runtime
-  - cd project
-  - bundle install --without development --path ../vendor
+  - bundle install --without development
 
 pages:
   script:
     - bundle exec middleman build
-    - cd ..
-    - mv project/build/ public
+    - mv build/ public
   artifacts:
     paths:
     - public

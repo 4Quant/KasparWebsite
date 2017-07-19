@@ -1,37 +1,34 @@
-# Narcotics Anonymous Middleman
+## Requirements
 
-## Run Development Environment with docker
+For project to succesfully run, you need to have already on your machine:
 
-### Requirements
+- Git
+- Ruby
+- Bundler
+- node.js
 
-- [homebrew](https://brew.sh/)
-- [Docker for Mac OS](https://docs.docker.com/docker-for-mac/install/)
+If you don't have this installed, recomended way is using Homebrew.
 
-### Setup process
+## Setup process
 
-#### Eventually working script
+Clone the repository using git, then run:
 
-If you're on a Mac OS Computer you can try running the setup script `install_mac_dependencies.sh`.
-
-```bash
-$ cd to/a/directory/where/you/store/your/data
-$ git clone git@github.com:casaper/docker-middleman.git
-$ cd docker-middleman
-$ ./install_mac_dependencies.sh
+```
+$ bundle install
 ```
 
-#### Step by step
+## Development
 
-- Install Git on your system, if it isn't
-- Get [Docker](https://docs.docker.com/) installed on your system
-- Clone this git repository to your computer
-- run `./run.sh start`
-- run `./run.sh build` to get the deployable html site in `./project/build/`
-- see more options for run by executing `./run.sh`
+```
+$ bundle exec middleman
+```
 
-view your local test site at [http://127.0.0.1:4567](http://127.0.0.1:4567)
+### Building
 
-## Linux
+```
+$ bundle exec middleman build
+```
 
-It has never been run on linux here, but assumingly this thing should work there as well.
+### Deployment
 
+Deployment is done automaticly to GitHub pages every time you push changes to `master` branch.

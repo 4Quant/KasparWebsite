@@ -1,9 +1,13 @@
 image: ruby:2.5
 
+cache:
+  paths:
+    - vendor/
+
 before_script:
   - apt-get update -qy
   - apt-get install -y nodejs # middleman requires JS runtime
-  - bundle install --without development
+  - bundle install --without development --path vendor
 
 pages:
   script:

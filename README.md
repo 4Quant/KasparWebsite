@@ -32,3 +32,15 @@ $ bundle exec middleman build
 ### Deployment
 
 Deployment is done automaticly to GitHub pages every time you push changes to `master` branch.
+
+#### Certificates
+
+For https we are using Let's Encrypt service, which needs to be updated every few months.
+
+Run this command and follow instructions:
+```
+sudo certbot certonly -a manual -d aifirst.ch -d www.aifirst.ch -d ai-first.ch -d www.ai-first.ch
+```
+
+When certificates are succesfully created, you need to add them on a github page here:
+https://gitlab.com/4quant/ai-first-website/pages

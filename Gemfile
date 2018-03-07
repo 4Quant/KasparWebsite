@@ -14,4 +14,5 @@ gem 'wdm', platforms: [:mswin, :mingw]
 
 source 'https://rails-assets.org' do
     gem 'rails-assets-lato-webfont'
+    gem 'rails-assets-bootstrap4'
 end

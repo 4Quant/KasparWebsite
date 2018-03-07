@@ -1,15 +1,18 @@
 image: ruby:2.5
 
 variables:
-  LC_ALL: "en_US.UTF-8"
+  LANG: 'en_US.UTF-8'
+  LC_ALL: 'en_US.UTF-8'
 
 cache:
   paths:
-    - vendor/
+    - vendor
 
 before_script:
   - apt-get update -qy
-  - apt-get install -y nodejs # middleman requires JS runtime
+  - apt-get install -y nodejs locales # middleman requires JS runtime
+  - echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
+  - locale-gen && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LANGUAGE=en
   - bundle install --without development --path vendor
 
 pages:

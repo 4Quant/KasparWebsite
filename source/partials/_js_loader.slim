@@ -1,11 +1,11 @@
-%script{ src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js' }
-%script
+script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'
+script
   = "var host = '#{hosturl}/javascripts/';"
   - if config[:environment] == :development
     = "var appJs = host + 'site.js'"
   - else
     = "var appJs = host + 'site.min.js';"
-:javascript
+javascript:
   var bodyElement = document.getElementsByTagName('body')[0]
   if(!window.jQuery) {
     var jqueryScriptTag = document.createElement('script');

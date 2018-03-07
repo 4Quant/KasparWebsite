@@ -8,6 +8,7 @@ gem 'middleman-favicon-maker', '4.0.3'
 gem 'middleman-google-analytics', '~> 3.0'
 gem 'middleman-livereload'
 gem 'middleman-pry'
+gem 'slim'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', platforms: [:mswin, :mingw]
 

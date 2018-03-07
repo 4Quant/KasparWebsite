@@ -1,0 +1,9 @@
+doctype 5
+html lang=data.site.options.language
+  = partial 'partials/head'
+  body
+    = partial 'partials/header'
+    main
+      = yield
+    = partial 'partials/footer'
+    = partial 'partials/js_loader', locals: { hosturl: config[:host] }

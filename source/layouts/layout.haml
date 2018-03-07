@@ -1,9 +1,0 @@
-!!!
-%html{ lang: data.site.options.language }
-  = partial 'partials/head.haml'
-  %body
-    = partial 'partials/header'
-    %main
-      = yield
-    = partial 'partials/footer'
-    = # partial 'partials/js_loader', locals: { hosturl: config[:host] }

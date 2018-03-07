@@ -2,21 +2,26 @@
   padding: 0
   margin: 0
 
+  &:first-child
+    .page-container
+      border-top: none
+  
+
   &--hero
-    background: linear-gradient(to bottom, $gradient-top 0%, $gradient-bottom 100%)
+    // background: linear-gradient(to bottom, $gradient-top 0%, $gradient-bottom 100%)
     padding-bottom: 0.5rem
 
     +respond-to(md)
       height: 90vh
 
   &--reinforcement
-    background-color: $c-slate-blue
-    color: $c-bubbles
-    text-shadow: 0 1px 0 $c-jungle-green
+    // background-color: $c-slate-blue
+    // color: $c-bubbles
+    // text-shadow: 0 1px 0 $c-jungle-green
 
   &--geyser
-    background-color: $c-geyser
-    background: linear-gradient(to bottom, lighten($c-geyser, 10%) 0%, $c-geyser 100%)
+    // background-color: $c-geyser
+    // background: linear-gradient(to bottom, lighten($c-geyser, 10%) 0%, $c-geyser 100%)
 
   &--blockquote
-    background-color: $c-blockquote-background
+    // background-color: $c-blockquote-background

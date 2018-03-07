@@ -4,12 +4,13 @@ title: 4Quant landing page claim - needs to be defined...
 
 article.article
   .page-container
-    .hero
-      = image_tag('brain.svg', alt: 'Brain Image', class: 'hero__image')
-      h1.hero__title Adopt artificial intelligence to create business value
-      p.hero__subtitle Conceptualize, prototype and develop your AI ventures
-      a.hero__button  href='#contact'
-        | Get in touch
+    .row.hero
+      .col-sm.text-center.align-self-center
+        = image_tag('http://4quant.com/assets/Flow.png', alt: 'Brain Image', class: 'hero__image')
+      .col-sm
+        h1.hero__title Adopt artificial intelligence to create business value
+        p.hero__subtitle Conceptualize, prototype and develop your AI ventures
+        = link_to('Get in touch', '#contact', class: 'hero__button')
 
 article.article
   .page-container

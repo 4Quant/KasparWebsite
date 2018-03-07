@@ -112,23 +112,6 @@ title: We are your one-stop-shop artificial intelligence partner
             .member__description
               Machine learning, image analytics
       .card
-        %a.member{ href: 'mailto:philippe.tracol@ai-first.ch' }
-          %img.member__photo{ src: '/images/team/tracol.jpg' }
-          .member__info
-            %h3.member__name Philippe Tracol
-            .member__company
-              Panter
-            .member__description
-              Machine learning, image analytics
-      .card
-        %a.member{ href: 'mailto:tim.head@ai-first.ch' }
-          %img.member__photo{ src: '/images/team/head.jpg' }
-          .member__info
-            %h3.member__name Dr. Tim Head
-            .member__company
-
-            .member__description
-              Machine learning, image analysis, data science and statistics
       .card
         %a.member{ href: 'mailto:kevin.mader@ai-first.ch' }
           %img.member__photo{ src: '/images/team/mader.jpg' }
@@ -157,9 +140,6 @@ title: We are your one-stop-shop artificial intelligence partner
       .contact__info
         %h2.contact__title Get in touch
         %div
-          %a{href: "mailto:info@ai-first.ch"} info@ai-first.ch
+          %a{href: "mailto:#{data.site.company.email}"}= data.site.company.email
         %h3.contact__subtitle Where
-        %div AI First<br>Sihlquai 131<br>8005 Zürich
-%article.article.article--reinforcement
-  .page-container
-    %h1.reinforcement Request a demo of our analytics capabilities for your own, specialized application.
+        %div= "#{data.site.company.name}<br>#{data.site.company.street}<br>#{data.site.company.postal_code} #{data.site.company.city}"

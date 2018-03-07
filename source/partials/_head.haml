@@ -1,9 +1,11 @@
 %head
+  %title= "#{data.site.company.name} | #{current_page.data.title || data.site.company.claim}"
   %meta{ charset: 'utf-8' }
   %meta{ content: 'width=device-width, initial-scale=1, shrink-to-fit=no', name: 'viewport' }
   %meta{ content: 'ie=edge', 'http-equiv' => 'x-ua-compatible' }
   %meta{ content: '', name: 'description' }
   = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'
+  = stylesheet_link_tag :site
   - if config[:environment] == :development
     %link{ href: '/images/favicon.png', rel: 'shortcut icon', type: 'image/png' }
   - else
@@ -16,6 +18,3 @@
     %meta{ content: 'Tooltip', name: 'msapplication-tooltip' }
     %meta{ content: 'ieconfig.xml', name: 'msapplication-config' }
     %meta{ name: 'google-site-verification', content: 'i9FQ_D37vjeDRJNDVzs-YnEWNwGj0lSgJeURQbhgd-E' }
-  %title
-    #{data.site.company.name} | #{current_page.data.title || data.site.company.claim}
-  = stylesheet_link_tag :site

@@ -1,5 +1,10 @@
+domain: '4quant.com'
 company:
-  name: 'AI First'
-  claim: 'Your artificial intelligence competence center'
+  name: '4Quant Ltd.'
+  claim: 'Big Image Analytics'
+  street: 'Technoparkstrasse 1'
+  city: 'Zurich'
+  postal_code: '8005'
+  email: 'info@4quant.com'
 options:
   language: 'en'

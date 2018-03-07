@@ -1,9 +1,5 @@
 image: ruby:2.5
 
-variables:
-  LANG: 'en_US.UTF-8'
-  LC_ALL: 'en_US.UTF-8'
-
 cache:
   paths:
     - vendor
@@ -13,10 +9,14 @@ before_script:
   - apt-get install -y nodejs locales # middleman requires JS runtime
   - echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
   - locale-gen && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LANGUAGE=en
+  - export LANG=en_US.UTF-8
+  - export LC_ALL=en_US.UTF-8
   - bundle install --without development --path vendor
 
 pages:
   script:
+    - export LANG=en_US.UTF-8
+    - export LC_ALL=en_US.UTF-8
     - bundle exec middleman build
     - mv build/ public
   artifacts:

@@ -2,8 +2,30 @@
   position: fixed
   width: 100%
   height: $v-header-height
-  background-color: $c-jungle-green
+  background-color: $c-header-background
   z-index: 100
+
+  .page-container
+    border-bottom: 1px solid $c-alabaster
+    background-color: $c-header-background
+
+  nav
+    ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+      display: flex
+      justify-content: flex-end
+
+    li
+      margin: 0 1rem 0 0
+      padding: 0
+
+    a
+      font-size: .9rem
+      text-decoration: none
+      color: $c-silver-chalice
+      font-weight: 300
 
   &__logo
     display: block

@@ -1,4 +1,20 @@
 domain: '4quant.com'
+team:
+  trolese:
+    email: ftrolese@4quant.com
+    name: 'Flavio Trolese'
+    job_title: 'XTO'
+    motto: 'Lorem di ipsilsarum ...'
+  mader:
+    email: ''
+    name: 'Dr. Kevin Mader'
+    job_title: 'YTO'
+    motto: 'Lorem di ipsilsarum ...'
+  hagger:
+    email: ''
+    name: 'Joachim Hagger'
+    job_title: 'ZFO'
+    motto: 'Lorem di ipsilsarum ...'
 company:
   name: '4Quant Ltd.'
   claim: 'Big Image Analytics'

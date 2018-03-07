@@ -8,8 +8,8 @@ article.article
       .col-sm.text-center.align-self-center
         = image_tag('http://4quant.com/assets/Flow.png', alt: 'Brain Image', class: 'hero__image')
       .col-sm
-        h1.hero__title Adopt artificial intelligence to create business value
-        p.hero__subtitle Conceptualize, prototype and develop your AI ventures
+        h1.hero__title= lorem.words 5
+        p.hero__subtitle= lorem.words 12
         = link_to('Get in touch', '#contact', class: 'hero__button')
 
 article.article
@@ -17,7 +17,6 @@ article.article
     blockquote.testimonial
       p.testimonial__quote Our newly developed inspection software just rocks. The AI first team delivered beyond expectations!
       p.testimonial__author Quality improvement program manager - Logistics
-
 
 article.article
   .page-container
@@ -103,30 +102,14 @@ article.article#team
   .page-container
     h1 Team
     .cards-single
-      .card
-        div.member
-          = image_tag('team/trolese.jpg', alt: 'Portrait: Flavio Trolese', class: 'member__photo')
-          .member__info
-            h3.member__name Flavio Trolese
-            .member__company
-
-            .member__description Machine learning, image analytics
-      .card
-        div.member
-          = image_tag('team/mader.jpg', alt: 'Portrait: Dr. Kevin Mader', class: 'member__photo')
-          .member__info
-            h3.member__name Dr. Kevin Mader
-            .member__company
-
-            .member__description Machine learning, image analysis, data science and big data
-      .card
-        div.member
-          = image_tag('team/hagger.jpg', alt: 'Portrait: Joachim Hagger', class: 'member__photo')
-          .member__info
-            h3.member__name Joachim Hagger
-            .member__company
-
-            .member__description Digital strategies
+      - data.site.team.each do |key, values|
+        .card
+          div.member
+            = image_tag("team/#{key}.jpg", alt: "Portrait: #{values.name}", class: 'member__photo')
+            .member__info
+              h3.member__name= values.name
+              .member__job_title= values.job_title
+              .member__description= values.motto
 
 article.article#contact
   .page-container

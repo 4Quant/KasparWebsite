@@ -34,6 +34,7 @@ end
 
 activate :autoprefixer
 activate :sprockets
+activate :asset_hash
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -48,7 +49,10 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
-
+  def md_article(md_partial, slug = nil)
+    slug ||= md_partial.dasherize
+    partial 'partials/article', locals: { markdown_file: "articles/_#{md_partial}.md", slug: slug }
+  end
 end
 
 # Build-specific configuration

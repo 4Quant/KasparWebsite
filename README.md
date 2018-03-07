@@ -44,3 +44,7 @@ sudo certbot certonly -a manual -d aifirst.ch -d www.aifirst.ch -d ai-first.ch -
 
 When certificates are succesfully created, you need to add them on a github page here:
 https://gitlab.com/4quant/ai-first-website/pages
+
+## Testing
+
+Go to https://4quant.gitlab.io/4quant.com/ after commit/merge

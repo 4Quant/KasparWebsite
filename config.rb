@@ -34,7 +34,6 @@ end
 
 activate :autoprefixer
 activate :sprockets
-activate :asset_hash
 
 # Reload the browser automatically whenever files change
 configure :development do

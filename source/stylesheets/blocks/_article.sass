@@ -1,3 +1,12 @@
+main
+  .article
+    .page-container
+      border-top: 1px solid $c-article-separator-color
+    &:first-child
+      .page-container
+        border-top: none
+
+
 .article
   padding: 0
   margin: 0
@@ -5,7 +14,7 @@
   &:first-child
     .page-container
       border-top: none
-  
+
 
   &--hero
     // background: linear-gradient(to bottom, $gradient-top 0%, $gradient-bottom 100%)

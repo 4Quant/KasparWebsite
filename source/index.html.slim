@@ -10,9 +10,8 @@ article.article
       .col-sm-6
         h1.page-title= lorem.words 5
         p.subtitle= lorem.words 12
-        p
+        p.mt-4
           a.github-button aria-label=("Star 4Quant/progressive_growing_of_gans on GitHub") data-show-count="true" data-size="large" href="https://github.com/4Quant/progressive_growing_of_gans" Star
-
 
 acrticle.article
   .page-container
@@ -32,7 +31,6 @@ acrticle.article
       .col-sm-6
         = image_tag(lorem.image('300x300', text: 'example image'))
 
-
 article.article
   .page-container
     .row
@@ -43,86 +41,6 @@ article.article
         p Our image labeling interfaces are open source.
         p= lorem.sentence + '.'
         p Checkout our #{link_to('Github repository', 'https://github.com/4Quant/progressive_growing_of_gans')} to learn about building custom labeling interfaces.
-
-/ article.article
-/   .page-container
-/     h1 Our offer
-/     h3 We are your one-stop-shop artificial intelligence partner
-/     p We accelerate the transformation and creation of your new products and services by combining your industry expertise with our Artificial Intelligence know-how.
-/     p We offer a proven, interdisciplinary and lean innovation process that minimizes risks and costs by streamlining the development and testing of new concepts.
-
-/     .process
-/       .process--step.process--step--1
-/         .process--number 1
-/         h3 Definition
-/       .process--step.process--step--2
-/         .process--number 2
-/         h3 User Testing
-/       .process--step.process--step--3
-/         .process--number 3
-/         h3 Deployment
-
-/ article.article
-/   .page-container
-/     h1.reinforcement Combining your industry expertise with our machine learning, data analytics, computer vision and natural language processing skills.
-
-/ article.article
-/   .page-container
-/     h2 Your Benefits
-/     ul.numbered
-/       li
-/         div
-/           h3 The power of data
-/           p Finally make sense of the data collected with machine learning, pattern recognition, natural language processing, computer vision and expert systems solutions.
-/       li
-/         div
-/           h3 First class technology
-/           p Use advanced technologies for high-throughput, adaptive data and image analysis and open-up totally new and lately unaccessible business opportunities.
-/       li
-/         div
-/           h3 Rapid prototyping
-/           p From your idea to a minimal viable product in no time - pragmatic and hands on.
-
-/ article.article
-/   .page-container
-/     h1 Artificial intelligence opportunities
-/     p Artificial Intelligence solutions can sense or perceive the world and collect data; understand the information collected; and act independently—all underpinned by the ability to learn and adapt over time.
-
-/     h2 Sense
-/     .cards-wide
-/       .container
-/         .card
-/           h3 Computer vision
-/           p Acquiring, processing, analyzing and understanding images. Video analytics integrated with surveillance cameras provides situational awareness of business operations, delivering insights about risk, safety and security. In retail, video analytics can be used to gain insights into shopper behaviors effectively and systematically.
-/         .card
-/           h3 Audio processing
-/           p Identifying, recognizing and analyzing sounds and speech. Speech recognition technologies integrated into call centers automate the identification of callers.
-/         .card
-/           h3 Sensor processing
-/           p Processing and analyzing information from sensors other than cameras and microphones. In an agricultural setting, sensors in the field can be integrated with software to deliver “precision agriculture”— sensing and communicating status about temperature, humidity, etc., enabling more precise care for crops.
-
-/     h2 Comprehend
-/     .cards-wide
-/       .container
-/         .card
-/           h3 Natural language processing
-/           p Understanding and generating language in spoken and/or written form. Personal assistants on consumer smart phones provide guidance and services using natural language. Increasingly, search capabilities include the ability to understand the meaning of what a person is saying, not just recognizing key words or doing statistical retrieval.
-/         .card
-/           h3 Knowledge representation
-/           p Depicting and communicating knowledge to facilitate inference and decision making. Knowledge-based tools provide the capability to link a particular search or piece of content to other relevant content on the web. This is done by tagging all content and then mapping it to a larger representation of knowledge. For example, a search for “Da Vinci” will link one to particular paintings and creations, as well as to Italy, to the Renaissance, and so forth.
-
-/     h2 Act
-/     .cards-wide
-/       .container
-/         .card
-/           h3 Inference engines
-/           p Deriving answers from a static knowledge base such as business rules. Solutions can apply rules to make automated loan approval or credit decisions, or granting of visas. Such capabilities can deliver accurate decisions in a fraction of the time of manual decision making.
-/         .card
-/           h3 Expert systems
-/           p Emulating the decision-making ability of a human expert and solving complex problems by reasoning with the information available in its knowledge base. Medical diagnostics as well as legal research can be significantly aided by the ability of expert systems to sift through millions of data sources, synthesize information and present it to a user.
-/         .card
-/           h3 Machine learning
-/           p Altering the decision process based on experience. Software tools and personal agents can learn from users to improve productivity—for example, by sorting email, then extracting calendar entries and action items.
 
 article.article#team
   .page-container
@@ -141,7 +59,7 @@ article.article#signup
   .page-container
     .row.justify-content-center.align-items-center
       .col-sm-7
-        h1 News letter
+        h1 Newsletter
         form*data.site.mailing_list.form
           input*data.site.mailing_list.list_id
           .form-group

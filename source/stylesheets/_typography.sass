@@ -8,39 +8,54 @@ html
 
 html,
 body
-  font-family: 'Lato', sans-serif
+  font-family: 'Roboto', sans-serif
 
 
 h1
-  font-size: $v-h1-font-size
-  font-weight: $v-h1-font-weight
-  line-height: 1.15em
+  font-size: 30px
+  color: $c-dove-grey
+  font-weight: 700
+  line-height: 1.15
   max-width: 40rem
+
+  &.page-title
+    font-size: 32px
+    font-weight: 700
+    line-height: 1.1
 
   &.reinforcement
     font-size: 1.4rem
-    font-weight: 600
+    font-weight: 500
     padding: 0 2rem
 
 h2
-  font-size: $v-h2-font-size
-  font-weight: $v-h2-font-weight
+  font-size: 1.35rem
+  font-weight: 500
   color: $c-h2-color
   text-transform: uppercase
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
 
 h3
-  font-size: $v-h3-font-size
-  font-weight: $v-h3-font-weight
+  font-size: 1.125rem
+  font-weight: 300
   color: $c-h3-color
 
 p
-  font-size: $v-p-font-size
-  font-weight: $v-p-font-weight
-  color: $c-p-color
+  margin-top: .25rem
+  margin-bottom: .25rem
+  font-size: 24px
+  font-weight: 300
+  color: $c-dove-grey
+  line-height: 1.7
 
-p.small
-  font-size: $v-p-small-font-size
+  &.subtitle
+    font-size: 1.25rem
+    line-height: 1.5
+    font-weight: 300
+    color: $c-mine-shaft
+
+  &.small
+    font-size: .875rem
 
 a, a:active, a:visited, a:hover
   color: $c-a-color

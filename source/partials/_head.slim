@@ -6,6 +6,7 @@ head
   meta content='' name='description'
   = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'
   = stylesheet_link_tag :site
+  script*{ async: true, defer: true, src: 'https://buttons.github.io/buttons.js' }
   - if config[:environment] == :development
     link href='/images/favicon.png' rel='shortcut icon' type='image/png'
   - else

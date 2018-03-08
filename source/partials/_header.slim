@@ -1,11 +1,9 @@
-header.page-header
-  .page-container
-    .row
-      .col-sm-2
-        a.page-header__logo href="#"
-          img alt="#{data.site.company.name} Logo" src="/images/logo.png"
-      .col-sm-10
-        nav
-          ul
-            li= link_to('Contact', '#contact')
-            li= link_to('Team', '#team')
+header.header.sticky-top
+  nav.header--nav.page--container.navbar.navbar-top.navbar-expand-lg
+    = link_to('#', class: 'navbar-brand') { image_tag('logo.png', class: 'header--nav--logo') }
+    .navbar-collapse.justify-content-end
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link href='#contact' Contact
+        li.nav-item
+          a.nav-link href='#team' Team

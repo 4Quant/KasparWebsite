@@ -10,7 +10,7 @@ body
   color: $c-main-foreground
 
 main
-  padding: $v-header-height 0 0
+  padding: 0
   margin: 0
 
 .text-center
@@ -18,3 +18,34 @@ main
 
 .text-right
   text-align: right
+
+.page
+  &--container
+    +respond-to(md)
+      max-width: $v-container-width-md
+      margin: 0 auto
+
+    +respond-to(lg)
+      max-width: $v-container-width-lg
+
+.header
+  border-bottom: $v-header-border-bottom-width solid $c-alabaster
+  height: $v-header-height
+  background-color: $c-header-background
+
+  &--nav
+    background-color: $c-header-background
+    height: $v-header-height - $v-header-border-bottom-width
+
+    &--logo
+      display: inline-block
+      width: $v-header-logo-width
+
+    .nav-link
+      text-decoration: none
+      color: $c-silver-chalice
+      font-weight: 300
+      font-size: 16px
+      cursor: pointer
+
+

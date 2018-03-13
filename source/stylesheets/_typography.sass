@@ -12,47 +12,87 @@ body
 
 
 h1
-  font-size: 30px
   color: $c-dove-grey
+  font-size: 25px
   font-weight: 700
   line-height: 1.15
+  margin-top: .5rem
   max-width: 40rem
 
+  +respond-to(md)
+    font-size: 30px
+
+  +respond-to(lg)
+    font-size: 30px
+
   &.page-title
-    font-size: 32px
+    font-size: 28px
     font-weight: 700
     line-height: 1.1
 
+    +respond-to(md)
+      font-size: 32px
+
+    +respond-to(lg)
+      font-size: 32px
+
   &.reinforcement
-    font-size: 1.4rem
+    font-size: 1.2rem
     font-weight: 500
     padding: 0 2rem
 
+    +respond-to(md)
+      font-size: 1.4rem
+
+    +respond-to(lg)
+      font-size: 1.4rem
+
+
 h2
-  font-size: 1.35rem
-  font-weight: 500
   color: $c-h2-color
-  text-transform: uppercase
+  font-size: 1.2rem
+  font-weight: 500
+  margin-top: .5rem
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
+  text-transform: uppercase
+
+  +respond-to(md)
+    font-size: 1.35rem
+
+  +respond-to(lg)
+    font-size: 1.35rem
 
 h3
+  color: $c-h3-color
   font-size: 1.125rem
   font-weight: 300
-  color: $c-h3-color
 
 p
-  margin-top: .25rem
-  margin-bottom: .25rem
-  font-size: 24px
-  font-weight: 300
   color: $c-dove-grey
+  font-size: 18px
+  font-weight: 300
   line-height: 1.7
+  margin-bottom: .25rem
+  margin-top: .25rem
+
+  +respond-to(md)
+    font-size: 24px
+
+  +respond-to(lg)
+    font-size: 24px
 
   &.subtitle
-    font-size: 1.25rem
-    line-height: 1.5
-    font-weight: 300
     color: $c-mine-shaft
+
+    font-size: 1rem
+    font-weight: 300
+    line-height: 1.5
+
+    +respond-to(md)
+      font-size: 1.25rem
+
+    +respond-to(lg)
+      font-size: 1.25rem
 
   &.small
     font-size: .875rem

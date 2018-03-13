@@ -7,26 +7,29 @@
     border-top: $v-article-separator-width solid $c-article-separator-color
     display: flex
     flex-direction: column
-    min-height: 60vh
     justify-content: center
+    min-height: 60vh
     padding: 2.5rem 1rem
 
   &:first-child
     .page-container
       border-top: 0
 
-  img
-    max-width: 100%
+  .row
+    img
+      display: block
+      margin: .5rem auto
+      max-width: 100%
 
   .twitter-timeline
+    height: 80vh !important
     margin-left: auto
     margin-right: auto
     width: 90% !important
-    height: 80vh !important
 
     +respond-to(md)
       width: 80% !important
 
     +respond-to(lg)
-      width: 50% !important
       height: 60vh !important
+      width: 50% !important

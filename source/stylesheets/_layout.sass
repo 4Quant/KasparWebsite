@@ -22,16 +22,16 @@ main
 .page
   &--container
     +respond-to(md)
-      max-width: $v-container-width-md
       margin: 0 auto
+      max-width: $v-container-width-md
 
     +respond-to(lg)
       max-width: $v-container-width-lg
 
 .header
+  background-color: $c-header-background
   border-bottom: $v-header-border-bottom-width solid $c-alabaster
   height: $v-header-height
-  background-color: $c-header-background
 
   &--nav
     background-color: $c-header-background
@@ -41,11 +41,30 @@ main
       display: inline-block
       width: $v-header-logo-width
 
+#navbarSupportedContent
+  .nav-link
+    color: $c-silver-chalice
+    cursor: pointer
+    font-size: 16px
+    font-weight: 300
+    text-decoration: none
+
+  @media (max-width: $v-container-width-sm)
+    background-color: $c-transparent-grey
+    left: 0
+    position: absolute
+    top: $v-header-height
+    width: 100vw
+
+    .navbar-nav
+      align-items: center
+      display: flex
+      justify-content: center
+      margin-bottom: $v-header-height * .5
+      margin-top: $v-header-height * .5
+
     .nav-link
-      text-decoration: none
-      color: $c-silver-chalice
-      font-weight: 300
-      font-size: 16px
-      cursor: pointer
+      color: $c-white
+      font-weight: 400
 
 

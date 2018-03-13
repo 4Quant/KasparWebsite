@@ -22,6 +22,23 @@ company:
   city: 'Zürich'
   postal_code: '8005'
   email: 'info@4quant.com'
+twitter:
+  script:
+     async: true
+     src: 'https://platform.twitter.com/widgets.js'
+     charset: 'utf-8'
+  link:
+    class: twitter-timeline
+    href: "https://twitter.com/4Quant?ref_src=twsrc%5Etfw"
+    data:
+      lang: en
+      # width: 50%
+      height: 800
+      chrome: nofooter noborders transparent
+      aria:
+        polite: assertive
+      tweet:
+        limit: 3
 options:
   language: 'en'
 mailing_list:

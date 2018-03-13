@@ -1,4 +1,6 @@
 domain: '4quant.com'
+options:
+  language: 'en'
 team:
   trolese:
     email: ftrolese@4quant.com
@@ -30,42 +32,58 @@ company:
     allowfullscreen: 'true'
     style: 'border:0'
     src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1350.606113532486!2d8.516254164255015!3d47.388291904039605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47906a1743daaaab%3A0x9dd0590a1dcdd2f2!2s4Quant+Ltd.!5e0!3m2!1sen!2sch!4v1520410058529'
-
-twitter:
-  script:
-     async: true
-     src: 'https://platform.twitter.com/widgets.js'
-     charset: 'utf-8'
-  link:
-    class: twitter-timeline
-    href: "https://twitter.com/4Quant?ref_src=twsrc%5Etfw"
+html:
+  nav_toggler:
+    class: navbar-toggler
+    aria:
+      controls: navbarSupportedContent
+      expanded: 'false'
+      label: Toggle navigation
     data:
-      lang: en
-      dnt: 'true'
-      hide_media: 'true'
-      height: 300
-      show-replies: 'false'
-      chrome: nofooter noborders transparent
-      aria:
-        polite: assertive
-options:
-  language: 'en'
-mailing_list:
-  form:
-    action: "//4quant.us12.list-manage.com/subscribe/post?u=87fbddd41af58f10d4820394c&amp;id=e1b453bfd5"
-    method: post
-    name: mc-embedded-subscribe-form
-    novalidate: true
-    target: _blank
-  list_id:
-    name: b_87fbddd41af58f10d4820394c_e1b453bfd5"
-    tabindex: -1
-    type: hidden
-    value: ''
-  email:
-    id: mce-EMAIL
-    class: form-control
-    name: EMAIL
-    placeholder: email address
-    required: true
-    type: email
+      target: '#navbarSupportedContent'
+      toggle: collapse
+    type: button
+  github_button:
+    class: github-button
+    aria:
+      label: 'Star 4Quant/progressive_growing_of_gans on GitHub'
+    data:
+      show-count: 'false'
+      size: 'large'
+    href: https://github.com/4Quant/progressive_growing_of_gans
+  twitter:
+    script:
+      async: true
+      src: 'https://platform.twitter.com/widgets.js'
+      charset: 'utf-8'
+    link:
+      class: twitter-timeline
+      href: "https://twitter.com/4Quant?ref_src=twsrc%5Etfw"
+      data:
+        lang: en
+        dnt: 'true'
+        hide_media: 'true'
+        height: 300
+        show-replies: 'false'
+        chrome: nofooter noborders transparent
+        aria:
+          polite: assertive
+  mailing_list:
+    form:
+      action: "//4quant.us12.list-manage.com/subscribe/post?u=87fbddd41af58f10d4820394c&amp;id=e1b453bfd5"
+      method: post
+      name: mc-embedded-subscribe-form
+      novalidate: true
+      target: _blank
+    list_id:
+      name: b_87fbddd41af58f10d4820394c_e1b453bfd5"
+      tabindex: -1
+      type: hidden
+      value: ''
+    email:
+      id: mce-EMAIL
+      class: form-control
+      name: EMAIL
+      placeholder: email address
+      required: true
+      type: email

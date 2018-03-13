@@ -11,13 +11,13 @@ article.article
         h1.page-title= lorem.words 5
         p.subtitle= lorem.words 12
         p.mt-4
-          a.github-button aria-label=("Star 4Quant/progressive_growing_of_gans on GitHub") data-show-count="true" data-size="large" href="https://github.com/4Quant/progressive_growing_of_gans" Star
+          a*data.site.html.github_button 4Quant/progressive_growing_of_gans
 
 
 article.article
   .page-container
-    a*data.site.twitter.link Tweets by 4Quant
-script*data.site.twitter.script
+    a*data.site.html.twitter.link Tweets by 4Quant
+script*data.site.html.twitter.script
 
 
 acrticle.article
@@ -68,11 +68,11 @@ article.article#signup
     .row.justify-content-center.align-items-center
       .col-sm-7
         h1 Newsletter
-        form*data.site.mailing_list.form
-          input*data.site.mailing_list.list_id
+        form*data.site.html.mailing_list.form
+          input*data.site.html.mailing_list.list_id
           .form-group
             label for="mce-EMAIL" Interested? Sign up for our newsletter to keep up to date!
-            input*data.site.mailing_list.email
+            input*data.site.html.mailing_list.email
           button.btn.btn-light type='submit' name='subscribe' Subscribe
 
 

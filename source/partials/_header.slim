@@ -1,7 +1,7 @@
 header.header.sticky-top
   nav.header--nav.page--container.navbar.navbar-expand-lg.navbar-light
     = link_to('#', class: 'navbar-brand') { image_tag('logo.png', class: 'header--nav--logo') }
-    button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button"
+    button*data.site.html.nav_toggler
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse.justify-content-end
       ul.navbar-nav
@@ -9,3 +9,12 @@ header.header.sticky-top
           a.nav-link href='#contact' Contact
         li.nav-item
           a.nav-link href='#team' Team
+javascript:
+  $('#navbarSupportedContent').on('shown.bs.collapse', function() {
+    $('#navbarSupportedContent').on('click', function() {
+      $('#navbarSupportedContent').collapse('hide');
+    });
+  });
+  $('#navbarSupportedContent').on('hidden.bs.collapse', function() {
+    $('#navbarSupportedContent').off('click');
+  });

@@ -6,6 +6,8 @@ head
   meta content='' name='description'
   = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'
   = stylesheet_link_tag :site
+  = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'
+  = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'
   script*{ async: true, defer: true, src: 'https://buttons.github.io/buttons.js' }
   - if config[:environment] == :development
     link href='/images/favicon.png' rel='shortcut icon' type='image/png'

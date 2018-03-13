@@ -32,13 +32,13 @@ twitter:
     href: "https://twitter.com/4Quant?ref_src=twsrc%5Etfw"
     data:
       lang: en
-      # width: 50%
-      height: 800
+      dnt: 'true'
+      hide_media: 'true'
+      height: 300
+      show-replies: 'false'
       chrome: nofooter noborders transparent
       aria:
         polite: assertive
-      tweet:
-        limit: 3
 options:
   language: 'en'
 mailing_list:

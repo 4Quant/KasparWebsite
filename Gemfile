@@ -14,5 +14,4 @@ gem 'wdm', platforms: [:mswin, :mingw]
 
 source 'https://rails-assets.org' do
     gem 'rails-assets-bootstrap'
-    gem 'rails-assets-roboto-fontface'
 end

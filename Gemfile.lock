@@ -122,8 +122,6 @@ GEM
     rack-livereload (0.3.16)
       rack
     rails-assets-bootstrap (4.0.0)
-    rails-assets-lato-webfont (1.1.2)
-    rails-assets-roboto-fontface (0.8.0)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -157,8 +155,6 @@ DEPENDENCIES
   middleman-pry
   middleman-sprockets (~> 4.0.0.rc)
   rails-assets-bootstrap!
-  rails-assets-lato-webfont!
-  rails-assets-roboto-fontface!
   slim
   tzinfo-data
   wdm

@@ -50,19 +50,6 @@ article.article
         p Checkout our #{link_to('Github repository', 'https://github.com/4Quant/progressive_growing_of_gans')} to learn about building custom labeling interfaces.
 
 
-article.article#team
-  .page-container
-    h1 Team
-    .cards-single
-      - data.site.team.each do |key, values|
-        .card
-          div.member
-            = image_tag("team/#{key}.jpg", alt: "Portrait: #{values.name}", class: 'member--photo')
-            .member--info
-              h3.member--name= values.name
-              .member--job-title= values.job_title
-              .member--description= values.motto
-
 article.article#signup
   .page-container
     .row.justify-content-center.align-items-center

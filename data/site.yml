@@ -36,21 +36,6 @@ options:
     -
       property: og:locale
       content: *locale
-    -
-      content: '#FFFFFF'
-      name: msapplication-TileColor
-    -
-      content: '/mstile-144x144.png'
-      name: msapplication-TileImage
-    -
-      content: *company-name
-      name: application-name
-    -
-      content: *company-claim
-      name: msapplication-tooltip
-    -
-      content: ieconfig.xml
-      name: msapplication-config
 html:
   nav_toggler:
     class: navbar-toggler

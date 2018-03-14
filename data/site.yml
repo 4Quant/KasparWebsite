@@ -35,14 +35,12 @@ html:
       target: '#navbarSupportedContent'
       toggle: collapse
     type: button
-  github_button:
-    class: github-button
-    aria:
-      label: 'Star 4Quant/progressive_growing_of_gans on GitHub'
-    data:
-      show-count: 'false'
-      size: 'large'
-    href: https://github.com/4Quant/progressive_growing_of_gans
+  github_button_iframe:
+    class: github-project-button
+    allowtransparency: 'true'
+    frameborder: 0
+    scrolling: 'no'
+    src: https://buttons.github.io/buttons.html#href=https://github.com/4Quant/progressive_growing_of_gans&amp;title=&aria-label=Star%204Quant/progressive_growing_of_gans%20on%20GitHub&data-text=4Quant/progressive_growing_of_gans&data-size=large&data-show-count=false
   twitter:
     script:
       async: true

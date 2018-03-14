@@ -9,12 +9,3 @@ header.header.sticky-top
           a.nav-link href='#contact' Contact
         li.nav-item
           a.nav-link href='#team' Team
-javascript:
-  $('#dropdown-nav').on('shown.bs.collapse', function() {
-    $('#dropdown-nav').on('click', function() {
-      $('#dropdown-nav').collapse('hide');
-    });
-  });
-  $('#dropdown-nav').on('hidden.bs.collapse', function() {
-    $('#dropdown-nav').off('click');
-  });

@@ -86,22 +86,3 @@ html:
         chrome: nofooter noborders transparent
         aria:
           polite: assertive
-  mailing_list:
-    form:
-      action: "//4quant.us12.list-manage.com/subscribe/post?u=87fbddd41af58f10d4820394c&amp;id=e1b453bfd5"
-      method: post
-      name: mc-embedded-subscribe-form
-      novalidate: true
-      target: _blank
-    list_id:
-      name: b_87fbddd41af58f10d4820394c_e1b453bfd5"
-      tabindex: -1
-      type: hidden
-      value: ''
-    email:
-      id: mce-EMAIL
-      class: form-control
-      name: EMAIL
-      placeholder: email address
-      required: true
-      type: email

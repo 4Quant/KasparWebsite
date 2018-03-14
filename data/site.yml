@@ -1,29 +1,56 @@
-domain: '4quant.com'
-options:
-  language: 'en'
-team:
-  trolese:
-    email: ftrolese@4quant.com
-    name: 'Flavio Trolese'
-    job_title: 'XTO'
-    motto: 'Lorem di ipsilsarum ...'
-  mader:
-    email: ''
-    name: 'Dr. Kevin Mader'
-    job_title: 'YTO'
-    motto: 'Lorem di ipsilsarum ...'
-  hagger:
-    email: ''
-    name: 'Joachim Hagger'
-    job_title: 'ZFO'
-    motto: 'Lorem di ipsilsarum ...'
 company:
-  name: '4Quant Ltd.'
-  claim: 'Big Image Analytics'
+  name: &company-name '4Quant Ltd.'
+  claim: &company-claim 'Big Image Analytics'
   street: 'Technoparkstrasse 1'
   city: 'Zürich'
   postal_code: '8005'
   email: 'info@4quant.com'
+options:
+  domain: &domain 4quant.com
+  language: &lang en
+  locale: &locale en_US
+  logo_file_name: &logo-file-name logo.png
+  description: &description Big Image Analytics
+  keywords: &keywords Big Image Analytics,Deep Learning,TensorFlow,Keras,Annotation,Curation,Active Learning
+  meta_tags:
+    -
+      charset: utf-8
+    -
+      content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
+      name: viewport
+    -
+      http-equiv: X-UA-Compatible
+      content: IE=edge"
+    -
+      name: description
+      content: *description
+    -
+      name: keywords
+      content: *keywords
+    -
+      http-equiv: content-language
+      content: *lang
+    -
+      property: og:description
+      content: *description
+    -
+      property: og:locale
+      content: *locale
+    -
+      content: '#FFFFFF'
+      name: msapplication-TileColor
+    -
+      content: '/mstile-144x144.png'
+      name: msapplication-TileImage
+    -
+      content: *company-name
+      name: application-name
+    -
+      content: *company-claim
+      name: msapplication-tooltip
+    -
+      content: ieconfig.xml
+      name: msapplication-config
 html:
   nav_toggler:
     class: navbar-toggler
@@ -35,14 +62,13 @@ html:
       target: '#navbarSupportedContent'
       toggle: collapse
     type: button
-  github_button:
-    class: github-button
-    aria:
-      label: 'Star 4Quant/progressive_growing_of_gans on GitHub'
-    data:
-      show-count: 'false'
-      size: 'large'
-    href: https://github.com/4Quant/progressive_growing_of_gans
+  github_button_iframe:
+    class: github-project-button
+    allowtransparency: 'true'
+    frameborder: 0
+    scrolling: 'no'
+    src: https://buttons.github.io/buttons.html#href=https://github.com/4Quant/progressive_growing_of_gans&amp;title=&aria-label=Star%204Quant/progressive_growing_of_gans%20on%20GitHub&data-text=4Quant/progressive_growing_of_gans&data-size=large&data-show-count=false
+
   twitter:
     script:
       async: true

@@ -10,23 +10,9 @@ body
   color: $c-main-foreground
 
 main
-  padding: 0
   margin: 0
+  padding: 0
 
-.text-center
-  text-align: center
-
-.text-right
-  text-align: right
-
-.page
-  &--container
-    +respond-to(md)
-      margin: 0 auto
-      max-width: $v-container-width-md
-
-    +respond-to(lg)
-      max-width: $v-container-width-lg
 
 .header
   background-color: $c-header-background
@@ -35,39 +21,58 @@ main
 
   .navbar-toggler
     border: 0
+    outline: 0
 
-  &--nav
+  nav
     background-color: $c-header-background
     height: $v-header-height - $v-header-border-bottom-width
+    position: relative
 
-    &--logo
+    img
       display: inline-block
       width: $v-header-logo-width
 
-#navbarSupportedContent
-  .nav-link
-    color: $c-silver-chalice
-    cursor: pointer
-    font-size: 16px
-    font-weight: 300
-    text-decoration: none
-
-  @media (max-width: $v-container-width-sm)
-    background-color: $c-transparent-grey
-    left: 0
-    position: absolute
-    top: $v-header-height
-    width: 100vw
-
-    .navbar-nav
-      align-items: center
-      display: flex
-      justify-content: center
-      margin-bottom: $v-header-height * .5
-      margin-top: $v-header-height * .5
+  .navbar-collapse
+    position: static
 
     .nav-link
-      color: $c-white
-      font-weight: 400
+      color: $c-silver-chalice
+      cursor: pointer
+      font-size: 16px
+      font-weight: 300
+      text-decoration: none
 
+    @include media-breakpoint-down(md)
+      .navbar-nav
+        align-items: center
+        background-color: $c-transparent-grey
+        display: flex
+        justify-content: center
+        left: 0
+        padding-bottom: $v-header-height * .5
+        padding-top: $v-header-height * .5
+        position: absolute
+        top: $v-header-height
+        width: 100vw
 
+      .nav-link
+        color: $c-white
+        font-weight: 400
+
+.twitter-timeline
+  height: 80vh !important
+  margin-left: auto
+  margin-right: auto
+  width: 90% !important
+
+  @include media-breakpoint-up(md)
+    width: 80% !important
+
+  @include media-breakpoint-up(lg)
+    height: 60vh !important
+    width: 50% !important
+
+.github-project-button
+  border: 0
+  height: 28px
+  width: 263px

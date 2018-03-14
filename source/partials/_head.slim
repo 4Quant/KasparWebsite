@@ -1,22 +1,18 @@
 head
-  title= "#{data.site.company.name} | #{current_page.data.title || data.site.company.claim}"
-  meta charset='utf-8'
-  meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'
-  meta*{ content: 'ie=edge', 'http-equiv' => 'x-ua-compatible' }
-  meta content='' name='description'
-  = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'
+  - page_title = "#{data.site.company.name} | #{current_page.data.title || data.site.company.claim}"
+  title= page_title
+  meta property="og:title" content=(page_title)
+  meta property="og:url" content=("https://#{data.site.options.domain}/#{current_path != 'index.html' ? current_path : ''}")
+  meta property="og:image" content=("https://#{data.site.options.domain}#{image_path(data.site.options.logo_file_name)}")
+  - data.site.options.meta_tags.each do |attributes|
+    meta*attributes
+
   = stylesheet_link_tag :site
   = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'
   = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'
-  script*{ async: true, defer: true, src: 'https://buttons.github.io/buttons.js' }
-  - if config[:environment] == :development
+  - if config[:environment] == :developmentre
     link href='/images/favicon.png' rel='shortcut icon' type='image/png'
   - else
     link href='/favicon.ico' rel='icon' type='image/ico'
     link href='/favicon.png' rel='icon' type='image/png'
     link href='/apple-touch-icon-precomposed.png' rel='apple-touch-icon-precomposed'
-    meta content='#FFFFFF' name='msapplication-TileColor'
-    meta content='/mstile-144x144.png' name='msapplication-TileImage'
-    meta content='Name' name='application-name'
-    meta content='Tooltip' name='msapplication-tooltip'
-    meta content='ieconfig.xml' name='msapplication-config'

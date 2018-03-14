@@ -35,6 +35,8 @@ end
 activate :autoprefixer
 activate :sprockets
 
+activate :minify_css
+
 # Reload the browser automatically whenever files change
 configure :development do
   config[:host] = 'http://localhost:4567'
@@ -68,7 +70,6 @@ configure :build do
     }
   end
 
-  activate :minify_css
   activate :relative_assets
   set :relative_links, true
 end

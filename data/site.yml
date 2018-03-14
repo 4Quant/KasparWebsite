@@ -38,7 +38,6 @@ options:
       content: *locale
 html:
   nav_toggler:
-    class: navbar-toggler
     aria:
       controls: navbarSupportedContent
       expanded: 'false'
@@ -48,7 +47,6 @@ html:
       toggle: collapse
     type: button
   github_button_iframe:
-    class: github-project-button
     allowtransparency: 'true'
     frameborder: 0
     scrolling: 'no'
@@ -60,7 +58,6 @@ html:
       src: 'https://platform.twitter.com/widgets.js'
       charset: 'utf-8'
     link:
-      class: twitter-timeline
       href: "https://twitter.com/4Quant?ref_src=twsrc%5Etfw"
       data:
         lang: en

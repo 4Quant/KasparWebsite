@@ -76,20 +76,3 @@ article.article#signup
           button.btn.btn-light type='submit' name='subscribe' Subscribe
 
 
-article.article#contact
-  .page-container
-    h1 Contact
-    .row.contact
-      .col-sm-6
-        iframe*data.site.company.google_map
-      .col-sm-6.contact--info
-        h2.contact--title Get in touch
-        div= mail_to(data.site.company.email)
-        h3.contact--subtitle Where
-        div
-          = data.site.company.name
-          br
-          = data.site.company.street
-          br
-          = "#{data.site.company.postal_code} #{data.site.company.city}"
-

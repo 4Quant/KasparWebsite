@@ -1,19 +1,22 @@
 .page-footer
   background: $c-main-background
-  padding: 2rem 1rem 1rem 1rem
-  color: lighten($c-jungle-green, 40%)
+  padding: 2rem 1rem 1rem
   text-align: center
 
-  +respond-to(md)
+  @include media-breakpoint-up(md)
+    font-size: .8rem
     text-align: left
-    font-size: 0.8rem
 
-  .page-container
+  .container
     border-top: 1px solid $c-article-separator-color
 
-  a, a:active, a:visited, a:hover
-    color: $c-evil-grey
-    text-decoration: underline
+  a
+    &,
+    &:active,
+    &:visited,
+    &:hover
+      color: $c-evil-grey
+      text-decoration: underline
 
   p
     font-size: 14px

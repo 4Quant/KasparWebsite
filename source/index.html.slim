@@ -3,24 +3,24 @@ title: 4Quant landing page claim - needs to be defined...
 ---
 
 article.article
-  .page-container
+  .container
     .row.hero
-      .col-sm-6.text-center.align-self-center
+      .col-md-6.text-center.align-self-center
         = image_tag(lorem.image('400x200', text: 'example image'), alt: 'Brain Image', class: 'hero--image')
-      .col-sm-6
+      .col-md-6
         h1.page-title= lorem.words 5
         p.subtitle= lorem.words 12
         p.mt-4
           iframe*data.site.html.github_button_iframe
 
 article.article
-  .page-container
+  .container
     a*data.site.html.twitter.link Tweets by 4Quant
 script*data.site.html.twitter.script
 
 
 acrticle.article
-  .page-container
+  .container
     h1 What people are saying about 4Quant
 
     blockquote.testimonial
@@ -28,21 +28,21 @@ acrticle.article
       p.testimonial--author Quality improvement program manager - Logistics
 
 acrticle.article
-  .page-container
+  .container
     .row
-      .col-sm-6
+      .col-md-6
         h1 Simple Image Annotation
         p Classify or segment images with your expert labeling team. Pre installed labeling interfaces support customizable single or multiple choice forms, bounding boxes, polygon, point and line tools.
 
-      .col-sm-6
+      .col-md-6
         = image_tag(lorem.image('300x300', text: 'example image'))
 
 article.article
-  .page-container
+  .container
     .row
-      .col-sm-6
+      .col-md-6
         = image_tag(lorem.image('470x470', text: 'example image'))
-      .col-sm-6
+      .col-md-6
         h1 Label Just About Anything
         p Our image labeling interfaces are open source.
         p= lorem.sentence + '.'
@@ -50,7 +50,7 @@ article.article
 
 
 article.article#signup
-  .page-container
+  .container
     .row.justify-content-center.align-items-center
       .col-sm-7
         h1 Newsletter

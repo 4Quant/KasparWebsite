@@ -3,16 +3,17 @@
   margin: 0
   padding: 0
 
-  .page-container
+  .container
     border-top: $v-article-separator-width solid $c-article-separator-color
     display: flex
     flex-direction: column
     justify-content: center
     min-height: 60vh
-    padding: 2.5rem 1rem
+    padding-bottom: 2.5rem
+    padding-top: 2.5rem
 
   &:first-child
-    .page-container
+    .container
       border-top: 0
 
   .row
@@ -21,15 +22,3 @@
       margin: .5rem auto
       max-width: 100%
 
-  .twitter-timeline
-    height: 80vh !important
-    margin-left: auto
-    margin-right: auto
-    width: 90% !important
-
-    +respond-to(md)
-      width: 80% !important
-
-    +respond-to(lg)
-      height: 60vh !important
-      width: 50% !important

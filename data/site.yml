@@ -68,6 +68,7 @@ html:
     frameborder: 0
     scrolling: 'no'
     src: https://buttons.github.io/buttons.html#href=https://github.com/4Quant/progressive_growing_of_gans&amp;title=&aria-label=Star%204Quant/progressive_growing_of_gans%20on%20GitHub&data-text=4Quant/progressive_growing_of_gans&data-size=large&data-show-count=false
+
   twitter:
     script:
       async: true

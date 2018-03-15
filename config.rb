@@ -58,7 +58,8 @@ end
 # Methods defined in the helpers block are available in templates
 helpers do
   def menu_link(key, section = :main, klass: nil)
-    link_to(*data.menu[section][key].values_at(:text, :url), class: klass)
+    item = data.menu[section][key]
+    link_to(*item.values_at(:text, :url), class: klass, target: item.target, title: item.title)
   end
 end
 

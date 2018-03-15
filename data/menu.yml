@@ -1,17 +1,23 @@
+# Links for the Header Menu
 main:
   medical_data_curation:
     text: 'Medical Data Curation'
     url: '/medical_data_curation'
+    title: 'Information about our Project'
   clinic_network:
     text: 'Clinic Network'
     url: '/clinic_network'
+    title: 'Specific title attribute information regarding clinic network'
   computer_aided_diagnostics:
     text: 'Computer Aided Diagnostics'
     url: '/computer_aided_diagnostics'
+    title: 'specific link title for computer aided diagnostics'
+
+# links that should not appear in the header menu
 other:
   research_and_development:
     text: Research & Development
-    url: '/research-and-development'
+    url: '/research_and_development'
   big_image_analytics:
     text: Big Image Analytics Platform
     url: '/big_image_analytics'
@@ -22,6 +28,8 @@ our_company:
   news: &jump-to-news
     text: News
     url: '/#news'
+
+# these are all only jump links for the index file
 index:
   medical_data_curation:
     text: Medical Data Curation

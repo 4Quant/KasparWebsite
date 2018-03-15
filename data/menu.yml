@@ -1,21 +1,47 @@
 main:
-  -
+  medical_data_curation:
     text: 'Medical Data Curation'
-    url: '#'
-  -
+    url: '/medical_data_curation'
+  clinic_network:
     text: 'Clinic Network'
-    url: '#'
-  -
+    url: '/clinic_network'
+  computer_aided_diagnostics:
     text: 'Computer Aided Diagnostics'
-    url: '#'
+    url: '/computer_aided_diagnostics'
 other:
-  -
+  research_and_development:
     text: Research & Development
-    url: '#'
+    url: '/research-and-development'
+  big_image_analytics:
+    text: Big Image Analytics Platform
+    url: '/big_image_analytics'
 our_company:
-  -
+  about:
     text: About
-    url: '#'
-  -
+    url: '/about'
+  news: &jump-to-news
     text: News
-    url: '#'
+    url: '/#news'
+index:
+  medical_data_curation:
+    text: Medical Data Curation
+    url: '/#medical-data-curation'
+  intro:
+    text: Intro
+    url: '/#intro'
+  footer:
+    text: Footer
+    url: '/#footer'
+  news: *jump-to-news
+  clinic_network:
+    text: Clinic Network
+    url: '/#clinic-network'
+  computer_aided_diagnostics:
+    text: LungStage
+    url: '/#computer-aided-diagnostics'
+  big_image_analytics:
+    text: Big Image Analytics Platform
+    url: '/#big-image-analytics'
+  social_proof:
+    text: Social Proof
+    url: '/#social-proof'

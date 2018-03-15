@@ -1,18 +1,18 @@
-footer.page-footer
+footer.page-footer#footer
   .container
     .row
       nav.col-sm-12.col-md-4
         h2 Our offering
         ul
-          - (data.menu.main + data.menu.other).each do |item|
-            li
-              = link_to item.text, item.url, title: item.title, target: item.target
+          - data.menu.main.keys.each do |key|
+            li= menu_link(key)
+          - data.menu.other.keys.each do |key|
+            li= menu_link(key, :other)
       nav.col-sm-12.col-md-8
         h2 Our company
         ul
-          - data.menu.our_company.each do |item|
-            li
-              = link_to item.text, item.url, title: item.title, target: item.target
+          - data.menu.our_company.keys.each do |key|
+            li= menu_link(key, :our_company)
       .col-sm-12.col-md-4
         p
           '#{data.site.company.name}

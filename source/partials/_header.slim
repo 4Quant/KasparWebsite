@@ -5,11 +5,9 @@ header.header.sticky-top
       span.navbar-toggler-icon
     .navbar-collapse.collapse.justify-content-end
       ul.navbar-nav
-        - data.menu.main.each do |item|
-          li.nav-item
-            = link_to item.text, item.url, class: 'nav-link', title: item.title, target: item.target
+        - data.menu.main.keys.each do |key|
+          li.nav-item= menu_link(key, klass: 'nav-link')
     .hamburger-nav
       ul.nav.flex-column
-        - data.menu.main.each do |item|
-          li.nav-item
-            = link_to item.text, item.url, class: 'nav-link', title: item.title, target: item.target
+        - data.menu.main.keys.each do |key|
+          li.nav-item= menu_link(key, klass: 'nav-link')

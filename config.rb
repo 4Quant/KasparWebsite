@@ -57,9 +57,8 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
-  def md_article(md_partial, slug = nil)
-    partial 'partials/article', locals: { markdown_file: "articles/_#{md_partial}.md",
-                                          slug: slug&.parameterize }
+  def menu_link(key, section = :main, klass: nil)
+    link_to(*data.menu[section][key].values_at(:text, :url), class: klass)
   end
 end
 

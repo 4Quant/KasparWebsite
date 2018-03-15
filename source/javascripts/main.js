@@ -1,12 +1,7 @@
-
-
 $(() => {
-  $('#dropdown-nav').on('shown.bs.collapse', () => {
-    $('#dropdown-nav').on('click', () => {
-      $('#dropdown-nav').collapse('hide');
-    });
-  });
-  $('#dropdown-nav').on('hidden.bs.collapse', () => {
-    $('#dropdown-nav').off('click');
-  });
+  const navToggler = $('header.header .navbar-toggler');
+  const mobileNav = $('header.header .hamburger-nav');
+  $(navToggler, mobileNav).on('click', () => toggleHamburger());
+
+  const toggleHamburger = () => mobileNav.toggleClass('hamburger-nav-open');
 });

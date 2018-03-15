@@ -13,6 +13,10 @@ main
   margin: 0
   padding: 0
 
+.github-project-button
+  border: 0
+  height: 28px
+  width: 263px
 
 .header
   background-color: $c-header-background
@@ -32,47 +36,31 @@ main
       display: inline-block
       width: $v-header-logo-width
 
-  .navbar-collapse
-    position: static
+  .nav-link
+    color: $c-a-color
+    cursor: pointer
+    font-size: 16px
+    font-weight: 400
+    text-decoration: underline
 
-    .nav-link
-      color: $c-silver-chalice
-      cursor: pointer
-      font-size: 16px
-      font-weight: 300
-      text-decoration: none
+    &:hover
+      color: $c-a-hover-color
 
-    @include media-breakpoint-down(md)
-      .navbar-nav
-        align-items: center
-        background-color: $c-transparent-grey
-        display: flex
-        justify-content: center
-        left: 0
-        padding-bottom: $v-header-height * .5
-        padding-top: $v-header-height * .5
-        position: absolute
-        top: $v-header-height
-        width: 100vw
+  .hamburger-nav
+    background-color: $c-transparent-white
+    left: 0
+    padding-bottom: $v-header-height * .5
+    padding-top: $v-header-height * .5
+    position: absolute
+    top: $v-header-height
+    transform: translate3d(0, -100%, 0)
+    transition: transform .7s
+    width: 100vw
+    z-index: -10
 
-      .nav-link
-        color: $c-white
-        font-weight: 400
+    @include media-breakpoint-up(lg)
+      display: none
 
-.twitter-timeline
-  height: 80vh !important
-  margin-left: auto
-  margin-right: auto
-  width: 90% !important
+  .hamburger-nav-open
+    transform: translate3d(0, 0, 0)
 
-  @include media-breakpoint-up(md)
-    width: 80% !important
-
-  @include media-breakpoint-up(lg)
-    height: 60vh !important
-    width: 50% !important
-
-.github-project-button
-  border: 0
-  height: 28px
-  width: 263px

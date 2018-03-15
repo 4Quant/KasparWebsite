@@ -22,3 +22,16 @@
       margin: .5rem auto
       max-width: 100%
 
+
+  .image-left-text-right
+    .col-md-6
+      &:first-child
+        @include media-breakpoint-up(md)
+          img
+            margin-left: 0
+
+        @include media-breakpoint-down(sm)
+          order: 13
+
+      &:nth-child(2)
+        padding-top: .5rem

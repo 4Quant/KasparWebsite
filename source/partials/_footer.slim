@@ -1,3 +1,22 @@
 footer.page-footer
   .container
-    p.text-center= "© 2018 #{data.site.company.name}"
+    .row
+      nav.col-sm-12.col-md-4
+        h2 Our offering
+        ul
+          - (data.site.links.main + data.site.links.other).each do |item|
+            li
+              = link_to item.text, item.url
+      nav.col-sm-12.col-md-8
+        h2 Our company
+        ul
+          - data.site.links.our_company.each do |item|
+            li
+              = link_to item.text, item.url
+      .col-sm-12.col-md-4
+        p
+          '#{data.site.company.name}
+          br
+          '#{data.site.company.street}
+          br
+          '#{data.site.company.postal_code} #{data.site.company.city}

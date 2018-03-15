@@ -1,13 +1,14 @@
-html
+html,
+body
   font-size: $v-base-font-size
   line-height: $v-base-line-height
 
   @include media-breakpoint-up(md)
-    font-size: $v-base-font-size * 1.1
+    font-size: $v-base-font-size * 1.2
 
   @include media-breakpoint-up(lg)
-    font-size: $v-base-font-size * 1.2
-    line-height: $v-base-line-height * 1.1
+    font-size: $v-base-font-size * 1.3
+    line-height: $v-base-line-height * 1.4
 
 html,
 body
@@ -16,7 +17,7 @@ body
 
 h1
   color: $c-dove-grey
-  font-size: 1.5625rem
+  font-size: 1.5rem
   font-weight: 700
   line-height: 1.15
   margin-top: .5rem
@@ -33,20 +34,19 @@ h1
 
 h2
   color: $c-h2-color
-  font-size: 1.2rem
+  font-size: 1.3rem
   font-weight: 500
   margin-top: .5rem
 
 h3
   color: $c-h3-color
-  font-size: 1.125rem
+  font-size: 1.15rem
   font-weight: 400
 
 p
   color: $c-dove-grey
-  font-size: 1.125
+  font-size: 1rem
   font-weight: 300
-  line-height: 1.7
   margin-bottom: .4rem
   margin-top: .25rem
 
@@ -56,7 +56,6 @@ p
 
     font-size: 1rem
     font-weight: 300
-    line-height: 1.5
 
   &.small
     font-size: .875rem

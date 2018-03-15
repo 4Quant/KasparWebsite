@@ -2,14 +2,14 @@ footer.page-footer#footer
   .container
     .row
       nav.col-sm-12.col-md-4
-        h2 Our offering
+        h1 Offering
         ul
           - data.menu.main.keys.each do |key|
             li= menu_link(key)
           - data.menu.other.keys.each do |key|
             li= menu_link(key, :other)
       nav.col-sm-12.col-md-8
-        h2 Our company
+        h1 Company
         ul
           - data.menu.our_company.keys.each do |key|
             li= menu_link(key, :our_company)
@@ -20,3 +20,5 @@ footer.page-footer#footer
           '#{data.site.company.street}
           br
           '#{data.site.company.postal_code} #{data.site.company.city}
+          br
+          '#{data.site.company.email}

@@ -3,14 +3,17 @@ image: ruby:2.5
 cache:
   paths:
     - vendor
+    - node_modules
 
 before_script:
+  - curl -sL https://deb.nodesource.com/setup_9.x | bash -
   - apt-get update -qy
   - apt-get install -y nodejs locales # middleman requires JS runtime
   - echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
   - locale-gen && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LANGUAGE=en
   - export LANG=en_US.UTF-8
   - export LC_ALL=en_US.UTF-8
+  - npm install --quiet --silent
   - bundle install --without development --path vendor
 
 pages:
@@ -18,6 +21,7 @@ pages:
     - export LANG=en_US.UTF-8
     - export LC_ALL=en_US.UTF-8
     - bundle exec middleman build
+    - mkdir build/javascripts && mv .tmp/dist/javascripts/main.bundle.js build/javascripts/
     - mv build/ public
   artifacts:
     paths:

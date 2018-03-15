@@ -61,6 +61,13 @@ helpers do
     item = data.menu[section][key]
     link_to(*item.values_at(:text, :url), class: klass, target: item.target, title: item.title)
   end
+
+  def news_paragraphs
+    Dir['source/news/*.html.md']
+      .map { |file| File.basename(file, '.html.md') }
+      .sort
+      .map { |file| [file, Date.parse(file)]}
+  end
 end
 
 # Build-specific configuration

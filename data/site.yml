@@ -37,38 +37,12 @@ options:
       property: og:locale
       content: *locale
 html:
-  nav_toggler:
-    aria:
-      controls: dropdown-nav
-      expanded: 'false'
-      label: Toggle navigation
-    data:
-      target: '#dropdown-nav'
-      toggle: collapse
-    type: button
-
   github_button_iframe:
     allowtransparency: 'true'
     frameborder: 0
     scrolling: 'no'
     src: https://buttons.github.io/buttons.html#href=https://github.com/4Quant/progressive_growing_of_gans&amp;title=&aria-label=Star%204Quant/progressive_growing_of_gans%20on%20GitHub&data-text=4Quant/progressive_growing_of_gans&data-size=large&data-show-count=false
 
-  twitter:
-    script:
-      async: true
-      src: 'https://platform.twitter.com/widgets.js'
-      charset: 'utf-8'
-    link:
-      href: "https://twitter.com/4Quant?ref_src=twsrc%5Etfw"
-      data:
-        lang: en
-        dnt: 'true'
-        hide_media: 'true'
-        height: 300
-        show-replies: 'false'
-        chrome: nofooter noborders transparent
-        aria:
-          polite: assertive
 team:
   trolese:
     email: ftrolese@4quant.com
@@ -79,3 +53,14 @@ team:
   hagger:
     email: ''
     name: 'Joachim Hagger'
+links:
+  main:
+    -
+      text: 'Medical Data Curation'
+      url: '#'
+    -
+      text: 'Clinic Network'
+      url: '#'
+    -
+      text: 'Computer Aided Diagnostics'
+      url: '#'

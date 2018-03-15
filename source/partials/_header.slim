@@ -1,11 +1,15 @@
 header.header.sticky-top
-  nav.container.navbar.navbar-expand-lg.navbar-light
+  nav.container.navbar.navbar-expand-lg.navbar-light.justify-content-between
     = link_to('#', class: 'navbar-brand') { image_tag('logo.png') }
-    button.navbar-toggler*data.site.html.nav_toggler
+    button.navbar-toggler.d-block.d-lg-none
       span.navbar-toggler-icon
-    #dropdown-nav.collapse.navbar-collapse.justify-content-end
+    .navbar-collapse.collapse.justify-content-end
       ul.navbar-nav
-        li.nav-item
-          a.nav-link href='#contact' Contact
-        li.nav-item
-          a.nav-link href='#team' Team
+        - data.site.links.main.each do |item|
+          li.nav-item
+            = link_to item.text, item.url, class: 'nav-link'
+    .hamburger-nav
+      ul.nav.flex-column
+        - data.site.links.main.each do |item|
+          li.nav-item
+            = link_to item.text, item.url, class: 'nav-link'

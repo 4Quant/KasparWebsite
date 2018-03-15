@@ -61,9 +61,12 @@ p
   &.small
     font-size: .875rem
 
-a, a:active, a:visited, a:hover
-  color: $c-a-color
-  text-decoration: underline
+a
+  &,
+  &:active,
+  &:visited
+    color: $c-a-color
+    text-decoration: underline
 
-a:hover
-  color: $c-a-hover-color
+  &:hover
+    color: $c-a-hover-color

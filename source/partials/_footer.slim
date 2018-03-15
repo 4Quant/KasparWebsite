@@ -4,13 +4,13 @@ footer.page-footer
       nav.col-sm-12.col-md-4
         h2 Our offering
         ul
-          - (data.site.links.main + data.site.links.other).each do |item|
+          - (data.menu.main + data.menu.other).each do |item|
             li
               = link_to item.text, item.url, title: item.title, target: item.target
       nav.col-sm-12.col-md-8
         h2 Our company
         ul
-          - data.site.links.our_company.each do |item|
+          - data.menu.our_company.each do |item|
             li
               = link_to item.text, item.url, title: item.title, target: item.target
       .col-sm-12.col-md-4

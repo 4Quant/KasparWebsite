@@ -1,0 +1,21 @@
+main:
+  -
+    text: 'Medical Data Curation'
+    url: '#'
+  -
+    text: 'Clinic Network'
+    url: '#'
+  -
+    text: 'Computer Aided Diagnostics'
+    url: '#'
+other:
+  -
+    text: Research & Development
+    url: '#'
+our_company:
+  -
+    text: About
+    url: '#'
+  -
+    text: News
+    url: '#'

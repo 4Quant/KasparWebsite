@@ -1,25 +1,3 @@
-links:
-  main:
-    -
-      text: 'Medical Data Curation'
-      url: '#'
-    -
-      text: 'Clinic Network'
-      url: '#'
-    -
-      text: 'Computer Aided Diagnostics'
-      url: '#'
-  other:
-    -
-      text: Research & Development
-      url: '#'
-  our_company:
-    -
-      text: About
-      url: '#'
-    -
-      text: News
-      url: '#'
 company:
   name: &company-name '4Quant Ltd.'
   claim: &company-claim 'Big Image Analytics'

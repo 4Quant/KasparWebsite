@@ -5,11 +5,11 @@ header.header.sticky-top
       span.navbar-toggler-icon
     .navbar-collapse.collapse.justify-content-end
       ul.navbar-nav
-        - data.site.links.main.each do |item|
+        - data.menu.main.each do |item|
           li.nav-item
             = link_to item.text, item.url, class: 'nav-link', title: item.title, target: item.target
     .hamburger-nav
       ul.nav.flex-column
-        - data.site.links.main.each do |item|
+        - data.menu.main.each do |item|
           li.nav-item
             = link_to item.text, item.url, class: 'nav-link', title: item.title, target: item.target

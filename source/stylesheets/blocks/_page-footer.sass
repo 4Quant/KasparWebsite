@@ -1,24 +1,23 @@
 .page-footer
-  background: $c-main-background
-  padding: 2rem 1rem 1rem
-  text-align: center
+  .container
+    border-top: $v-article-separator-width solid $c-article-separator-color
+    padding-bottom: 1rem
+    padding-top: 2rem
+
+  ul
+    list-style-position: outside
+    list-style-type: none
+    display: flex
+    flex-direction: column
+    padding-left: 0
+
+    li
+      flex: 0 0 auto
 
   @include media-breakpoint-up(md)
-    font-size: .8rem
-    text-align: left
+    nav
+      margin-bottom: 2rem
 
-  .container
-    border-top: 1px solid $c-article-separator-color
-
-  a
-    &,
-    &:active,
-    &:visited,
-    &:hover
-      color: $c-evil-grey
-      text-decoration: underline
-
-  p
-    font-size: 14px
+  h2
     font-weight: 400
-    line-height: 1.7
+    font-size: 1.1rem

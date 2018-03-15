@@ -13,11 +13,6 @@ main
   margin: 0
   padding: 0
 
-.github-project-button
-  border: 0
-  height: 28px
-  width: 263px
-
 .header
   background-color: $c-header-background
   border-bottom: $v-header-border-bottom-width solid $c-alabaster
@@ -36,24 +31,23 @@ main
       display: inline-block
       width: $v-header-logo-width
 
-  .nav-link
+  .navbar-light .navbar-nav .nav-link
     color: $c-a-color
     cursor: pointer
-    font-size: .9rem
     text-decoration: underline
 
     &:hover
       color: $c-a-hover-color
 
   .hamburger-nav
-    background-color: $c-transparent-white
+    background-color: $c-white
     left: 0
-    padding-bottom: $v-header-height * .5
-    padding-top: $v-header-height * .5
+    padding-bottom: $v-header-height * .25
+    padding-top: $v-header-height * .25
     position: absolute
     top: $v-header-height
     transform: translate3d(0, -100%, 0)
-    transition: transform .7s
+    transition: transform .5s
     width: 100vw
     z-index: -10
 

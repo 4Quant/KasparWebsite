@@ -39,13 +39,14 @@ options:
 html:
   nav_toggler:
     aria:
-      controls: navbarSupportedContent
+      controls: dropdown-nav
       expanded: 'false'
       label: Toggle navigation
     data:
-      target: '#navbarSupportedContent'
+      target: '#dropdown-nav'
       toggle: collapse
     type: button
+
   github_button_iframe:
     allowtransparency: 'true'
     frameborder: 0
@@ -68,3 +69,13 @@ html:
         chrome: nofooter noborders transparent
         aria:
           polite: assertive
+team:
+  trolese:
+    email: ftrolese@4quant.com
+    name: 'Flavio Trolese'
+  mader:
+    email: ''
+    name: 'Dr. Kevin Mader'
+  hagger:
+    email: ''
+    name: 'Joachim Hagger'

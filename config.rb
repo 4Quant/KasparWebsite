@@ -34,6 +34,13 @@ end
 
 activate :autoprefixer
 activate :sprockets
+ignore 'javascripts/main.js'
+
+activate :external_pipeline,
+  name: :webpack,
+  command: "./node_modules/webpack/bin/webpack.js --mode #{build? ? 'production --bail' : 'development --watch -d'}",
+  source: '.tmp/dist',
+  latency: 1
 
 activate :minify_css
 
@@ -70,6 +77,7 @@ configure :build do
     }
   end
 
+  ignore 'javascripts/*.js'
   activate :relative_assets
   set :relative_links, true
 end

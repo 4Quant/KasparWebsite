@@ -4,13 +4,12 @@
   padding: 0
 
   .container
-    border-top: $v-article-separator-width solid $c-article-separator-color
     display: flex
     flex-direction: column
     justify-content: center
     min-height: 60vh
-    padding-bottom: 2.5rem
-    padding-top: 2.5rem
+    padding-top: 1.5rem
+    padding-bottom: 5rem
 
     &>img
       margin-bottom: .5rem
@@ -29,7 +28,7 @@
   .text-left-image-right
     .col-md-6
       &:first-child
-        padding-top: .5rem
+        padding-top: 0
 
       &:last-child
         @include media-breakpoint-up(md)
@@ -47,7 +46,7 @@
           order: 13
 
       &:last-child
-        padding-top: .5rem
+        padding-top: 0
 
   .news
     h2
@@ -55,3 +54,5 @@
       font-weight: 400
       margin-bottom: .1rem
       margin-top: .5rem
+    h3
+      margin-bottom: 0

@@ -20,16 +20,13 @@ options:
       name: viewport
     -
       http-equiv: X-UA-Compatible
-      content: IE=edge"
+      content: IE=edge
     -
       name: description
       content: *description
     -
       name: keywords
       content: *keywords
-    -
-      http-equiv: content-language
-      content: *lang
     -
       property: og:description
       content: *description

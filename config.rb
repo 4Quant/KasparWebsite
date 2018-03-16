@@ -77,7 +77,7 @@ end
 
 # Build-specific configuration
 configure :build do
-  config[:host] = 'https://4quant.com'
+  config[:host] = 'https://4quant.gitlab.io/4quant.com/'
   activate :favicon_maker do |f|
     f.template_dir = 'source/images/'
     f.icons = {

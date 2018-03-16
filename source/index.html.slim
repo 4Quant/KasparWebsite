@@ -71,7 +71,7 @@ article.article#social-proof
 article.article#news
   .container.news
     h1 News
-    - news_paragraphs.each do |file_name, date|
+    - news_paragraphs[0..1].each do |file_name, date|
       h2= date.strftime('%d. %h %Y')
       = partial "news/#{file_name}.html.md", localized: { date: date }
 

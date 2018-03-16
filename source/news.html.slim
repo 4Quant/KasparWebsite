@@ -1,0 +1,9 @@
+---
+title: News
+---
+
+- news_paragraphs.each do |file_name, date|
+  article.article*{ id: file_name }
+    .container
+      p= date.strftime('%d. %h %Y')
+      = partial "news/#{file_name}.html.md", localized: { date: date }

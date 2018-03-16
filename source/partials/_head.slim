@@ -3,7 +3,6 @@ head
   title= page_title
   meta property="og:title" content=(page_title)
   meta property="og:url" content=("https://#{data.site.options.domain}/#{current_path != 'index.html' ? current_path : ''}")
-  / meta property="og:image" content=("https://#{data.site.options.domain}#{image_path(data.site.options.logo_file_name)}")
   - data.site.options.meta_tags.each do |attributes|
     meta*attributes
   = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700'
@@ -14,6 +13,7 @@ head
   - if current_page.data.carousel
     = stylesheet_link_tag :slick
     = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'
+    = javascript_include_tag :slick
   - if config[:environment] == :developmentre
     = favicon_tag '/favicon.ico'
     = favicon_tag '/favicon.png'

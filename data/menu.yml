@@ -25,12 +25,15 @@ our_company:
   about:
     text: About
     url: '/about'
-  news: &jump-to-news
+  news:
     text: News
-    url: '/#news'
+    url: '/news'
 
 # these are all only jump links for the index file
 index:
+  index:
+    text: Home
+    url: '/'
   medical_data_curation:
     text: Medical Data Curation
     url: '/#medical-data-curation'
@@ -40,7 +43,9 @@ index:
   footer:
     text: Footer
     url: '/#footer'
-  news: *jump-to-news
+  news:
+    text: News
+    url: '/#news'
   clinic_network:
     text: Clinic Network
     url: '/#clinic-network'

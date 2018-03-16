@@ -32,6 +32,7 @@ activate :google_analytics do |ga|
   ga.tracking_id = 'UA-xxx-xxx-xx'
 end
 
+activate :directory_indexes
 activate :autoprefixer
 activate :sprockets
 ignore 'javascripts/main.js'
@@ -65,7 +66,7 @@ helpers do
   def news_paragraphs
     Dir['source/news/*.html.md']
       .map { |file| File.basename(file, '.html.md') }
-      .sort
+      .sort.reverse
       .map { |file| [file, Date.parse(file)]}
   end
 end

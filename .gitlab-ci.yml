@@ -21,7 +21,7 @@ pages:
     - export LANG=en_US.UTF-8
     - export LC_ALL=en_US.UTF-8
     - bundle exec middleman build
-    - mkdir build/javascripts && cp source/javascripts/*.js build/javascripts/ && mv .tmp/dist/javascripts/main.bundle.js build/javascripts/
+    - mkdir build/javascripts && mv .tmp/dist/javascripts/main.bundle.js build/javascripts/
     - mv build/ public
   artifacts:
     paths:

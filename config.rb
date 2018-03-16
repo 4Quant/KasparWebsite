@@ -88,8 +88,8 @@ configure :build do
       ]
     }
   end
-
-  ignore 'javascripts/*.js'
+  ignore 'templates'
+  ignore 'javascripts/main.js'
   activate :relative_assets
   set :relative_links, true
 end

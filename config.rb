@@ -59,7 +59,11 @@ end
 # Methods defined in the helpers block are available in templates
 helpers do
   def menu_link(key, section = :main, klass: nil)
-    item = data.menu[section][key]
+    item = if section == :news
+             { text: key.to_s, url: "/news##{key}" }
+           else
+             data.menu[section][key]
+           end
     link_to(*item.values_at(:text, :url), class: klass, target: item.target, title: item.title)
   end
 

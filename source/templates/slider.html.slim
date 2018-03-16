@@ -6,7 +6,9 @@ carousel: true
 article.article#social-proof
   .container.text-center
     h1 What people are saying about us
-    .slicker-slider
+    / Pass slick options via data-slick='' html attribute in order to chang slicks behaviour
+    / http://kenwheeler.github.io/slick/ for documentation
+    .slicker-slider*{ data: { slick: '{"initialSlide": 1}' } }
       div
         blockquote
           p Hier möchten wir Aussagen zu unserem Tun der Herren (!) Stieltjes,  Müller (Henning), Harvey, Luke, Prevedello, Gays, Michalski, Stampanoni, Vorländer oder - Heitland abbilden. Im Stile von “4Quant hat hier und dort einen super Job gemacht”

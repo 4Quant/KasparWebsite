@@ -1,61 +1,40 @@
+$base-font-size: 20px
+$base-line-height: 1.5
+$base-font-weight: 400
+
 html,
 body
-  font-size: $v-base-font-size
-  line-height: $v-base-line-height
-
-  @include media-breakpoint-up(md)
-    font-size: $v-base-font-size * 1
-    line-height: $v-base-line-height * 1
+  color: $c-black
+  font-family: 'IBM Plex Sans', Helvetica, sans-serif
+  font-size: $base-font-size
+  font-weight: $base-font-weight
+  line-height: $base-line-height
 
   @include media-breakpoint-up(lg)
-    font-size: $v-base-font-size * 1.1
-    line-height: $v-base-line-height * 1.1
+    font-size: $base-font-size * 1.1
+    line-height: $base-line-height * 1.1
 
-html,
-body
-  font-family: ibm plex sans,Helvetica,sans-serif
+h1, h2, h3, h4, h5, p, li, dd, dt, td, blockquote
+  color: $c-black
 
 h1
-  color: $c-h1-color
   font-size: 2.6rem
   font-weight: 700
   line-height: 1.15
-  margin-top: 0.5rem
   margin-bottom: 1rem
-
-  &.page-title
-    font-size: 1.75rem
-    font-weight: 700
-    line-height: 1.1
-
-  &.reinforcement
-    font-size: 1.2rem
-    font-weight: 500
-    padding: 0 2rem
+  margin-top: .5rem
 
 h2
-  color: $c-h2-color
   font-size: 2rem
   font-weight: 700
 
 h3
-  color: $c-h3-color
   font-size: 1.15rem
   font-weight: 700
 
 p
-  color: $c-p-color
   font-size: 1rem
-  font-weight: 400
   margin-bottom: 1rem
-
-  &.subtitle
-    color: $c-mine-shaft
-    font-size: 1rem
-    font-weight: 400
-
-  &.small
-    font-size: .875rem
 
 .text-two-colums
   @include media-breakpoint-up(md)

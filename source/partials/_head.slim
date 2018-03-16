@@ -11,6 +11,9 @@ head
   = stylesheet_link_tag :site
   = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'
   = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'
+  - if current_page.data.carousel
+    = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css'
+    = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'
   - if config[:environment] == :developmentre
     = favicon_tag '/favicon.ico'
     = favicon_tag '/favicon.png'

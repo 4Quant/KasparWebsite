@@ -14,7 +14,7 @@ If you don't have this installed, recomended way is using Homebrew.
 Clone the repository using git, then run:
 
 ```
-$ bundle install
+$ bundle install && npm install
 ```
 
 ## Development
@@ -39,11 +39,11 @@ For https we are using Let's Encrypt service, which needs to be updated every fe
 
 Run this command and follow instructions:
 ```
-sudo certbot certonly -a manual -d aifirst.ch -d www.aifirst.ch -d ai-first.ch -d www.ai-first.ch
+sudo certbot certonly -a manual -d 4quant.com -d www.4quant.com
 ```
 
-When certificates are succesfully created, you need to add them on a github page here:
-https://gitlab.com/4quant/ai-first-website/pages
+When certificates are succesfully created, you need to add them on a gitlab page here:
+https://gitlab.com/4quant/4quant.com/pages
 
 ## Testing
 

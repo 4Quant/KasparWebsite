@@ -2,13 +2,28 @@
 title: Filling the gap in the data backbone of medical AI business
 ---
 
+article.article#test
+  .container
+    h1 Filling the gap in the data backbone of medical AI business
+    p Dies ist eine Intro zu 4Quant. In dieser Intro wird auf die drei Haupttätigkeitsfelder verweisen. Diese sind: #{menu_link(:medical_data_curation)}, #{menu_link(:clinic_network)} und #{menu_link(:computer_aided_diagnostics)}. Das Motto ist filling the gap in the data backbone of medical AI business.
+    p Das ist der Intro-Text zur Landingpage. Auf dieser Landingpage sind weiter unten die Tätigkeitsfelder #{menu_link(:medical_data_curation)}, #{menu_link(:clinic_network)} und #{menu_link(:computer_aided_diagnostics)} ganz knapp aufgeführt mit je einem Bildchen. Über das Menu oben und den Links im #{menu_link(:footer, :index)} navigiert man zu den Sub-Pages.
+
 article.article#intro
   .container
     h1 Filling the gap in the data backbone of medical AI business
-    h2 Ein H2 nur so zum Test
     .text-two-colums
       p Dies ist eine Intro zu 4Quant. In dieser Intro wird auf die drei Haupttätigkeitsfelder verweisen. Diese sind: #{menu_link(:medical_data_curation)}, #{menu_link(:clinic_network)} und #{menu_link(:computer_aided_diagnostics)}. Das Motto ist filling the gap in the data backbone of medical AI business.
       p Das ist der Intro-Text zur Landingpage. Auf dieser Landingpage sind weiter unten die Tätigkeitsfelder #{menu_link(:medical_data_curation)}, #{menu_link(:clinic_network)} und #{menu_link(:computer_aided_diagnostics)} ganz knapp aufgeführt mit je einem Bildchen. Über das Menu oben und den Links im #{menu_link(:footer, :index)} navigiert man zu den Sub-Pages.
+
+article.article#neuer-stil
+  .container
+    = menu_link(:medical_data_curation)
+    h1 So gefällt es viel besser als unten
+    .row.text-left-image-right
+      .col-md-6
+        p Hier möchten wir HICCAP als Plattform für Medical Data Curation in drei, vier Sätzen illustrieren. Das Bildchen rechts wird noch durch eines ersetzt, dass den Style-Guidelines von Immanuel, Stefan und Angela (den HSR Studenten) entspricht. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod aliquyam erat, sed diam voluptua.
+      .col-md-6
+        = image_tag('medical-data-curation.gif', alt: 'Medical Data Curation', class: 'img-fluid')
 
 article.article#medical-data-curation
   .container

@@ -14,7 +14,8 @@ body
     font-size: $base-font-size * 1.1
     line-height: $base-line-height * 1.1
 
-h1, h2, h3, h4, h5, p, li, dd, dt, td, blockquote
+h1, h2, h3, h4, h5, p, li, dd, dt, td, blockquote, a, a:active, a:hover, a:visited,
+input, button
   color: $c-black
 
 h1
@@ -41,12 +42,5 @@ p
     column-gap: 2rem
     columns: 2
 
-a
-  &,
-  &:active,
-  &:visited
-    color: $c-a-color
-    text-decoration: underline
-
-  &:hover
-    color: $c-a-hover-color
+a, a:active, a:hover, a:visited
+  text-decoration: underline

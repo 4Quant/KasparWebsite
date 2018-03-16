@@ -1,7 +1,7 @@
-$(() => {
-  const navToggler = $('header.header .navbar-toggler');
-  const mobileNav = $('header.header .hamburger-nav');
-  $(navToggler, mobileNav).on('click', () => toggleHamburger());
+import hamburger from './hamburger';
+import slider from './slider';
 
-  const toggleHamburger = () => mobileNav.toggleClass('hamburger-nav-open');
+$(() => {
+  hamburger();
+  slider('.slicker-slider');
 });

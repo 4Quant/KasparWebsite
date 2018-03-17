@@ -8,7 +8,7 @@ cache:
 before_script:
   - curl -sL https://deb.nodesource.com/setup_9.x | bash -
   - apt-get update -qy
-  - apt-get install -y nodejs locales # middleman requires JS runtime
+  - apt-get install -qy nodejs locales # middleman requires JS runtime
   - echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
   - locale-gen && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LANGUAGE=en
   - export LANG=en_US.UTF-8

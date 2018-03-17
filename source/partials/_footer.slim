@@ -1,18 +1,19 @@
 footer.page-footer#footer
   .container
     .row
-      nav.col-sm-12.col-md-4
+      nav.col-sm-12.col-md-5
         h1 Offering
         ul
-          - data.menu.main.keys.each do |key|
-            li= menu_link(key)
-          - data.menu.other.keys.each do |key|
-            li= menu_link(key, :other)
-      nav.col-sm-12.col-md-8
+          li = link_to 'Medical Data Curation', '/medical_data_curation'
+          li = link_to 'Clinic Network', '/clinic_network'
+          li = link_to 'Computer Aided Diagnostics', '/computer_aided_diagnostics'
+          li = link_to 'Research And Development', '/research_and_development'
+      nav.col-sm-12.col-md-7
         h1 Company
         ul
-          - data.menu.our_company.keys.each do |key|
-            li= menu_link(key, :our_company)
+          li= link_to 'Home', '#'
+          li= link_to 'About', '/about'
+          li= link_to 'News', '/news'
       .col-sm-12.col-md-4
         p
           '#{data.site.company.name}

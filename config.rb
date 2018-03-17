@@ -58,15 +58,6 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
-  def menu_link(key, section = :main, klass: nil)
-    item = if section == :news
-             { text: key.to_s, url: "/news##{key}" }
-           else
-             data.menu[section][key]
-           end
-    link_to(*item.values_at(:text, :url), class: klass, target: item.target, title: item.title)
-  end
-
   def news_paragraphs
     Dir['source/news/*.html.md']
       .map { |file| File.basename(file, '.html.md') }
@@ -77,7 +68,7 @@ end
 
 # Build-specific configuration
 configure :build do
-  config[:host] = 'https://4quant.gitlab.io/4quant.com/'
+  config[:host] = '/'
   activate :favicon_maker do |f|
     f.template_dir = 'source/images/'
     f.icons = {

@@ -9,12 +9,12 @@ article.article#intro
     h1 Das ist eine Intro
     h2 Und das?
     h3 Test
-    p Dies ist eine Intro zu 4Quant. In dieser Intro wird auf die drei Haupttätigkeitsfelder verweisen. Diese sind: #{menu_link(:medical_data_curation)}, #{menu_link(:clinic_network)} und #{menu_link(:computer_aided_diagnostics)}. Das Motto ist filling the gap in the data backbone of medical AI business.
-    p Das ist der Intro-Text zur Landingpage. Auf dieser Landingpage sind weiter unten die Tätigkeitsfelder #{menu_link(:medical_data_curation)}, #{menu_link(:clinic_network)} und #{menu_link(:computer_aided_diagnostics)} ganz knapp aufgeführt mit je einem Bildchen. Über das Menu oben und den Links im #{menu_link(:footer, :index)} navigiert man zu den Sub-Pages.
+    p Dies ist eine Intro zu 4Quant. In dieser Intro wird auf die drei Haupttätigkeitsfelder verweisen. Diese sind: Medical Data Curation}, Clinic Network und Computer Aided Diagnostics. Das Motto ist filling the gap in the data backbone of medical AI business.
+    p Das ist der Intro-Text zur Landingpage. Auf dieser Landingpage sind weiter unten die Tätigkeitsfelder MDA, CN und CADx ganz knapp aufgeführt mit je einem Bildchen. Über das Menu oben und den Links im Footer navigiert man zu den Sub-Pages.
 
 article.article#neuer-stil
   .container
-    = menu_link(:medical_data_curation)
+    = link_to 'Foo', '/foo'
     h1 Medical Data Curation At Its Best
     .row.text-left-image-right
       .col-md-8
@@ -24,7 +24,7 @@ article.article#neuer-stil
 
 article.article#clinic-network
   .container
-    = menu_link(:clinic_network)
+    = link_to 'Foo', '/foo'
     h1 International Clinic Network
     .row.image-left-text-right
       .col-md-4
@@ -34,7 +34,7 @@ article.article#clinic-network
 
 article.article#computer-aided-diagnostics
   .container
-    = menu_link(:computer_aided_diagnostics)
+    = link_to 'Foo', '/foo'
     h1 LungStage
     .row.text-left-image-right
       .col-md-8

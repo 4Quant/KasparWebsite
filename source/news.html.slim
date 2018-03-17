@@ -2,9 +2,6 @@
 title: News
 ---
 
-.container
-    h1.page-title News
-
 - news_paragraphs.each do |file_name, date|
   article.article*{ id: file_name }
     .container.news

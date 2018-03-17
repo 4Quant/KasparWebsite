@@ -5,6 +5,7 @@ footer.page-footer#footer
         h1 Offering
         ul.nav.flex-column
           = partial 'partials/header_nav'
+          li.nav-item= link_to 'Research And Development', '/research_and_development', class:'nav-link'
       nav.col-sm-12.col-md-7
         h1 Company
         ul.nav.flex-column
@@ -12,11 +13,8 @@ footer.page-footer#footer
           li.nav-item= link_to 'About', '/about', class:'nav-link'
           li.nav-item= link_to 'News', '/news', class:'nav-link'
       .col-sm-12.col-md-4
-        p
-          '#{data.site.company.name}
-          br
-          '#{data.site.company.street}
-          br
-          '#{data.site.company.postal_code} #{data.site.company.city}
-          br
-          '#{data.site.company.email}
+        markdown:
+          #{data.site.company.name}<br>
+          #{data.site.company.street}<br>
+          #{data.site.company.postal_code} #{data.site.company.city}<br>
+          #{data.site.company.email}

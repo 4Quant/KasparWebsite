@@ -14,6 +14,7 @@ $v-header-border-bottom-width: .06rem
   nav
     height: $v-header-height - $v-header-border-bottom-width
     position: relative
+    background-color: $c-white
 
     img
       display: inline-block
@@ -25,16 +26,17 @@ $v-header-border-bottom-width: .06rem
       color: $c-black
       cursor: pointer
       text-decoration: none
+      padding-left: 0
 
   .hamburger-nav
     background-color: $c-white
     left: 0
     padding-bottom: $v-header-height * .25
     padding-top: $v-header-height * .25
-    position: absolute
-    top: $v-header-height
+    position: fixed
+    top: $v-header-height - .5rem
     transform: translate3d(0, -100%, 0)
-    transition: transform .5s
+    transition: transform .3s
     visibility: hidden
     width: 100vw
     z-index: -10

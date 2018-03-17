@@ -21,10 +21,6 @@ page '/index.html', layout: :layout
 # We need to disable HAML warnings, since templating engine for HAML are setting some
 # settings, which are no longer available in HAML. More info here:
 # https://github.com/middleman/middleman/issues/2087
-Haml::TempleEngine.disable_option_validator!
-
-# General configuration
-set :haml, { format: :html5 }
 set :markdown_engine, :kramdown
 set :markdown, auto_ids: false
 
@@ -34,6 +30,36 @@ end
 
 activate :directory_indexes
 activate :autoprefixer
+
+activate :imageoptim do |options|
+  # Use a build manifest to prevent re-compressing images between builds
+  options.manifest = true
+
+  # Silence problematic image_optim workers
+  options.skip_missing_workers = true
+
+  # Cause image_optim to be in shouty-mode
+  options.verbose = true
+
+  # Setting these to true or nil will let options determine them (recommended)
+  options.nice = true
+  options.threads = true
+
+  # Image extensions to attempt to compress
+  options.image_extensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg']
+
+  # Compressor worker options, individual optimisers can be disabled by passing
+  # false instead of a hash
+  options.advpng    = { level: 4 }
+  options.gifsicle  = { interlace: false }
+  options.jpegoptim = { strip: ['all'], max_quality: 100 }
+  options.jpegtran  = { copy_chunks: false, progressive: true, jpegrescan: true }
+  options.optipng   = { level: 6, interlace: false }
+  options.pngcrush  = { chunks: ['alla'], fix: false, brute: false }
+  options.pngout    = { copy_chunks: false, strategy: 0 }
+  options.svgo      = {}
+end
+
 activate :sprockets
 ignore 'javascripts/main.js'
 
@@ -82,5 +108,6 @@ configure :build do
   ignore 'templates/*'
   ignore 'javascripts/main.js'
   activate :relative_assets
+  activate :gzip
   set :relative_links, true
 end

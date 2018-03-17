@@ -9,8 +9,8 @@ options:
   domain: &domain 4quant.com
   language: &lang en
   locale: &locale en_US
-  logo_file_name: &logo-file-name logo.png
-  description: &description Big Image Analytics
+  logo_file_name: logo.png
+  description: *company-claim
   keywords: &keywords Big Image Analytics,Deep Learning,TensorFlow,Keras,Annotation,Curation,Active Learning
   meta_tags:
     -
@@ -23,13 +23,13 @@ options:
       content: IE=edge
     -
       name: description
-      content: *description
+      content: *company-claim
     -
       name: keywords
       content: *keywords
     -
       property: og:description
-      content: *description
+      content: *company-claim
     -
       property: og:locale
       content: *locale

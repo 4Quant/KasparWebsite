@@ -2,7 +2,7 @@ head
   - page_title = "#{data.site.company.name} | #{current_page.data.title || data.site.company.claim}"
   title= page_title
   meta property="og:title" content=(page_title)
-  meta property="og:url" content=("https://#{data.site.options.domain}/#{current_path != 'index.html' ? current_path : ''}")
+  meta property="og:url" content=("https://#{data.site.options.domain}/#{current_path}")
   - data.site.options.meta_tags.each do |attributes|
     meta*attributes
   = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700'

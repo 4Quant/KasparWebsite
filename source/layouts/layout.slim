@@ -1,7 +1,7 @@
 doctype 5
 html lang=data.site.options.language
   = partial 'partials/head'
-  body
+  body*{ class: page_classes }
     = partial 'partials/header'
     main
       = yield

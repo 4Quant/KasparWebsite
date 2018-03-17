@@ -1,0 +1,8 @@
+- footer ||= false
+- unless footer
+  li.nav-item= link_to 'Home', '/', class:'nav-link'
+li.nav-item= link_to 'Medical Data Curation', '/medical_data_curation', class:'nav-link'
+li.nav-item= link_to 'Clinic Network', '/clinic_network', class:'nav-link', title: 'International Clinic Network'
+li.nav-item= link_to 'CADx', '/computer_aided_diagnostics', class:'nav-link', title: 'Computer Aided Diagnostics'
+- if footer
+  li.nav-item= link_to 'Research And Development', '/research_and_development', class:'nav-link'

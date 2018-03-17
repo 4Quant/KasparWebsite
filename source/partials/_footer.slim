@@ -4,8 +4,7 @@ footer.page-footer#footer
       nav.col-sm-12.col-md-5
         h1 Offering
         ul.nav.flex-column
-          = partial 'partials/header_nav'
-          li.nav-item= link_to 'Research And Development', '/research_and_development', class:'nav-link'
+          = partial 'partials/nav_items', locals: { footer: true }
       nav.col-sm-12.col-md-7
         h1 Company
         ul.nav.flex-column

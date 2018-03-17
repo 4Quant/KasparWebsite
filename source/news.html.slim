@@ -2,9 +2,11 @@
 title: News
 ---
 
+.container
+    h1.page-title News
+
 - news_paragraphs.each do |file_name, date|
   article.article*{ id: file_name }
     .container.news
       h2= date.strftime('%d. %h %Y')
-      .text-two-colums
-        = partial "news/#{file_name}.html.md", localized: { date: date }
+      = partial "news/#{file_name}.html.md", localized: { date: date }

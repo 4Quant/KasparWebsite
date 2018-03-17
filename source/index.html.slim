@@ -6,6 +6,9 @@ carousel: true
 article.article#intro
   .container
     h1.page-title Filling the gap in the data backbone of medical AI business
+    h1 Das ist eine Intro
+    h2 Und das?
+    h3 Test
     p Dies ist eine Intro zu 4Quant. In dieser Intro wird auf die drei Haupttätigkeitsfelder verweisen. Diese sind: #{menu_link(:medical_data_curation)}, #{menu_link(:clinic_network)} und #{menu_link(:computer_aided_diagnostics)}. Das Motto ist filling the gap in the data backbone of medical AI business.
     p Das ist der Intro-Text zur Landingpage. Auf dieser Landingpage sind weiter unten die Tätigkeitsfelder #{menu_link(:medical_data_curation)}, #{menu_link(:clinic_network)} und #{menu_link(:computer_aided_diagnostics)} ganz knapp aufgeführt mit je einem Bildchen. Über das Menu oben und den Links im #{menu_link(:footer, :index)} navigiert man zu den Sub-Pages.
 
@@ -14,9 +17,9 @@ article.article#neuer-stil
     = menu_link(:medical_data_curation)
     h1 Medical Data Curation At Its Best
     .row.text-left-image-right
-      .col-md-6
+      .col-md-8
         p Hier möchten wir HICCAP als Plattform für Medical Data Curation in drei, vier Sätzen illustrieren. Das Bildchen rechts wird noch durch eines ersetzt, dass den Style-Guidelines von Immanuel, Stefan und Angela (den HSR Studenten) entspricht. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod aliquyam erat, sed diam voluptua.
-      .col-md-6
+      .col-md-4
         = image_tag('medical-data-curation.gif', alt: 'Medical Data Curation', class: 'img-fluid')
 
 article.article#clinic-network
@@ -24,9 +27,9 @@ article.article#clinic-network
     = menu_link(:clinic_network)
     h1 International Clinic Network
     .row.image-left-text-right
-      .col-md-6
+      .col-md-4
         = image_tag('clinic-network.png', alt: 'International Clinic Network', class: 'img-fluid')
-      .col-md-6
+      .col-md-8
         p An zweiter Stelle präsentieren wir in knappen Worten unsere Datenallianz. Hier darf zum Beispiel beschrieben werden, dass wir durch diese Allianz raschen Zugang, sowohl zu Rohdaten, wie auch zu Partnern für die Kuratierung von klinischen Daten haben. Offen ist ob dieser Abschnitt nur aus Text bestehen soll, oder ob links z.B. eine Weltkarte illustriert werden soll.
 
 article.article#computer-aided-diagnostics
@@ -34,21 +37,11 @@ article.article#computer-aided-diagnostics
     = menu_link(:computer_aided_diagnostics)
     h1 LungStage
     .row.text-left-image-right
-      .col-md-6
+      .col-md-8
         p Lasst uns an dieser Stelle “LungStage” als ein  Beispiel für unsere Kompetenz im Bereich CAD-Entwicklung aufführen. Ganz im Sinne von eat your own dog food.
         p Es mag Sinn machen, LungStage als “World's first algorithm that detects lesions on PET/CT and characterizes them according to TNM.” vorzustellen.
-      .col-md-6
+      .col-md-4
         = image_tag('lung-stage.png', alt: 'LungStage', class: 'img-fluid')
-
-article.article#big-image-analytics
-  .container
-    = menu_link(:big_image_analytics, :other)
-    h1 Big Image Analytics Platform
-    .row.image-left-text-right
-      .col-md-6
-        = image_tag('big-image-analytics.png', alt: 'International Clinic Network', class: 'img-fluid')
-      .col-md-6
-        p Die Big Image Analytics Platform wird auf dieser Website vorerst stiefmütterlich behandelt - hier ist der einzige Abschnitt, in der sie Erwähnung findet. Das ist im moment auch kein Problem. Wir fokussieren uns für den Ersten Wurf der Website auf Inhalte, die für das Healthworks-Programm und unsere weiteren Fundraising- und Sales-Aktivitäten von Bedeutung sind.
 
 article.article#social-proof
   .container.text-center

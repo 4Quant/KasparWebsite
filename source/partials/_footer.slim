@@ -3,17 +3,14 @@ footer.page-footer#footer
     .row
       nav.col-sm-12.col-md-5
         h1 Offering
-        ul
-          li = link_to 'Medical Data Curation', '/medical_data_curation'
-          li = link_to 'Clinic Network', '/clinic_network'
-          li = link_to 'Computer Aided Diagnostics', '/computer_aided_diagnostics'
-          li = link_to 'Research And Development', '/research_and_development'
+        ul.nav.flex-column
+          = partial 'partials/header_nav'
       nav.col-sm-12.col-md-7
         h1 Company
-        ul
-          li= link_to 'Home', '#'
-          li= link_to 'About', '/about'
-          li= link_to 'News', '/news'
+        ul.nav.flex-column
+          li.nav-item= link_to 'Home', '/', class:'nav-link'
+          li.nav-item= link_to 'About', '/about', class:'nav-link'
+          li.nav-item= link_to 'News', '/news', class:'nav-link'
       .col-sm-12.col-md-4
         p
           '#{data.site.company.name}

@@ -4,7 +4,6 @@ cache:
   paths:
     - vendor
     - node_modules
-    - build
 
 before_script:
   - curl -sL https://deb.nodesource.com/setup_9.x | bash -
@@ -22,7 +21,7 @@ pages:
     - export LANG=en_US.UTF-8
     - export LC_ALL=en_US.UTF-8
     - bundle exec middleman build
-    - cp -Rf build/ public
+    - mv build/ public
   artifacts:
     paths:
     - public

@@ -7,10 +7,6 @@ $v-header-border-bottom-width: .06rem
   display: flex
   height: $v-header-height
   justify-content: center
-  // margin-right: -$grid-gutter-width * .5
-
-
-
 
   .navbar
     background-color: $c-white
@@ -18,36 +14,24 @@ $v-header-border-bottom-width: .06rem
     padding-left: $grid-gutter-width * .5
     padding-right: $grid-gutter-width * .5
 
-
-
-
-    // @include media-breakpoint-up(md)
-    //   max-width: map-get($container-max-widths, md)
-
-    // @include media-breakpoint-up(lg)
-    //   max-width: map-get($container-max-widths, lg)
-
-
     .navbar-brand
-      width: 6rem
-      flex: 0 0 6rem
       align-self: flex-start
+      flex: 0 0 6rem
+      width: 6rem
 
       img
         max-width: 100%
 
     .navbar
-      flex: 1 0 auto
       align-self: flex-end
+      flex: 1 0 auto
 
-    ul.navbar-nav
+    .navbar-nav
       @include media-breakpoint-down(md)
         display: none
 
       flex-direction: row
       justify-content: flex-end
-
-
 
   .nav-item
     .nav-link

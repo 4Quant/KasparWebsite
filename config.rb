@@ -52,7 +52,7 @@ activate :imageoptim do |options|
   # false instead of a hash
   options.advpng    = { level: 4 }
   options.gifsicle  = { interlace: false }
-  options.jpegoptim = { strip: ['all'], max_quality: 100 }
+  options.jpegoptim = { strip: ['all'], max_quality: 90 }
   options.jpegtran  = { copy_chunks: false, progressive: true, jpegrescan: true }
   options.optipng   = { level: 6, interlace: false }
   options.pngcrush  = { chunks: ['alla'], fix: false, brute: false }
@@ -61,6 +61,8 @@ activate :imageoptim do |options|
 end
 
 activate :sprockets
+sprockets.append_path "#{root}/node_modules/@ibm"
+sprockets.append_path "#{root}/node_modules"
 ignore 'javascripts/main.js'
 
 activate :external_pipeline,
@@ -69,7 +71,6 @@ activate :external_pipeline,
   source: '.tmp/dist',
   latency: 1
 
-activate :minify_css
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -107,7 +108,16 @@ configure :build do
   end
   ignore 'templates/*'
   ignore 'javascripts/main.js'
+  ignore 'javascripts/main.bundle.js'
+  activate :minify_css
+  activate :minify_javascript
   activate :relative_assets
   activate :gzip
   set :relative_links, true
+end
+
+# copy webpack built js file into build dir
+after_build do
+  system 'cp .tmp/dist/javascripts/main.bundle.js build/javascripts/'
+  system 'gzip -c .tmp/dist/javascripts/main.bundle.js > build/javascripts/main.bundle.js.gz'
 end

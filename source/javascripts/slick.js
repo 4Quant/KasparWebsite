@@ -1,3 +1,5 @@
+//= require slick-carousel/slick/slick.js
+
 $(function() {
   $('.slicker-slider').slick({
     dots: true,

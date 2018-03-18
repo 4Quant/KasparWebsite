@@ -146,7 +146,6 @@ GEM
     rack (2.0.4)
     rack-livereload (0.3.16)
       rack
-    rails-assets-bootstrap (4.0.0)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -180,7 +179,6 @@ DEPENDENCIES
   middleman-livereload
   middleman-pry
   middleman-sprockets (~> 4.0.0.rc)
-  rails-assets-bootstrap!
   slim
   tzinfo-data
   wdm

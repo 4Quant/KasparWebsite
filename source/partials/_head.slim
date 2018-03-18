@@ -8,10 +8,8 @@ head
   = stylesheet_link_tag :site
   - if current_page.data.carousel
     = stylesheet_link_tag :slick
-  - if config[:environment] == :developmentre
-    = favicon_tag '/favicon.ico'
-    = favicon_tag '/favicon.png'
-  - else
+  = favicon_tag '/favicon.png'
+  - if config[:environment] == :production
     = favicon_tag '/favicon.ico'
     = favicon_tag '/favicon.png'
     link href='/apple-touch-icon-precomposed.png' rel='apple-touch-icon-precomposed'

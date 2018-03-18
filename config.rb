@@ -118,6 +118,6 @@ end
 
 # copy webpack built js file into build dir
 after_build do
-  system 'cp .tmp/dist/javascripts/main.bundle.js build/javascripts/'
-  system 'gzip -c .tmp/dist/javascripts/main.bundle.js > build/javascripts/main.bundle.js.gz'
+  system 'cat .tmp/dist/javascripts/main.bundle.js >> build/javascripts/app.js'
+  system 'gzip -c build/javascripts/app.js > build/javascripts/app.js.gz'
 end

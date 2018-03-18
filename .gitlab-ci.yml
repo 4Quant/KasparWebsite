@@ -22,7 +22,6 @@ pages:
     - export LANG=en_US.UTF-8
     - export LC_ALL=en_US.UTF-8
     - bundle exec middleman build
-    - ls -lah public && ls -lah public/
     - cp -Rf build/ public
   artifacts:
     paths:

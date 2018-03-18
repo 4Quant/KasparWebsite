@@ -1,11 +1,10 @@
 header.header.sticky-top
-  nav.container.navbar.navbar-expand-lg.navbar-light.justify-content-between
+  nav.navbar.navbar-light.container
     = link_to('/', class: 'navbar-brand') { image_tag('logo.png') }
     button.navbar-toggler.d-block.d-lg-none
       span.navbar-toggler-icon
-    .navbar-collapse.collapse.justify-content-end
-      ul.navbar-nav
-        = partial 'partials/nav_items'
+    ul.navbar-nav
+      = partial 'partials/nav_items'
     .hamburger-nav
       ul.nav.flex-column.container
         = partial 'partials/nav_items'

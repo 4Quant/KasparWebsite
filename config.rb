@@ -68,17 +68,29 @@ helpers do
       .map { |file| [file, Date.parse(file)]}
   end
 
-  def picture(image, html: { class: nil, data: nil, alt: nil, id: nil })
+  def picture(image, lazy: false, html: { class: nil, data: nil, alt: nil, id: nil })
     path = image_path(image)
     tags = ''
-    tags += webp_source_tag(path) if config[:environment] == :production
-    tags += image_tag(image, alt: html[:alt], data: html[:data], class: html[:class])
-    content_tag(:picture, tags, class: html[:class], id: html[:id])
+    tags += webp_source_tag(path, lazy)
+    tags += if lazy
+              lazy_img(path, html)
+            else
+              image_tag(image, html)
+            end
+    content_tag(:picture, tags, html)
   end
 
-  def webp_source_tag(path)
+  def lazy_img(path, html)
+    tag(:img, data: { src: path }, class: html[:class], id: html[:id], alt: html[:alt])
+  end
+
+  def webp_source_tag(path, lazy)
     webp = "#{File.dirname(path)}/#{File.basename(path, File.extname(path))}.webp"
-    tag(:source, srcset: webp, type: 'image/webp') if config[:environment] == :production
+    if lazy
+      tag(:source, data: { srcset: webp }, type: 'image/webp')
+    else
+      tag(:source, srcset: webp, type: 'image/webp')
+    end
   end
 end
 

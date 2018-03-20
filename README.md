@@ -47,4 +47,4 @@ https://gitlab.com/4quant/4quant.com/pages
 
 ## Testing
 
-Go to https://4quant.gitlab.io/4quant.com/ after commit/merge
+Go to https://4quant.gitlab.io after commit/merge

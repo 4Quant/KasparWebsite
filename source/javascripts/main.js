@@ -1,6 +1,17 @@
 $(() => {
   hamburger();
+  slider();
 });
+
+const slider = () => {
+  $('.slicker-slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: false
+  });
+}
 
 const hamburger = () => {
   const navToggler = $('header.header .navbar-toggler');

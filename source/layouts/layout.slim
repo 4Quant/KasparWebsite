@@ -7,8 +7,6 @@ html lang=data.site.options.language
       = yield
     = partial 'partials/footer'
     = javascript_include_tag :app
-    - if current_page.data.carousel
-      = javascript_include_tag :slick
     - if config[:environment] == :development
      = javascript_include_tag 'main.bundle'
     = google_analytics_tag

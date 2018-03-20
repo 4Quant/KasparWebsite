@@ -130,6 +130,8 @@ GEM
     middleman-sprockets (4.0.0)
       middleman-core (~> 4.0)
       sprockets (>= 3.0)
+    middleman-webp (0.4.3)
+      middleman-core (~> 4.0)
     minitest (5.11.3)
     padrino-helpers (0.13.3.4)
       i18n (~> 0.6, >= 0.6.7)
@@ -179,6 +181,7 @@ DEPENDENCIES
   middleman-livereload
   middleman-pry
   middleman-sprockets (~> 4.0.0.rc)
+  middleman-webp
   slim
   tzinfo-data
   wdm

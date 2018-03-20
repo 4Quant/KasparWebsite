@@ -13,6 +13,7 @@ gem 'middleman-favicon-maker', '4.0.3'
 gem 'middleman-google-analytics', '~> 3.0'
 gem 'middleman-imageoptim', github: 'plasticine/middleman-imageoptim', branch: 'master'
 gem 'middleman-livereload'
+gem 'middleman-webp'
 gem 'middleman-pry'
 gem 'slim'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]

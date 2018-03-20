@@ -10,6 +10,9 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+page '/404.html', layout: false, directory_index: false
+page '/403.html', layout: false, directory_index: false
+
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 page '/index.html', layout: :layout
@@ -30,35 +33,8 @@ end
 
 activate :directory_indexes
 activate :autoprefixer
-
-activate :imageoptim do |options|
-  # Use a build manifest to prevent re-compressing images between builds
-  options.manifest = true
-
-  # Silence problematic image_optim workers
-  options.skip_missing_workers = true
-
-  # Cause image_optim to be in shouty-mode
-  options.verbose = true
-
-  # Setting these to true or nil will let options determine them (recommended)
-  options.nice = true
-  options.threads = true
-
-  # Image extensions to attempt to compress
-  options.image_extensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg']
-
-  # Compressor worker options, individual optimisers can be disabled by passing
-  # false instead of a hash
-  options.advpng    = { level: 4 }
-  options.gifsicle  = { interlace: false }
-  options.jpegoptim = { strip: ['all'], max_quality: 90 }
-  options.jpegtran  = { copy_chunks: false, progressive: true, jpegrescan: true }
-  options.optipng   = { level: 6, interlace: false }
-  options.pngcrush  = { chunks: ['alla'], fix: false, brute: false }
-  options.pngout    = { copy_chunks: false, strategy: 0 }
-  options.svgo      = {}
-end
+activate :relative_assets
+activate :webp
 
 activate :sprockets
 sprockets.append_path "#{root}/node_modules/@ibm"
@@ -91,6 +67,19 @@ helpers do
       .sort.reverse
       .map { |file| [file, Date.parse(file)]}
   end
+
+  def picture(image, html: { class: nil, data: nil, alt: nil, id: nil })
+    path = image_path(image)
+    tags = ''
+    tags += webp_source_tag(path) if config[:environment] == :production
+    tags += image_tag(image, alt: html[:alt], data: html[:data], class: html[:class])
+    content_tag(:picture, tags, class: html[:class], id: html[:id])
+  end
+
+  def webp_source_tag(path)
+    webp = "#{File.dirname(path)}/#{File.basename(path, File.extname(path))}.webp"
+    tag(:source, srcset: webp, type: 'image/webp') if config[:environment] == :production
+  end
 end
 
 # Build-specific configuration
@@ -111,7 +100,6 @@ configure :build do
   ignore 'javascripts/main.bundle.js'
   activate :minify_css
   activate :minify_javascript
-  activate :relative_assets
   activate :gzip
   set :relative_links, true
 end

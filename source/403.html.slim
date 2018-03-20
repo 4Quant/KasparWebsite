@@ -1,0 +1,14 @@
+doctype 5
+html lang=data.site.options.language
+  head
+    title #{data.site.company.name} | 403 - Forbidden
+    - data.site.options.meta_tags.each do |attributes|
+      meta*attributes
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400italic,500,500italic,600,700,700italic'
+    = stylesheet_link_tag :error
+  body
+    div
+      h1
+        span 403
+      p You don't seem to have access here...
+      p= link_to 'Take me back to the homepage', '/'

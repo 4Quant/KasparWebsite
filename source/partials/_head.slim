@@ -5,6 +5,7 @@ head
   meta property="og:url" content=("https://#{data.site.options.domain}/#{current_path}")
   - data.site.options.meta_tags.each do |attributes|
     meta*attributes
+  = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400italic,500,500italic,600,700,700italic'
   = stylesheet_link_tag :site
   - if current_page.data.carousel
     = stylesheet_link_tag :slick

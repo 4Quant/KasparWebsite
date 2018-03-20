@@ -33,8 +33,16 @@ end
 
 activate :directory_indexes
 activate :autoprefixer
-activate :relative_assets
-activate :webp
+
+activate :webp do |webp|
+  webp.conversion_options = {
+    '**/*.png' => { lossless: true },
+    '**/*.jpg' => { q: 100 },
+    '**/*.gif' => { lossy: true }
+  }
+  # webp.run_before_build = true
+  # webp.allow_skip = false
+end
 
 activate :sprockets
 sprockets.append_path "#{root}/node_modules/@ibm"
@@ -70,8 +78,7 @@ helpers do
 
   def picture(image, lazy: false, html: { class: nil, data: nil, alt: nil, id: nil })
     path = image_path(image)
-    tags = ''
-    tags += webp_source_tag(path, lazy)
+    tags = webp_source_tag(path, lazy)
     tags += if lazy
               lazy_img(path, html)
             else

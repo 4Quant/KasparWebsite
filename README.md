@@ -5,7 +5,8 @@ For project to succesfully run, you need to have already on your machine:
 - Git
 - Ruby
 - Bundler
-- node.js
+- node.js `brew install node`
+- webp `brew install webp --with-giflib`
 
 If you don't have this installed, recomended way is using Homebrew.
 

@@ -34,15 +34,8 @@ end
 activate :directory_indexes
 activate :autoprefixer
 
-activate :webp do |webp|
-  webp.conversion_options = {
-    '**/*.png' => { lossless: true },
-    '**/*.jpg' => { q: 100 },
-    '**/*.gif' => { lossy: true }
-  }
-  # webp.run_before_build = true
-  # webp.allow_skip = false
-end
+
+
 
 activate :sprockets
 sprockets.append_path "#{root}/node_modules/@ibm"
@@ -61,6 +54,16 @@ configure :development do
   config[:host] = 'http://localhost:4567'
   activate :livereload
   activate :pry
+
+  activate :webp do |webp|
+    webp.conversion_options = {
+      '**/*.png' => { lossless: true },
+      '**/*.jpg' => { q: 100 },
+      '**/*.gif' => { lossy: true }
+    }
+    webp.run_before_build = true
+    webp.allow_skip = false
+  end
 end
 
 ###
@@ -120,6 +123,15 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :gzip
+
+  activate :webp do |webp|
+    webp.conversion_options = {
+      '**/*.png' => { lossless: true },
+      '**/*.jpg' => { q: 100 },
+      '**/*.gif' => { lossy: true }
+    }
+    webp.allow_skip = false
+  end
   set :relative_links, true
 end
 

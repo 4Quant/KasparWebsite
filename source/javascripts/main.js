@@ -2,9 +2,6 @@ $(() => {
   hamburger();
   slider();
   loadLazyloader();
-  new LazyLoad({
-    elements_selector: 'picture source[type="image/webp"]'
-  });
 });
 
 
@@ -14,7 +11,14 @@ const loadLazyloader = () => {
     const s = d.createElement("script"); s.async = true;
     const v = !("IntersectionObserver" in w) ? "8.6.0" : "10.4.2";
     s.src = "https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/" + v + "/lazyload.min.js";
-    w.lazyLoadOptions = {}; // Your options here. See "recipes" for more information about async.
+    w.lazyLoadOptions = {
+      elements_selector: 'source[type="image/webp"],img'
+    };
+    s.addEventListener('load', () => {
+      var myLazyLoad = new LazyLoad({
+        elements_selector: 'source[type="image/webp"],img'
+      });
+    });
     b.appendChild(s);
   }(window, document));
 }

@@ -1,5 +1,5 @@
-import loadLazyloader from './loadLazyloader';
-import jumpWidthSmoothScroll from './jumpWidthSmoothScroll';
+import loadLazyloader from './inc/loadLazyloader';
+import jumpWidthSmoothScroll from './inc/jumpWidthSmoothScroll';
 
 $(() => {
   hamburger();

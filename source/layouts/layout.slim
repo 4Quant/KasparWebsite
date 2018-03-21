@@ -8,5 +8,7 @@ html lang=data.site.options.language
     = partial 'partials/footer'
     = javascript_include_tag :app
     - if config[:environment] == :development
-     = javascript_include_tag 'main.bundle'
-    = google_analytics_tag
+      = javascript_include_tag 'main.bundle'
+
+    / Google Analytics tag to be uncomented when tracking id configured
+    / = google_analytics_tag

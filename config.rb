@@ -27,9 +27,11 @@ page '/index.html', layout: :layout
 set :markdown_engine, :kramdown
 set :markdown, auto_ids: false
 
-activate :google_analytics do |ga|
-  ga.tracking_id = 'UA-xxx-xxx-xx'
-end
+# Enable Google Analytics: Replace 'UA-xxx-xxx-xx' with your google tracking id
+#
+# activate :google_analytics do |ga|
+#   ga.tracking_id = 'UA-xxx-xxx-xx'
+# end
 
 activate :directory_indexes
 activate :autoprefixer

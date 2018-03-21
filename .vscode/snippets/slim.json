@@ -1,22 +1,27 @@
 {
 	"Article 2 col - image left text right": {
 		"prefix": "article-img-left-text-right",
-		"body": "article.article$1\n  .container\n    / Note: Only one h1 element per <article> element is valid\n    h1 $2\n    .row.image-left-text-right\n      .col-md-6\n        = image_tag($3, alt: 'example image', class: 'img-fluid')\n      .col-md-6\n        p $0",
+    "body": "article.article\n  .container\n    h1 $0\n    .row.image-left-text-right\n      .col-md-6\n        = image_tag($1, alt: '$2', class: 'img-fluid')\n      .col-md-6\n        p $0\n\n",
 		"description": "Article element with two columns and image to the left and text to the right"
   },
 	"Article with slider": {
 		"prefix": "article-slider",
-		"body": "article.article$1\n    .container.text-center\n      h1 $2\n      .slicker-slider*{ data: { slick: '{}' } }\n        div\n          $3\n        div\n          $0",
+    "body": "article.article$1\n  .container.text-center\n    h1 $2\n    .slicker-slider*{ data: { slick: '{}' } }\n      div\n        p $3\n      div\n        p $0\n",
 		"description": "Article element with slider on the inside"
 	},
 	"Article 2 col - text left image right": {
 		"prefix": "article-text-left-image-right",
-		"body": "article.article\n    .container\n      h1 $1\n      .row.text-left-image-right\n        .col-md-6\n          p $0\n        .col-md-6\n          = image_tag($2, alt: '$3', class: 'img-fluid')",
+    "body": "article.article\n  .container\n    h1 $1\n    .row.text-left-image-right\n      .col-md-6\n        p $0\n      .col-md-6\n        = image_tag($2, alt: '$3', class: 'img-fluid')\n\n",
 		"description": "Article element with two columns and image to the right and text to the left"
   },
 	"Text short and wide image after": {
 		"prefix": "article-short-text-image-after",
-		"body": "article.article\n    .container\n      h1 $3\n      p $0\n  \n      = image_tag('$1', alt: '$2', class: 'img-fluid')\n",
+    "body": "article.article\n  .container\n    h1 $3\n    p $0\n\n    = image_tag('$1', alt: '$2', class: 'img-fluid')\n\n",
 		"description": "Article element with title and short text. Then a wide image at the bottom."
+  },
+	"Article with markdown part": {
+		"prefix": "article-with-markdown",
+    "body": "article.article\n  .container\n    markdown:\n      $0\n\n",
+		"description": "Article element with markdown interpreting section"
   }
 }

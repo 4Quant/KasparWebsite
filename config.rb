@@ -1,20 +1,10 @@
 require 'slim'
-###
-# Page options, layouts, aliases and proxies
-###
+# Per-page layout changes
+['/*.xml', '/*.json', '/*.txt'].each { |file| page file, layout: false }
 
-# Per-page layout changes:
-#
-# With no layout
-page '/*.xml', layout: false
-page '/*.json', layout: false
-page '/*.txt', layout: false
-
-page '/404.html', layout: false, directory_index: false
-page '/403.html', layout: false, directory_index: false
+['/404.html', '/403.html'].each { |file| page file, layout: false, directory_index: false }
 
 page '/index.html', layout: :layout
-
 
 set :markdown_engine, :kramdown
 set :markdown, auto_ids: false
@@ -25,22 +15,23 @@ set :markdown, auto_ids: false
 #   ga.tracking_id = 'UA-xxx-xxx-xx'
 # end
 
-activate :directory_indexes
-activate :autoprefixer
+[:directory_indexes, :autoprefixer, :sprockets].each { |extension| activate extension }
 
-activate :sprockets
-sprockets.append_path "#{root}/node_modules/@ibm"
-sprockets.append_path "#{root}/node_modules"
-ignore 'javascripts/main.js'
+["#{root}/node_modules/@ibm", "#{root}/node_modules"].each { |path| sprockets.append_path path }
 
+['javascripts/main.js', 'javascripts/inc/*'].each { |file| ignore file }
+
+webpack_command = {
+  production: 'production --bail',
+  development: 'development --watch -d'
+}
 activate :external_pipeline,
   name: :webpack,
-  command: "./node_modules/webpack/bin/webpack.js --mode #{build? ? 'production --bail' : 'development --watch -d'}",
+  command: "./node_modules/webpack/bin/webpack.js --mode #{webpack_command[config[:environment]]}",
   source: '.tmp/dist',
   latency: 1
 
 
-# Reload the browser automatically whenever files change
 configure :development do
   config[:host] = 'http://localhost:4567'
   activate :livereload
@@ -61,7 +52,6 @@ end
 # Helpers
 ###
 
-# Methods defined in the helpers block are available in templates
 helpers do
   def news_paragraphs
     Dir['source/news/*.html.md']
@@ -75,17 +65,19 @@ helpers do
   # lazy: true => enables lazy loading for the image
   def picture(image, lazy: false, html: { class: nil, data: nil, alt: nil, id: nil })
     path = image_path(image)
-    tags = webp_source_tag(path, lazy)
-    tags += if lazy
-              lazy_img(path, html)
-            else
-              image_tag(image, html)
-            end
-    content_tag(:picture, tags, html)
+    content_tag(
+      :picture,
+      "#{webp_source_tag(path, lazy)}#{custom_image_tag(image, path, html, lazy)}",
+      html
+    )
   end
 
-  def lazy_img(path, html)
-    tag(:img, data: { src: path }, class: html[:class], id: html[:id], alt: html[:alt])
+  def custom_image_tag(image, path, html, lazy = false)
+    if lazy
+      tag(:img, data: { src: path }, class: html[:class], id: html[:id], alt: html[:alt])
+    else
+      image_tag(image, html)
+    end
   end
 
   def webp_source_tag(path, lazy)
@@ -98,7 +90,6 @@ helpers do
   end
 end
 
-# Build-specific configuration
 configure :build do
   config[:host] = 'https://4quant.gitlab.io'
   activate :favicon_maker do |f|
@@ -121,12 +112,12 @@ configure :build do
     webp.allow_skip = false
   end
 
-  ignore 'templates/*'
-  ignore 'javascripts/main.js'
-  ignore 'javascripts/main.bundle.js'
-  activate :minify_css
-  activate :minify_javascript
-  activate :gzip
+  [
+    'templates/*', 'javascripts/main.js', 'javascripts/main.bundle.js', 'javascripts/inc/*'
+  ].each do |file|
+    ignore file
+  end
+  [:minify_css, :minify_javascript, :gzip].each { |extension| activate extension }
 
   set :relative_links, true
 end

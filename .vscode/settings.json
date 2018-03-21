@@ -1,0 +1,10 @@
+{
+  // "files.exclude": {
+  //   "**/.{DS_Store,keep}": true,
+  //   "{node_modules,vendor,build,config.rb,package.json,webpack.config.js,package-lock.json,Gemfile*,README.md}": true,
+  //   "source/fonts": true,
+  //   "source/{fonts,stylesheets,javscripts,partials,javascripts,layouts,news.html.slim,404.html.slim,403.html.slim}": true,
+  //   "source/images/ajax-loader.gif": true,
+  //   ".{vscode,sass-cache,gitlab,gitlab-ci.yml,rubocop.yml,uby-version,tmp,git,ruby-version,babelrc,editorconfig,gitignore}": true
+  // }
+}

@@ -53,13 +53,6 @@ end
 ###
 
 helpers do
-  def news_paragraphs
-    Dir['source/news/*.html.md']
-      .map { |file| File.basename(file, '.html.md') }
-      .sort.reverse
-      .map { |file| [file, Date.parse(file)]}
-  end
-
   # picture tag for webp images with fallback to img
   #
   # lazy: true => enables lazy loading for the image

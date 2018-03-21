@@ -13,17 +13,9 @@ page '/*.txt', layout: false
 page '/404.html', layout: false, directory_index: false
 page '/403.html', layout: false, directory_index: false
 
-# With alternative layout
-# page "/path/to/file.html", layout: :otherlayout
 page '/index.html', layout: :layout
 
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
-#  which_fake_page: "Rendering a fake page with a local variable" }
 
-# We need to disable HAML warnings, since templating engine for HAML are setting some
-# settings, which are no longer available in HAML. More info here:
-# https://github.com/middleman/middleman/issues/2087
 set :markdown_engine, :kramdown
 set :markdown, auto_ids: false
 
@@ -35,9 +27,6 @@ set :markdown, auto_ids: false
 
 activate :directory_indexes
 activate :autoprefixer
-
-
-
 
 activate :sprockets
 sprockets.append_path "#{root}/node_modules/@ibm"
@@ -111,7 +100,7 @@ end
 
 # Build-specific configuration
 configure :build do
-  config[:host] = '/'
+  config[:host] = 'https://4quant.gitlab.io'
   activate :favicon_maker do |f|
     f.template_dir = 'source/images/'
     f.icons = {
@@ -122,12 +111,6 @@ configure :build do
       ]
     }
   end
-  ignore 'templates/*'
-  ignore 'javascripts/main.js'
-  ignore 'javascripts/main.bundle.js'
-  activate :minify_css
-  activate :minify_javascript
-  activate :gzip
 
   activate :webp do |webp|
     webp.conversion_options = {
@@ -137,6 +120,14 @@ configure :build do
     }
     webp.allow_skip = false
   end
+
+  ignore 'templates/*'
+  ignore 'javascripts/main.js'
+  ignore 'javascripts/main.bundle.js'
+  activate :minify_css
+  activate :minify_javascript
+  activate :gzip
+
   set :relative_links, true
 end
 

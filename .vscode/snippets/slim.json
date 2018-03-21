@@ -23,5 +23,10 @@
 		"prefix": "article-with-markdown",
     "body": "article.article\n  .container\n    markdown:\n      $0\n\n",
 		"description": "Article element with markdown interpreting section"
+  },
+	"Page Title front matter": {
+		"prefix": "title-front-matter",
+    "body": "---\ntitle: $0\n---\n\n",
+		"description": "Configer your pages title"
   }
 }

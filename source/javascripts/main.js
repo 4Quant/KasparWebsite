@@ -1,8 +1,11 @@
 import loadLazyloader from './loadLazyloader';
+import jumpWidthSmoothScroll from './jumpWidthSmoothScroll';
+
 $(() => {
   hamburger();
   slider();
   loadLazyloader();
+  jumpWidthSmoothScroll();
 });
 
 const slider = () => {

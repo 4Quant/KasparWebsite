@@ -81,6 +81,9 @@ helpers do
       .map { |file| [file, Date.parse(file)]}
   end
 
+  # picture tag for webp images with fallback to img
+  #
+  # lazy: true => enables lazy loading for the image
   def picture(image, lazy: false, html: { class: nil, data: nil, alt: nil, id: nil })
     path = image_path(image)
     tags = webp_source_tag(path, lazy)

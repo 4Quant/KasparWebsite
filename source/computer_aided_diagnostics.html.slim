@@ -1,5 +1,89 @@
+---
+title: Computer Aided Diagnostics
+---
 
 article.article
+  .container.text-center
+    h1.page-title Computer-aided Diagnostics
+    p Computer-aided diagnostics solutions are systems that assist doctors in the interpretation of medical images. Imaging techniques in X-ray, MRI, and ultrasound diagnostics yield a great deal of information that the radiologist or other medical professional has to analyze and evaluate comprehensively in a short time.
+    p CAD systems process digital images for typical appearances and to highlight conspicuous sections, such as possible diseases, in order to offer input to support a decision taken by the professional.
+    = image_tag(lorem.image('1300x400'), alt: 'wide image below text', class: 'img-fluid')
+
+
+article.article
+  .container
+    h1 LungStage
+    hr
+    p 4Quant's LungStage is a CAD software product to assist radiologists and nuclear medicine physicians in the interpretation of medical images and taking decisions. LungStage computes an overview of cancerous regions of interest in the image and computes a TNM staging classification supported by a clearly delineated set of rules based on objective and quantitative data. Thus, the physicians save time creating their reports and preparing materials for discussion in the tumor board.
+    p LungStage speeds up the staging process by a factor of 10, leads to less mis-diagnoses (higher sensitivity and specificity) and provides higher QALY for the patient.
+
+article.article
+  .container
+    h2 Lesion detection
+    .row.text-left-image-right
+      .col-md-6
+        p Foo bar
+      .col-md-6
+        = image_tag(lorem.image('500x500'), alt: 'example image', class: 'img-fluid')
+
+article.article
+  .container
+    h2 Lesion classification
+    .row.image-left-text-right
+      .col-md-6
+        = image_tag(lorem.image('500x500'), alt: 'example image', class: 'img-fluid')
+      .col-md-6
+        p Foo bar
+
+article.article
+  .container
+    h2 TNM Staging
+    .row.text-left-image-right
+      .col-md-6
+        p Foo bar
+      .col-md-6
+        = image_tag(lorem.image('500x500'), alt: 'example image', class: 'img-fluid')
+
+
+article.article
+  .container
+    h1 Chronic obstructive pulmonary disease analytics
+    hr
+    .row.text-left-image-right
+      .col-md-8
+        p Modality: Chest CT or Whole Body CT
+        p 204,800 images from 3 countries and 3 manufacturers
+        p Collected data to build COPD algorithms requiring segmentation of lungs and quantification of disease progress.
+      .col-md-4
+        = image_tag(lorem.image('500x800'), alt: 'example image', class: 'img-fluid')
+
+article.article
+  .container
+    h1 Nasopharynx cancer staging (NPC)
+    hr
+    .row.image-left-text-right
+      .col-md-4
+        = image_tag(lorem.image('500x600'), alt: 'example image', class: 'img-fluid')
+      .col-md-8
+        p Modality: Diffusion Weighted MRI
+        p 200 patients and 137,000 images
+        p Collected spatial and patient level information on the lesions and staging for nasopharyngeal cancer patients.
+
+article.article
+  .container
+    h1 Osteoporosis and Fracture Risk
+    hr
+    .row.text-left-image-right
+      .col-md-8
+        p Modality: Musculoskeletal Radiographs, CT
+        p 300,000 images, 2,300 patients
+        p To evaluate if bone density derived from large scale routinely acquired CTs can be used as predictive marker for osteoporotic fractures and included within a clinical diagnostic routine.
+      .col-md-4
+        = image_tag(lorem.image('500x800'), alt: 'example image', class: 'img-fluid')
+
+
+
+/article.article
   .container
     h1.page-title Computer Aided Diagnostics
     h1 Intro zu Computer Aided Diagnostics
@@ -8,7 +92,7 @@ article.article
       Kurzbeschreibung LungStage, Aufzeichnen was Kurzbeschreibung LungStage, Aufzeichnen was Kurzbeschreibung LungStage, Aufzeichnen was Kurzbeschreibung LungStage, Aufzeichnen was Kurzbeschreibung LungStage, Aufzeichnen was Kurzbeschreibung LungStage, Aufzeichnen was Kurzbeschreibung LungStage, Aufzeichnen was Kurzbeschreibung LungStage, Aufzeichnen was Kurzbeschreibung LungStage, Aufzeichnen was        Kurzbeschreibung LungStage, Aufzeichnen was AI für CAD sonst noch für Potential hat ... Image post-processing, Image synthesis, Triage, Hanging protocols, Image registration, Temporal comparisons, Segmentation, Detection, Quantification, Classification, Prediction, Structured reporting, Decision making, ….
       [Envoy AI](https://www.envoyai.com/partners/4quant)
 
-article.article#intro-raw-data-to-cad
+/article.article#intro-raw-data-to-cad
   .container
     .row.image-left-text-right
       .col-md-4
@@ -19,13 +103,13 @@ article.article#intro-raw-data-to-cad
 
           4Quant deckt die gesamt Arbeitskette ab für die Entwicklung neuer CAD Lösungen mit superpowers. Unsere Partnerkliniken liefern die Daten. Unsere Kurationstools werten diese auf. Wir entwickeln mit Ihnen die Algorithmen und unsere Vertriebspartner integrieren sie und so weiter und so fort. Filling the gap in the data backbone of medical AI business.
 
-article.article#lungstage
+/article.article#lungstage
   .container
     h1 LungStage
     markdown:
       Ein paar Worte zu LungStage. Wieso nicht eine Prosa-Einführung und später dann auch noch Querverweise zu Präsentationen, Abstracts und so weiter hinzufügen? Nicht vergessen dürfen wir unsere Freunde am USB zu erwähnen und alle anderen die das Projekt unterstützt haben. So auch nnoSuisse und Gabor beispielsweise. Wär auch schön die Teammitglieder zu nennen.
 
-article.article#lungstage-lesion-detection
+/article.article#lungstage-lesion-detection
   .container
     .row.image-left-text-right
       .col-md-4
@@ -33,29 +117,23 @@ article.article#lungstage-lesion-detection
       .col-md-8
         markdown:
           ## Lesion detection
-
           Ein paar Worte zu lesion detection. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod aliquyam erat, sed diam voluptua.
-
           At vero eos et accusam et justo duo dolores et ea rebum.
-
           Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-article.article#lungstage-lesion-characterization
+/article.article#lungstage-lesion-characterization
   .container
     .row.text-left-image-right
       .col-md-8
         markdown:
           ## Lesion characterization
-
           Ein paar Worte zu lesion characterization. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod aliquyam erat, sed diam voluptua.
-
           At vero eos et accusam et justo duo dolores et ea rebum.
-
           Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
       .col-md-4
         = image_tag(lorem.image('500x500'), alt: 'example image', class: 'img-fluid')
 
-article.article#lungstage-tnm-staging
+/article.article#lungstage-tnm-staging
   .container
     .row.image-left-text-right
       .col-md-4
@@ -63,36 +141,29 @@ article.article#lungstage-tnm-staging
       .col-md-8
         markdown:
           # TNM Staging
-
           Ein paar Worte zu lesion detection. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod aliquyam erat, sed diam voluptua.
-
           At vero eos et accusam et justo duo dolores et ea rebum.
-
           Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-
-article.article#projekte
+/article.article#projekte
   .container
     h1 Weitere CAD-Algorithmen von 4Quant
     markdown:
       Wir haben auch Algorithmen für COPD und NPC entwickelt. Gerne bauen wir auch für Sie einen flotten Algorithmus. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 
-article.article#projekte-copd
+/article.article#projekte-copd
   .container
     .row.text-left-image-right
       .col-md-8
         markdown:
           # COPD
-
-          ür COPD haben wir einen ganz guten Algorithmus gebaut. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod aliquyam erat, sed diam voluptua.
-
+          Für COPD haben wir einen ganz guten Algorithmus gebaut. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod aliquyam erat, sed diam voluptua.
           At vero eos et accusam et justo duo dolores et ea rebum.
-
           Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
       .col-md-4
         = image_tag(lorem.image('500x500'), alt: 'example image', class: 'img-fluid')
 
-article.article#projekte-npc
+/article.article#projekte-npc
   .container
     .row.image-left-text-right
       .col-md-4
@@ -100,10 +171,6 @@ article.article#projekte-npc
       .col-md-8
         markdown:
           # Nasopharyngeal Cancer
-
           NPC war auch sehr interessant bla bla. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod aliquyam erat, sed diam voluptua.
-
           At vero eos et accusam et justo duo dolores et ea rebum.
-
           Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-

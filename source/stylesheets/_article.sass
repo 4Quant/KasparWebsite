@@ -14,15 +14,17 @@
       margin-bottom: .5rem
       margin-top: .5rem
 
-  &:first-child
-    .container
-      border-top: 0
 
   &:nth-child(even)
-    background-color: $c-mine-shaft-dark
+    background-color: $c-black
 
   &:nth-child(odd)
-    background-color: $c-black
+    background-color: $c-mine-shaft-dark
+
+  &:first-child
+    background-color: $c-real-black
+    .container
+      border-top: 0
 
   .row
     img

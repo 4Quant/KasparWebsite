@@ -1,14 +1,14 @@
 .article
   margin: 0
-  min-height: 45vw
   padding: 0
 
   .container
     display: flex
     flex-direction: column
     justify-content: center
+    min-height: 45vw
     padding-bottom: 3rem
-    padding-top: 1.5rem
+    padding-top: 2.5rem
 
     &>img
       margin-bottom: .5rem
@@ -19,7 +19,10 @@
       border-top: 0
 
   &:nth-child(even)
-    background-color: $c-white
+    background-color: $c-mine-shaft-dark
+
+  &:nth-child(odd)
+    background-color: $c-black
 
   .row
     img
@@ -59,3 +62,11 @@
 
     h3
       margin-bottom: .5rem
+
+  hr
+    background: $c-white
+    border: none
+    color: $c-white
+    height: .05rem
+    width: 20%
+    margin-left: 0

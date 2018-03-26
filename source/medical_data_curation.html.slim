@@ -3,6 +3,66 @@ title: Medical Data Curation
 ---
 
 article.article
+  .container.text-center
+    h1.page-title Medical Data Curation
+    p We provide curated clinical data streams to vendors of next generation’s Computer Aided Diagnostics solutions as a service.
+
+article.article
+  .container
+    p Costs in radiology are continually increasing and new intelligent tools based on machine learning are needed to make radiology more efficient, less error-prone and eventually reduce costs at even higher quality.
+    p A number of players are active in developing these tools from the existing vendors of computer aided diagnostics (CAD) and clinical decision support solutions (CDSS), large tech giants like Apple, Microsoft, Google and IBM, and hundreds of start-ups.
+    p The development of such solutions requires vast amounts of high-quality curated clinical, cross-functional and cross-organizational data as ground truth.
+    p The acquisition and curation of such data today is expensive, complex, and often results in poor quality for ML training purposes.
+    p We provide curated clinical data streams to vendors of next generation’s CAD solutions as a service covering the whole workflow from identification, acquisition, validation, enrichment up tp curation of high volumes of training data. Thereby we address all concerns related to anonymization, privacy and security, bias reduction, statistical analysis and quality assurance.
+    p Our customers can focus on product development and significantly shorten time to market of their CAD products.
+    = image_tag(lorem.image('1300x400'), alt: 'wide image below text', class: 'img-fluid')
+
+article.article
+  .container
+    h1 HICCAP
+    hr
+    p HICCAP is 4Quant’s annotation platform for quickly and continuously creating curated data in the clinical setting. The platform is built on a number of core components enabling us to integrate with existing systems, provide pixel-exact annotations with single clicks, incorporate medical information into workflow and scale to thousands of annotators covering millions of patients.
+    p Our system has been applied to a number of different cases and image types from diffusion-weighted MRI images to PET/CT and has used a combination of standard image processing approaches (with integrations for ImageJ, ITK, OpenCV, and scikit-image) and the latest deep learning tools to solving problems. The platform enables all of these heterogeneous data sources and approaches to be easily explored in a single, distributed environment.
+    = image_tag(lorem.image('1300x400'), alt: 'wide image below text', class: 'img-fluid')
+
+article.article
+  .container
+    h2 Data Acquisition
+    p For data acquisition, HICCAP provides two subsystems to integration with existing infrastructure: PACS and RIS Crawler.
+    p PACS Crawler allows for a full faceted search on all DICOM metadata of your PACS system. PACS Crawler is scalable to millions of studies and provides result sets in a fraction of a second.
+    p RIS Crawler does the same on clinical data coming from RIS (or other clinical information system).
+    p HICCAP combines the various data sources, including real-time streams of images or video data, for any analytics task.
+
+article.article
+  .container
+    .row.text-left-image-right
+      .col-md-8
+        h2 Labeling and Annotation
+        p Data curation addresses key tasks for big data analysis and machine learning.
+        p Data needs to be structured, labeled, annotated, cleansed, combined to gain the quality requirements for ground truth data used as training data.
+        p AI-supported add-ons to the platform include applications for efficient labeling and annotation of medical imaging data as well as performing data quality checks.
+        p Our curation suite handles a wide variety of different 2D, 3D and 4D studies covering PET, CT, Diffusion MRI, Ultrasound, and Radiographs. It is adaptable to different projects and tasks and formats the data so it can easily be used for training and validating complex models.
+      .col-md-4
+        = image_tag(lorem.image('500x800'), alt: 'example image', class: 'img-fluid')
+
+article.article
+  .container
+    .row.image-left-text-right
+      .col-md-4
+        = image_tag(lorem.image('500x600'), alt: 'example image', class: 'img-fluid')
+      .col-md-8
+        h2 Quality Control
+        p We provide a rigorous quality-control pipeline for visualizing the data and finding gaps, sequence mismatches, poor quality, and other ill-suited datasets for highly reproducible studies. As an additional output the tools can generate a number of statistical and radiomic analyses for use in clinical research and publication.
+        p Labeling and annotation runs on any browser without installation of any local software. In this way, physicians can annotate at any time and from any location.
+
+
+article.article
+  .container
+    h2 Flexible Deployment
+    p HICCAP contains a Big Data-ready database. It handles data access policies and data access security requirements.
+    p HICCAP scales on a variety of standard platforms, from notebook computers to computing and storage clusters including GPU-accelerated servers. The platform can either be deployed on-site for very data sensitive or regulatory demands or on generic cloud infrastructure for better scalability.
+
+/article.article
   .container
     h1.page-title Medical data curation
     h2. Bla bla bla
@@ -12,7 +72,7 @@ article.article
       Denkbar ist die value chain oder das data maturity model im breiten Platzhalter da unten zu illustrieren. Und nicht zu vergessen: Filling the gap in the data backbone of medical AI business.
     = picture('medical_data_curation/curation1.png', lazy: true, html: { alt: 'huge image below', class: 'img-fluid' })
 
-article.article#hiccap
+/article.article#hiccap
   .container
     markdown:
       # HICCAP
@@ -21,25 +81,21 @@ article.article#hiccap
         = picture('medical-data-curation.gif', lazy: true, html: { alt: 'example image', class: 'img-fluid' })
       .col-md-8
           Wir lassen den Leser nicht lange im Theoretischen stehen und präsentieren stattdessen gleich HICCAP als unsere Kuratierungsplattform für klinische Daten. In den folgenden Abschnitten werden die wesentlichen Eigenschaften der Kuratierungsplattform illustriert.
-
           Dabei vergessen wir nicht zu erwähnen, dass es sich umd die weltweit erste Kuratierungsplattform mit KI handelt. Das Bildchen links wird dann auch nocht schon gemacht.
 
-article.article#hiccap-data-acquisition
+/article.article#hiccap-data-acquisition
   .container
     markdown:
       # Clinical data acquisition and management
     .row.text-left-image-right
       .col-md-8
           Hier stellen wir die Data Acquisition & Management (PACS, RIS, EHR, Public Datasets) vor von HICCAvor.
-
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod aliquyam erat, sed diam voluptua.
-
           At vero eos et accusam et justo duo dolores et ea rebum.
-
       .col-md-4
         = picture('medical_data_curation/curation2.png', lazy: true, html: { alt: 'example image', class: 'img-fluid' })
 
-article.article#hiccap-filtering
+/article.article#hiccap-filtering
   .container
     markdown:
       # Einfach Kohorten bilden
@@ -49,21 +105,19 @@ article.article#hiccap-filtering
       .col-md-8
           Filter out patients with appropriate modality, sequences, contrast, scan-types. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod aliquyam erat, sed diam voluptua.<br>
           At vero eos et accusam et justo duo dolores et ea rebum.
-
           Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-article.article#hiccap-annotation
+/article.article#hiccap-annotation
   .container
     markdown:
       # Schnellere Annotation dank KI
     .row.text-left-image-right
       .col-md-8
           Unsere Tools sind supercharged by AI (so beispielsweise unser magic lasso). Wir unterstützen auch die Annotation von Bildern in der klinischen Routine (mit einem CE-certified Tool). In der Forschungsumgebung kommen unsere intelligenten, selbstlernenden Annotationstools zum Einsatz. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod aliquyam erat, sed diam voluptua.
-
       .col-md-4
         = picture('medical_data_curation/curation4.png', lazy: true, html: { alt: 'example image', class: 'img-fluid' })
 
-article.article#hiccap-qm
+/article.article#hiccap-qm
   .container
     markdown:
       # HICCAP für bessere Qualität
@@ -72,21 +126,18 @@ article.article#hiccap-qm
         = picture('medical_data_curation/curation5.gif', lazy: true, html: { alt: 'example image', class: 'img-fluid' })
       .col-md-8
           Die HICCAP-Plattform bietet ein integriertes Qualitätsmanagement und -controlling an. Es ist supercharged by AI, unterstützt distributed, randomized und voting-based. Auch peer reviews sind plötzlich easy.
-
           At vero eos et accusam et justo duo dolores et ea rebum.
-
           Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-article.article#hiccap-integration
+/article.article#hiccap-integration
   .container
     h1 Integration weiterer Datenquellen
     markdown:
       Mit HICCAP integrierst du weitere Datenquellen wie zum Beispiel Genomics, Patho oder Lab für deinen ground trouth im Nu. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos.
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-
     = picture('medical_data_curation/curation6.png', lazy: true, html: { alt: 'wide image below text', class: 'img-fluid' })
 
-article.article#hiccap-database
+/article.article#hiccap-database
   .container
     markdown:
       # Tracked, Auditable Database
@@ -96,6 +147,4 @@ article.article#hiccap-database
       .col-md-8
           Security, Privacy and 3rd Party Access und ML/XNAT/IntelliSpace Discovery/Siemens Frontier... Interface sind kein Problem mehr. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod aliquyam erat, sed diam voluptua.<br>
           At vero eos et accusam et justo duo dolores et ea rebum.
-
           Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-

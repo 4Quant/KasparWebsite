@@ -3,7 +3,8 @@ company:
   claim: &company-claim 'Big Image Analytics'
   street: 'Technoparkstrasse 1'
   city: 'Zürich'
-  postal_code: 'CH-8005'
+  postal_code: '8005'
+  country: 'Switzerland'
   email: 'info@4quant.com'
 options:
   domain: &domain 4quant.com

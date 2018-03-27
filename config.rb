@@ -87,7 +87,7 @@ helpers do
   # picture tag for webp images with fallback to img
   #
   # lazy: true => enables lazy loading for the image
-  def picture(image, lazy: false, html: { class: nil, data: nil, alt: nil, id: nil })
+  def picture(image, lazy: true, html: { class: nil, data: nil, alt: nil, id: nil })
     path = image_path(image)
     content_tag(
       :picture,
@@ -105,6 +105,7 @@ helpers do
   end
 
   def webp_source_tag(path, lazy)
+    return if config[:environment] == :development
     webp = "#{File.dirname(path)}/#{File.basename(path, File.extname(path))}.webp"
     if lazy
       tag(:source, data: { srcset: webp }, type: 'image/webp')

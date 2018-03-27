@@ -23,12 +23,26 @@ FAVICON_MAKER_OPTIONS = { template_dir: 'source/images/', icons: { 'icon.png' =>
   { icon: 'favicon.ico', size: '64x64,32x32,24x24,16x16' }
 ] } }.freeze
 
-WEBP_GENERAL_OPTIONS = { conversion_options: {
-  '**/*.png' => { lossless: true }, '**/*.jpg' => { q: 100 }, '**/*.gif' => { lossy: true }
-}, allow_skip: false }.freeze
-
-WEBP_OPTIONS = { development: WEBP_GENERAL_OPTIONS.merge(run_before_build: true),
-                 production: WEBP_GENERAL_OPTIONS }.freeze
+WEBP_OPTIONS = {
+  development: {
+    conversion_options: {
+      '**/*.png' => { lossless: true },
+      '**/*.jpg' => { q: 100 },
+      '**/*.gif' => { lossy: true }
+    },
+    allow_skip: false,
+    run_before_build: true
+  },
+  production: {
+    conversion_options: {
+      '**/*.png' => { lossless: true },
+      '**/*.jpg' => { q: 100 },
+      '**/*.gif' => { lossy: true }
+    },
+    allow_skip: false,
+    run_before_build: false
+  }
+}.freeze
 
 SPROCKETS_IGNORE = {
   development: ['javascripts/main.js', 'javascripts/inc/*'],
@@ -101,7 +115,6 @@ helpers do
 end
 
 configure :build do
-  config[:host] = 'https://4quant.gitlab.io'
   activate :favicon_maker, FAVICON_MAKER_OPTIONS
   set :relative_links, true
 

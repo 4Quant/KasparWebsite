@@ -22,8 +22,8 @@ pages:
     - export LC_ALL=en_US.UTF-8
     - bundle exec middleman build
     - mv build/ public
-  artifacts:
-    paths:
-    - public
+  # artifacts:
+  #   paths:
+  #   - public
   only:
     - master

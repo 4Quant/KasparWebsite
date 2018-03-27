@@ -11,6 +11,8 @@ $(() => {
 const slider = () => {
   $('.slicker-slider').slick({
     dots: true,
+    arrows: false,
+    mobileFirst: true,
     infinite: true,
     speed: 300,
     slidesToShow: 1,

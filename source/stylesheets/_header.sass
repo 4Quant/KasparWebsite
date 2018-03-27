@@ -6,14 +6,24 @@ $v-logo-width: 6rem
   @include media-breakpoint-up(lg)
     font-size: .8rem
 
-  background-color: $c-real-black
+  background-color: rgba(34, 34, 34, .9)
   height: $v-header-height
   justify-content: center
 
   .navbar
+    background-color: transparent
     height: $v-header-height - $v-header-border-bottom-width
     padding-left: $grid-gutter-width * .5
     padding-right: $grid-gutter-width * .5
+
+    &::after
+      background-color: rgba(51, 51, 51, .9)
+      content: ''
+      height: 1px
+      left: 0
+      position: fixed
+      top: $v-header-height
+      width: 100vw
 
     .navbar-brand
       align-self: flex-start
@@ -60,12 +70,12 @@ $v-logo-width: 6rem
   @include media-breakpoint-up(lg)
     display: none
 
-  background-color: $c-real-black
+  background-color: rgba(34, 34, 34, .9)
   left: 0
   padding-bottom: $v-header-height * .25
   padding-top: $v-header-height * .25
   position: fixed
-  top: $v-header-height - .5rem
+  top: $v-header-height
   transform: translate3d(0, -100%, 0)
   transition: transform .3s
   visibility: hidden
@@ -75,6 +85,24 @@ $v-logo-width: 6rem
   .nav
     padding-left: $grid-gutter-width * .5
 
+  .nav-item
+    .nav-link
+      color: $c-white
+      cursor: pointer
+      padding-left: 0
+      padding-right: 1.5rem
+      text-decoration: none
+
 .hamburger-nav-open
   transform: translate3d(0, 0, 0)
   visibility: visible
+
+  &::after
+    background-color: rgba(51, 51, 51, .9)
+    content: ''
+    display: block
+    height: 1px
+    left: 0
+    position: relative
+    top: $v-header-height * .25
+    width: 100vw

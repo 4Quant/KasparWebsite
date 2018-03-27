@@ -10,5 +10,5 @@ html lang=data.site.options.language
     - if config[:environment] == :development
       = javascript_include_tag 'main.bundle'
 
-    / Google Analytics tag to be uncomented when tracking id configured
-    / = google_analytics_tag
+    - if app.extensions[:google_analytics].present?
+      = google_analytics_tag

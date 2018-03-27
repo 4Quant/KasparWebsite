@@ -55,25 +55,25 @@ $v-logo-width: 6rem
     .navbar-toggler-icon
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(244,244,244, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
 
-  .hamburger-nav
-    @include media-breakpoint-up(lg)
-      display: none
+.hamburger-nav
+  @include media-breakpoint-up(lg)
+    display: none
 
-    background-color: $c-real-black
-    left: 0
-    padding-bottom: $v-header-height * .25
-    padding-top: $v-header-height * .25
-    position: fixed
-    top: $v-header-height - .5rem
-    transform: translate3d(0, -100%, 0)
-    transition: transform .3s
-    visibility: hidden
-    width: 100vw
-    z-index: -10
+  background-color: $c-real-black
+  left: 0
+  padding-bottom: $v-header-height * .25
+  padding-top: $v-header-height * .25
+  position: fixed
+  top: $v-header-height - .5rem
+  transform: translate3d(0, -100%, 0)
+  transition: transform .3s
+  visibility: hidden
+  width: 100vw
+  z-index: 1
 
-    .nav
-      padding-left: $grid-gutter-width * .5
+  .nav
+    padding-left: $grid-gutter-width * .5
 
-  .hamburger-nav-open
-    transform: translate3d(0, 0, 0)
-    visibility: visible
+.hamburger-nav-open
+  transform: translate3d(0, 0, 0)
+  visibility: visible

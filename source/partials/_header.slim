@@ -1,6 +1,6 @@
 header.header.sticky-top
   nav.navbar.container.sticky-top
-    = link_to('/', class: 'navbar-brand') { picture('logo.png') }
+    = link_to('/', class: 'navbar-brand') { File.read('source/images/logo.svg') }
     button.navbar-toggler.d-block.d-lg-none
       span.navbar-toggler-icon
     ul.navbar-nav

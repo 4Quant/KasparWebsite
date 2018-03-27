@@ -1,12 +1,14 @@
 $v-header-height: 3rem
 $v-header-border-bottom-width: .06rem
+$v-logo-width: 6rem
 
 .header
+  @include media-breakpoint-up(lg)
+    font-size: .8rem
+
   background-color: $c-real-black
   height: $v-header-height
   justify-content: center
-  @include media-breakpoint-up(lg)
-    font-size: .8rem
 
   .navbar
     height: $v-header-height - $v-header-border-bottom-width
@@ -15,11 +17,16 @@ $v-header-border-bottom-width: .06rem
 
     .navbar-brand
       align-self: flex-start
-      flex: 0 0 6rem
-      width: 6rem
+      flex: 0 0 $v-logo-width
+      width: $v-logo-width
 
-      img
-        max-width: 100%
+    svg
+      height: auto
+      max-width: 100%
+      width: $v-logo-width
+
+      g
+        fill: $c-white
 
     .navbar
       align-self: flex-end
@@ -49,6 +56,9 @@ $v-header-border-bottom-width: .06rem
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(244,244,244, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
 
   .hamburger-nav
+    @include media-breakpoint-up(lg)
+      display: none
+
     background-color: $c-real-black
     left: 0
     padding-bottom: $v-header-height * .25
@@ -63,9 +73,6 @@ $v-header-border-bottom-width: .06rem
 
     .nav
       padding-left: $grid-gutter-width * .5
-
-    @include media-breakpoint-up(lg)
-      display: none
 
   .hamburger-nav-open
     transform: translate3d(0, 0, 0)

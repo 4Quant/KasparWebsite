@@ -96,7 +96,7 @@ helpers do
   end
 
   def custom_image_tag(path, html_attributes)
-    tag(:img, data: { src: path }, id: html_attributes[:id], alt: html_attributes[:alt])
+    tag(:img, data: { src: path }, alt: html_attributes[:alt])
   end
 
   def webp_source_tag(path)

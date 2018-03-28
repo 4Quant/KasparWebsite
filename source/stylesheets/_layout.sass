@@ -14,17 +14,26 @@ header
   padding: 0
 
 
+// html
+//   background-color: $c-real-black
+
+// body
+
 html,
 body
-  background-color: $c-real-black
   color: $c-white
   min-height: 100vh
 
 body
+  backdrop-filter: blur(2px)
+  background-color: $c-header-background
   display: flex
   flex-direction: column
 
 main
+
+  padding-top: $v-header-height
+  background-color: $c-real-black
   flex: 1 0 auto
 
 picture

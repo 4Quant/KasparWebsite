@@ -1,14 +1,22 @@
-$v-header-height: 3rem
-$v-header-border-bottom-width: .06rem
-$v-logo-width: 4.5rem
-
 .header
   @include media-breakpoint-up(lg)
     font-size: .8rem
 
-  background-color: rgba(34, 34, 34, .9)
+  backdrop-filter: blur(2px)
+  background-color: $c-header-background
   height: $v-header-height
   justify-content: center
+  margin-bottom: - $v-header-height
+
+  &::after
+    background-color: $c-header-background-border
+    content: ''
+    display: block
+    height: 1px
+
+  &.shade-burger-nav-open
+    &::after
+      display: none
 
   .navbar
     background-color: transparent
@@ -16,14 +24,8 @@ $v-logo-width: 4.5rem
     padding-left: $grid-gutter-width * .5
     padding-right: $grid-gutter-width * .5
 
-    &::after
-      background-color: rgba(51, 51, 51, .9)
-      content: ''
-      height: 1px
-      left: 0
-      position: fixed
-      top: $v-header-height
-      width: 100vw
+
+
 
     .navbar-brand
       align-self: flex-start
@@ -66,19 +68,19 @@ $v-logo-width: 4.5rem
     .navbar-toggler-icon
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(244,244,244, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
 
+$transition-time: .5s
 .hamburger-nav
   @include media-breakpoint-up(lg)
     display: none
-
-  background-color: rgba(34, 34, 34, .9)
+  backdrop-filter: blur(2px)
+  background-color: rgba(34, 34, 34, .5)
   left: 0
   padding-bottom: $v-header-height * .25
   padding-top: $v-header-height * .25
   position: fixed
   top: $v-header-height
   transform: translate3d(0, -100%, 0)
-  transition: transform .3s
-  visibility: hidden
+  transition: transform $transition-time, background-color $transition-time
   width: 100vw
   z-index: 1
 
@@ -92,13 +94,21 @@ $v-logo-width: 4.5rem
       padding-left: 0
       padding-right: 1.5rem
       text-decoration: none
+      opacity: 0
+      transition: opacity $transition-time
 
 .hamburger-nav-open
   transform: translate3d(0, 0, 0)
-  visibility: visible
+  background-color: $c-header-background
+  transition: transform $transition-time 0 ease, background-color $transition-time
+
+  .nav-item
+    .nav-link
+      opacity: 1
+      transition: opacity  $transition-time
 
   &::after
-    background-color: rgba(51, 51, 51, .9)
+    background-color: $c-header-background-border
     content: ''
     display: block
     height: 1px

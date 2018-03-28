@@ -7,10 +7,7 @@ head
     meta*attributes
   = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300italic,400,400italic,500,500italic,600,700,700italic'
   = stylesheet_link_tag :site
-  - if current_page.data.carousel
-    = stylesheet_link_tag :slick
   = favicon_tag '/favicon.png'
-  - if config[:environment] == :production
+  - if build?
     = favicon_tag '/favicon.ico'
-    = favicon_tag '/favicon.png'
     link href='/apple-touch-icon-precomposed.png' rel='apple-touch-icon-precomposed'

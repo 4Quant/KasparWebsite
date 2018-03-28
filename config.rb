@@ -87,31 +87,22 @@ helpers do
   # picture tag for webp images with fallback to img
   #
   # lazy: true => enables lazy loading for the image
-  def picture(image, lazy: true, html: { class: nil, data: nil, alt: nil, id: nil })
-    path = image_path(image)
-    content_tag(
-      :picture,
-      "#{webp_source_tag(path, lazy)}#{custom_image_tag(image, path, html, lazy)}",
-      html
-    )
+  def picture(image, html_attributes)
+    external = image[0..3] == 'http'
+    path = external ? image : image_path(image)
+    html_str = custom_image_tag(path, html_attributes)
+    html_str = html_str.prepend(webp_source_tag(path)) unless external
+    content_tag(:picture, html_str, html_attributes)
   end
 
-  def custom_image_tag(image, path, html, lazy = false)
-    if lazy
-      tag(:img, data: { src: path }, class: html[:class], id: html[:id], alt: html[:alt])
-    else
-      image_tag(image, html)
-    end
+  def custom_image_tag(path, html_attributes)
+    tag(:img, data: { src: path }, id: html_attributes[:id], alt: html_attributes[:alt])
   end
 
-  def webp_source_tag(path, lazy)
-    return if config[:environment] == :development
+  def webp_source_tag(path)
+    return if development?
     webp = "#{File.dirname(path)}/#{File.basename(path, File.extname(path))}.webp"
-    if lazy
-      tag(:source, data: { srcset: webp }, type: 'image/webp')
-    else
-      tag(:source, srcset: webp, type: 'image/webp')
-    end
+    tag(:source, data: { srcset: webp }, type: 'image/webp')
   end
 end
 

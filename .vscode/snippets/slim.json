@@ -29,9 +29,9 @@
     "body": "---\ntitle: $0\n---\n\n",
 		"description": "Configer your pages title"
   },
-	"Picture tag for webp image": {
+	"Picture tag for lazy loading image": {
 		"prefix": "picture",
-    "body": "picture('${1:image}', lazy: ${2:true}, html: { alt: '${0:description}', class: 'img-fluid' })",
+    "body": "picture('${1:path}', alt: '${2:description}', class: '${0:image-fluid}')",
 		"description": "Create a Picture tag useing webp image on browsers that support it, and fallback image for the browsers that dont."
   }
 }

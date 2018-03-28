@@ -1,5 +1,23 @@
 article.article#youtube
   .container
     h1 Youtube
-    p Works only on desktops
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/-zHIUqm7Uwk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    p Standard ratio, if not passed is 16by9
+    = youtube('https://www.youtube.com/embed/-zHIUqm7Uwk')
+
+article.article#youtube
+  .container
+    h1 Youtube
+    p Example video with 4by3 aspect ratio
+    = youtube('https://www.youtube.com/watch?v=mM5_T-F1Yn4', '4by3')
+
+article.article#youtube
+  .container
+    h1 Youtube
+    p Example video with 21by9 aspect ratio
+    = youtube('https://www.youtube.com/watch?v=kEMenouZDKs', '21by9')
+
+article.article#youtube
+  .container
+    h1 Youtube
+    p Example video with 21by9 aspect ratio
+    = youtube('https://www.youtube.com/watch?v=mM5_T-F1Yn4', '1by1')

@@ -84,6 +84,28 @@ config[:host] = HOST_CONFIG[config[:environment]]
 # Helpers
 #
 helpers do
+  # youtube video responsive embed
+  #
+  # link:
+  #   'https://youtu.be/G30HGR7AVHY', 'https://www.youtube.com/embed/-zHIUqm7Uwk',
+  #   'https://www.youtube.com/embed/H2rTecSO0gk', '-zHIUqm7Uwk'
+  # aspect:
+  #   '16by9', '21by9', '4by3', '1by1'
+  #
+  def youtube(link, aspect = '16by9')
+    aspect = '16by9' unless ['16by9', '21by9', '4by3', '1by1'].include?(aspect)
+    partial('partials/responsive_youtube',
+      locals: { video_id: extract_youtube_video_id(link), aspect: aspect })
+  end
+
+  def extract_youtube_video_id(link)
+    uri = Addressable::URI.parse(link)
+    return link unless ['www.youtube.com', 'youtu.be', 'youtube.com'].include?(uri.hostname)
+    return uri.path[1..-1] if uri.hostname == 'youtu.be'
+    return uri.query_values['v'] if uri.path == '/watch'
+    uri.path.split('/')[-1] if uri.path.include? '/embed/'
+  end
+
   # picture tag for webp images with fallback to img
   #
   # lazy: true => enables lazy loading for the image

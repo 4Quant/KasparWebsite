@@ -117,11 +117,11 @@ helpers do
   #
   # lazy: true => enables lazy loading for the image
   def picture(image, html_attributes)
-    external = image[0..3] == 'http'
-    path = external ? image : image_path(image)
-    html_str = custom_image_tag(path, html_attributes)
-    html_str = html_str.prepend(webp_source_tag(path)) unless external
-    content_tag(:picture, html_str, html_attributes)
+    if image[0..3] == 'http'
+      return image_tag(image, html_attributes)
+    end
+    path = image_path(image)
+    content_tag(:picture, "#{webp_source_tag(path)}#{custom_image_tag(path, html_attributes)}", html_attributes)
   end
 
   def custom_image_tag(path, html_attributes)

@@ -2,8 +2,8 @@ const loadLazyloader = () => {
   (function(w, d){
     const b = d.getElementsByTagName('body')[0];
     const s = d.createElement("script"); s.async = true;
-    const v = !("IntersectionObserver" in w) ? "8.6.0" : "10.4.2";
-    s.src = "https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/" + v + "/lazyload.min.js";
+    const v = !("IntersectionObserver" in w) ? "8.6.0" : "10.5.2";
+    s.src = "/javascripts/lazyload." + v + ".js";
     w.lazyLoadOptions = {
       elements_selector: 'source[type="image/webp"],img'
     };

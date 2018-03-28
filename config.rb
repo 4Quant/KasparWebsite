@@ -84,6 +84,13 @@ config[:host] = HOST_CONFIG[config[:environment]]
 # Helpers
 #
 helpers do
+  # responsive google slide
+  #
+  def google_slide(link, aspect = '16by9')
+    aspect = '16by9' unless ['16by9', '21by9', '4by3', '1by1'].include?(aspect)
+    partial('partials/responsive_google_slide', locals: { aspect: aspect, src: link })
+  end
+
   # youtube video responsive embed
   #
   # link:

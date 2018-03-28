@@ -1,5 +1,11 @@
 article.article#slides
   .container
     h1 A Google Slides Presentation
-    p Works only for desktops
-    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTf5gU6ckjDNDPCvc-zRCZiJXvjDomlak1yWGt4EoPQPZ2nZu2m-z6CocJoQSXXEZ9Q03oQfA-VOiIJ/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    p With default aspect ratio 16by9. Also available aspect ratios: 21by9, 4by3 and 1by1 -> google_slide(your_link, '21by9')
+    = google_slide('https://docs.google.com/presentation/d/e/2PACX-1vTf5gU6ckjDNDPCvc-zRCZiJXvjDomlak1yWGt4EoPQPZ2nZu2m-z6CocJoQSXXEZ9Q03oQfA-VOiIJ/embed?start=false&loop=false&delayms=3000')
+
+article.article#slides
+  .container
+    h1 A Google Slides Presentation
+    p With aspect ratio 21by9.
+    = google_slide('https://docs.google.com/presentation/d/e/2PACX-1vTf5gU6ckjDNDPCvc-zRCZiJXvjDomlak1yWGt4EoPQPZ2nZu2m-z6CocJoQSXXEZ9Q03oQfA-VOiIJ/embed?start=false&loop=false&delayms=3000', '21by9')

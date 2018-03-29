@@ -7,17 +7,17 @@ article.article
     h1.page-title Towards precision medicine and personalized health
     p 4Quant provides access to clinical data and the key technology to turn huge amounts of this data into actionable information.
     p With default aspect ratio 16by9. Also available aspect ratios: 21by9, 4by3 and 1by1 -> youtube(your_link, '21by9')
-    = youtube('https://www.youtube.com/embed/-zHIUqm7Uwk')
+    / = youtube('https://www.youtube.com/embed/-zHIUqm7Uwk')
 
 article.article#slides
   .container
     h1 A Google Slides Presentation
     p With default aspect ratio 16by9. Also available aspect ratios: 21by9, 4by3 and 1by1 -> google_slide(your_link, '21by9')
-    = google_slide('https://docs.google.com/presentation/d/e/2PACX-1vTf5gU6ckjDNDPCvc-zRCZiJXvjDomlak1yWGt4EoPQPZ2nZu2m-z6CocJoQSXXEZ9Q03oQfA-VOiIJ/embed?start=false&loop=false&delayms=3000')
+    / = google_slide('https://docs.google.com/presentation/d/e/2PACX-1vTf5gU6ckjDNDPCvc-zRCZiJXvjDomlak1yWGt4EoPQPZ2nZu2m-z6CocJoQSXXEZ9Q03oQfA-VOiIJ/embed?start=false&loop=false&delayms=3000')
 
 article.article#social-proof
   .container.text-center
-    .slicker-slider*{ data: { slick: '{"initialSlide": 1, centerMode: true}' } }
+    .slicker-slider.reveal-on-scroll*{ data: { slick: '{"initialSlide": 1, centerMode: true}' } }
       div
         blockquote
           'I believe the future is going to be AI feeding AI
@@ -46,10 +46,10 @@ article.article#social-proof
 
 article.article
   .container
-    h1 = link_to 'Computer-aided Diagnostics', '/computer_aided_diagnostics'
-    hr
-    p Using our technology, we support research partners to quickly develop and work on algorithms, AI-based models, radiomics, and digital biomarkers.
-    p
+    h1.reveal-on-scroll = link_to 'Computer-aided Diagnostics', '/computer_aided_diagnostics'
+    hr.reveal-on-scroll
+    p.reveal-on-scroll Using our technology, we support research partners to quickly develop and work on algorithms, AI-based models, radiomics, and digital biomarkers.
+    p.reveal-on-scroll
       'Those support radiologists, oncologists, and other clinicians on having evidence-based and big data-backed information for better decision making.
       br
       = link_to 'Learn more >', '/computer_aided_diagnostics'

@@ -2,6 +2,7 @@ import LoadLazyLoader from './inc/LoadLazyLoader'
 import JumpWithSmoothScroll from './inc/JumpWithSmoothScroll'
 import HamburgerMenu from './inc/HamburgerMenu'
 import SlickInit from './inc/SlickInit'
+import ScrollRevealer from './inc/ScrollRevealer'
 
 // window onload trigger
 $(() => {
@@ -9,4 +10,5 @@ $(() => {
   SlickInit()
   LoadLazyLoader()
   JumpWithSmoothScroll()
+  ScrollRevealer()
 })

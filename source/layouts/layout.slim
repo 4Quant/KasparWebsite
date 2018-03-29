@@ -7,8 +7,6 @@ html lang=data.site.options.language
       = yield
     = partial 'partials/footer'
     = javascript_include_tag :app
-    - if development?
-      = javascript_include_tag 'main.bundle'
 
     - if app.extensions[:google_analytics].present?
       = google_analytics_tag

@@ -6,6 +6,7 @@ For project to succesfully run, you need to have already on your machine:
 - Ruby
 - Bundler
 - node.js `brew install node`
+- yarn `brew install yarn`
 - webp `brew install webp --with-giflib`
 
 If you don't have this installed, recomended way is using Homebrew.
@@ -15,7 +16,7 @@ If you don't have this installed, recomended way is using Homebrew.
 Clone the repository using git, then run:
 
 ```
-$ bundle install && npm install
+$ bundle install && yarn install
 ```
 
 ## Development

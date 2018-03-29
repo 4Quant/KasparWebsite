@@ -1,6 +1,6 @@
 import SmoothScroll from 'smooth-scroll';
 
-const jumpWidthSmoothScroll = () => {
+const JumpWithSmoothScroll = () => {
   const scroll = new SmoothScroll('a[href*="#"]', {
     header: 'header.header',
     speed: 500,
@@ -8,4 +8,4 @@ const jumpWidthSmoothScroll = () => {
   });
 }
 
-export default jumpWidthSmoothScroll;
+export default JumpWithSmoothScroll;

@@ -117,19 +117,18 @@ helpers do
   #
   # lazy: true => enables lazy loading for the image
   def picture(image, html_attributes)
-    if image[0..3] == 'http'
-      return image_tag(image, html_attributes)
-    end
-    path = image_path(image)
-    content_tag(:picture, "#{webp_source_tag(path)}#{custom_image_tag(path, html_attributes)}", html_attributes)
+    external = image[0..3] == 'http'
+    path = external ? image : image_path(image)
+    content_tag(:picture,
+      "#{webp_source_tag(path, external)}#{custom_image_tag(path, html_attributes)}", html_attributes)
   end
 
   def custom_image_tag(path, html_attributes)
     tag(:img, data: { src: path }, alt: html_attributes[:alt])
   end
 
-  def webp_source_tag(path)
-    return if development?
+  def webp_source_tag(path, external)
+    return if development? || external
     webp = "#{File.dirname(path)}/#{File.basename(path, File.extname(path))}.webp"
     tag(:source, data: { srcset: webp }, type: 'image/webp')
   end
@@ -142,10 +141,4 @@ configure :build do
   if GOOGLE_ANALYTICS_OPTIONS[:tracking_id] != 'UA-xxx-xxx-xx'
     activate :google_analytics, GOOGLE_ANALYTICS_OPTIONS
   end
-end
-
-# copy webpack built js file into build dir
-after_build do
-  system 'cat .tmp/dist/javascripts/main.bundle.js >> build/javascripts/app.js'
-  system 'gzip -c build/javascripts/app.js > build/javascripts/app.js.gz'
 end

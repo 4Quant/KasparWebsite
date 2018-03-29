@@ -1,32 +1,12 @@
-import loadLazyloader from './inc/loadLazyloader';
-import jumpWidthSmoothScroll from './inc/jumpWidthSmoothScroll';
+import LoadLazyLoader from './inc/LoadLazyLoader';
+import JumpWithSmoothScroll from './inc/JumpWithSmoothScroll';
+import HamburgerMenu from './inc/HamburgerMenu';
+import SlickInit from './inc/SlickInit';
 
+// window onload trigger
 $(() => {
-  hamburger();
-  slider();
-  loadLazyloader();
-  jumpWidthSmoothScroll();
+  HamburgerMenu();
+  SlickInit();
+  LoadLazyLoader();
+  JumpWithSmoothScroll();
 });
-
-const slider = () => {
-  $('.slicker-slider').slick({
-    dots: true,
-    arrows: false,
-    mobileFirst: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    adaptiveHeight: false
-  });
-}
-
-const hamburger = () => {
-  const header = $('header.header');
-  const navToggler = $('header.header .navbar-toggler');
-  const mobileNav = $('.hamburger-nav');
-  $(navToggler, mobileNav).on('click', () => toggleHamburger());
-  const toggleHamburger = () => {
-    header.toggleClass('shade-burger-nav-open')
-    mobileNav.toggleClass('hamburger-nav-open');
-  };
-}

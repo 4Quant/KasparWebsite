@@ -1,6 +1,5 @@
-
 const SlickInit = () => {
-  $('.slicker-slider').slick({
+  const options = {
     dots: true,
     arrows: false,
     mobileFirst: true,
@@ -8,7 +7,7 @@ const SlickInit = () => {
     speed: 300,
     slidesToShow: 1,
     adaptiveHeight: false
-  });
+  }
+  $('.slicker-slider').slick(options)
 }
-
-export default SlickInit;
+export default SlickInit

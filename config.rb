@@ -7,7 +7,7 @@ HOST_CONFIG = { development: 'http://localhost:4567', production: 'https://4quan
 
 # Extensions that dont need any options
 ENABLE_EXTENSIONS_NO_OPTS = {
-  development: [:directory_indexes, :autoprefixer, :sprockets, :livereload, :pry],
+  development: [:directory_indexes, :autoprefixer, :sprockets, :pry],
   production: [:directory_indexes, :autoprefixer, :sprockets, :minify_css, :minify_javascript, :gzip]
 }.freeze
 
@@ -30,6 +30,7 @@ WEBP_OPTIONS = {
       '**/*.jpg' => { q: 100 },
       '**/*.gif' => { lossy: true }
     },
+    verbose: false,
     allow_skip: false,
     run_before_build: true
   },
@@ -67,6 +68,8 @@ set :markdown, auto_ids: false
 
 # Activate Middleman extensions
 ENABLE_EXTENSIONS_NO_OPTS[config[:environment]].each { |extension| activate extension }
+
+activate :livereload, no_swf: true, host: '127.0.0.1'
 
 activate :webp, WEBP_OPTIONS[config[:environment]]
 

@@ -7,13 +7,15 @@ cache:
 
 before_script:
   - curl -sL https://deb.nodesource.com/setup_9.x | bash -
+  - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+  - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
   - apt-get update -qy
-  - apt-get install -qy nodejs locales webp # middleman requires JS runtime
+  - apt-get install -qy nodejs locales webp yarn # middleman requires JS runtime
   - echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
   - locale-gen && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LANGUAGE=en
   - export LANG=en_US.UTF-8
   - export LC_ALL=en_US.UTF-8
-  - npm install --quiet --silent
+  - yarn install -s
   - bundle install --without development --path vendor
 
 pages:

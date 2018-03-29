@@ -4,6 +4,8 @@ cache:
   paths:
     - vendor/ruby
     - node_modules/
+    - .yarn-cache
+
 
 before_script:
   - curl -sL https://deb.nodesource.com/setup_9.x | bash -
@@ -15,7 +17,7 @@ before_script:
   - locale-gen && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LANGUAGE=en
   - export LANG=en_US.UTF-8
   - export LC_ALL=en_US.UTF-8
-  - yarn install -s
+  - yarn install --cache-folder .yarn-cache
   - bundle install --without development --path vendor
 
 pages:

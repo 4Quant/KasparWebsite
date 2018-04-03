@@ -4,6 +4,6 @@ node_modules
 vendor.vscode
 .vscode
 4quant.com.wiki
-source/images/**/*.webp
 .sass-cache
 yarn-error.log
+source/images/**/*.webp

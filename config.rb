@@ -35,28 +35,6 @@ FAVICON_MAKER_OPTIONS = { template_dir: 'source/images/', icons: { 'icon.png' =>
   { icon: 'favicon.ico', size: '64x64,32x32,24x24,16x16' }
 ] } }.freeze
 
-WEBP_OPTIONS = {
-  development: {
-    conversion_options: {
-      '**/*.png' => { lossless: true },
-      '**/*.jpg' => { q: 100 },
-      '**/*.gif' => { lossy: true }
-    },
-    verbose: false,
-    allow_skip: false,
-    run_before_build: true
-  },
-  production: {
-    conversion_options: {
-      '**/*.png' => { lossless: true },
-      '**/*.jpg' => { q: 100 },
-      '**/*.gif' => { lossy: true }
-    },
-    allow_skip: false,
-    run_before_build: false
-  }
-}.freeze
-
 # configure Google Analytics tracking id in order to enable: eabled if not "UA-xxx-xxx-xx"
 GOOGLE_ANALYTICS_OPTIONS = { tracking_id: 'UA-xxx-xxx-xx' }.freeze
 
@@ -73,8 +51,6 @@ set :markdown, auto_ids: false
 ENABLE_EXTENSIONS_NO_OPTS[config[:environment]].each { |extension| activate extension }
 
 activate :livereload, no_swf: true, host: '127.0.0.1'
-
-activate :webp, WEBP_OPTIONS[config[:environment]]
 
 # Add sprockets import paths
 SPROCKETS_IMPORT_PATHS.each { |path| sprockets.append_path "#{root}/#{path}" }

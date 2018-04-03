@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
 gem 'middleman'
 gem 'middleman-sprockets', '~> 4.0.0.rc'
 gem 'middleman-autoprefixer'
@@ -13,6 +14,8 @@ gem 'middleman-google-analytics', '~> 3.0'
 gem 'middleman-livereload'
 gem 'middleman-webp'
 gem 'middleman-pry'
+
+gem 'fastimage'
 gem 'slim'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', platforms: [:mswin, :mingw]

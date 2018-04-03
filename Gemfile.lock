@@ -144,6 +144,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  fastimage
   middleman
   middleman-autoprefixer
   middleman-favicon-maker (= 4.0.3)

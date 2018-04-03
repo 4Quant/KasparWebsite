@@ -3,20 +3,20 @@ title: Filling the gap in the data backbone of medical AI business
 ---
 
 article.article
-  .container.text-center
+  .container.text-center.reveal-on-scroll
     h1.page-title Towards precision medicine and personalized health
     p 4Quant provides access to clinical data and the key technology to turn huge amounts of this data into actionable information.
     p With default aspect ratio 16by9. Also available aspect ratios: 21by9, 4by3 and 1by1 -> youtube(your_link, '21by9')
     = youtube('https://www.youtube.com/embed/-zHIUqm7Uwk')
 
-article.article#slides
+article.article#slides.reveal-on-scroll
   .container
     h1 A Google Slides Presentation
     p With default aspect ratio 16by9. Also available aspect ratios: 21by9, 4by3 and 1by1 -> google_slide(your_link, '21by9')
-    / = google_slide('https://docs.google.com/presentation/d/e/2PACX-1vTf5gU6ckjDNDPCvc-zRCZiJXvjDomlak1yWGt4EoPQPZ2nZu2m-z6CocJoQSXXEZ9Q03oQfA-VOiIJ/embed?start=false&loop=false&delayms=3000')
+    = google_slide('https://docs.google.com/presentation/d/e/2PACX-1vTf5gU6ckjDNDPCvc-zRCZiJXvjDomlak1yWGt4EoPQPZ2nZu2m-z6CocJoQSXXEZ9Q03oQfA-VOiIJ/embed?start=false&loop=false&delayms=3000')
 
 article.article#social-proof
-  .container.text-center
+  .container.text-center.reveal-on-scroll
     .slicker-slider.reveal-on-scroll*{ data: { slick: '{"initialSlide": 1, centerMode: true}' } }
       div
         blockquote
@@ -45,122 +45,12 @@ article.article#social-proof
           i Prof Henning Müller
 
 article.article
-  .container
-    h1.reveal-on-scroll = link_to 'Computer-aided Diagnostics', '/computer_aided_diagnostics'
-    hr.reveal-on-scroll
-    p.reveal-on-scroll Using our technology, we support research partners to quickly develop and work on algorithms, AI-based models, radiomics, and digital biomarkers.
-    p.reveal-on-scroll
+  .container.reveal-on-scroll
+    h1 = link_to 'Computer-aided Diagnostics', '/computer_aided_diagnostics'
+    hr
+    p Using our technology, we support research partners to quickly develop and work on algorithms, AI-based models, radiomics, and digital biomarkers.
+    p
       'Those support radiologists, oncologists, and other clinicians on having evidence-based and big data-backed information for better decision making.
       br
       = link_to 'Learn more >', '/computer_aided_diagnostics'
     = picture('lungstage-01.png', alt: 'wide image below text', class: 'img-fluid rounded')
-
-/article.article
-  .container
-    h1 Ten thousands a day
-    hr
-    p Radiologists and nuclear physicians worldwide make indispensable contributions to the diagnosis of patients on a daily basis.
-    p They detect anomalies using computer tomography, classify lesions using magnetic resonance imaging and quantify the effect of cancer therapies in collaboration with oncologists.
-    p A radiologist examines around 10,000 grayscale images per day - a considerable burden.
-    p illustration: scanner -> radiologist -> diagnosis
-
-/article.article
-  .container
-    h1 Increasing pressure
-    p New imaging techniques are producing ever more accurate and high-resolution images.
-    p The workload of these diagnosticians is growing from year to year, while the demands placed on them are constantly increasing and the number of newly registered specialists has remained constant for years.
-    p illustration: chart
-
-/article.article
-  .container
-    h1 Artificial intelligence
-    p Künstliche Intelligenz verspricht diesen Ärzte bei ihrer Arbeit Abhilfe und super-human bla bla.
-    p Radiologen und maschinelles Lernen zusammen öffnen die Türe zu einer personalisierten Präzisionsmedizin.
-    p illustration: scanner -> radiologist + AI -> diagnosis
-
-/article.article
-  .container
-    h1 Hemmnis und Durchbruch
-    p Obschon unzählige Forschungsgruppen an neuen Algorithmen für eine computergestützte Medizin arbeiten, haben wir bis heute noch keinen  Durchbruch.
-    p Grösste Mengen an kuratierten Daten mit hoher Varietät und Qualität und geeignete Technologie fehlen.
-    p illustration: klinische daten -> ground truth -> AI
-
-/article.article
-  .container
-    h1 Kuratierte klinische Daten
-    p Klinische Daten und deren Aufbereitung zu Groundtruth sind die Basis für die Entwicklung zukunftsweisender Unterstützungssysteme.
-
-/article.article
-  .container
-    h1 Access to clinical data
-    p We are setting up an international network of clinics and radiology centers who curate their data using our platform.
-    p In this way and with help of our sales channels to data consumers, the growing number of data providers are able to monetize their clinical data.
-    p Fully compliant with local data regulations and privacy standards.
-    p illustration: weltkarte mit access-punkten
-
-/article.article
-  .container
-    h1 Preparation to Ground Truth
-    p We provide curated clinical data streams to vendors of next generation’s CAD solutions as a service covering the whole workflow from identification, acquisition, validation, enrichment up tp curation of high volumes of training data.
-    p Thereby we address all concerns related to anonymization, privacy and security, bias reduction, statistical analysis and quality assurance.
-    p Our customers can focus on product development and significantly shorten time to market of their CAD products.
-    p illustration: kuratierung mit hiccap
-
-/article.article
-  .container
-    h1 Research and development
-    p Using our technology, we support research partners to quickly develop and work on algorithms, AI-based models, radiomics, and digital biomarkers.
-    p Those support radiologists, oncologists, and other clinicians on having evidence-based and big data-backed information for better decision making.
-    p illustration: klinische daten -> ground truth -> AI (mit highlight)
-
-
-/    p For a next generation of healthcare, precision medicine and personalized health: 4Quant provides the key technology to turn huge amounts of clinical data into actionable information.
-/    h2 Medical Data Curation
-/    p We provide curated clinical data streams to vendors of next generation’s CAD solutions as a service covering the whole workflow from identification, acquisition, validation, enrichment up to curation of high volumes of training data.
-/    p Thereby we address all concerns related to anonymization, privacy and security, bias reduction, statistical analysis and quality assurance.
-/    p Our customers can focus on product development and significantly shorten time to market of their CAD products.
-/    h2 International Clinic Network
-/    p We are setting up an international network of clinics and radiology centers who curate their data using our platform. In this way and with help of our sales channels to data consumers, the growing number of data providers are able to monetize their clinical data. Fully compliant with local data regulations and privacy standards.
-/    h2 Computer Aided Diagnostics
-/    p Using our technology, we support research partners to quickly develop and work on algorithms, AI-based models, radiomics, and digital biomarkers. Those support radiologists, oncologists, and other clinicians on having evidence-based and big data-backed information for better decision making.
-/    h2 Big Image Analytics
-/    p Core element of our technology platform is BIAP, a highly scalable, stream-based image analysis engine. It is capable to process high resolution, large volume, multidimensional image and video data, where both classical computer vision and state-of-the-art methods, such as supervised learning, are supported.
-
-
-/article.article#neuer-stil
-/ .container
-/    = link_to 'Foo', '/foo'
-/    h1 Medical Data Curation At Its Best
-/    .row.text-left-image-right
-/      .col-md-8
-/        p We provide curated clinical data streams to vendors of next generation’s CAD solutions as a service covering the whole workflow from identification, acquisition, validation, enrichment up tp curation of high volumes of training data. Thereby we address all concerns related to anonymization, privacy and security, bias reduction, statistical analysis and quality assurance. Our customers can focus on product development and significantly shorten time to market of their CAD products.
-/      .col-md-4
-/        = picture('medical-data-curation.gif', alt: 'Medical Data Curation', class: 'img-fluid')
-
-/article.article#clinic-network
-/  .container
-/    = link_to 'Foo', '/foo'
-/    h1 International Clinic Network
-/    .row.image-left-text-right
-/      .col-md-4
-/        = picture('clinic-network.png', alt: 'International Clinic Network', class: 'img-fluid')
-/      .col-md-8
-/        p We are setting up an international network of clinics and radiology centers who curate their data using our platform. In this way and with help of our sales channels to data consumers, the growing number of data providers are able to monetize their clinical data. Fully compliant with local data regulations and privacy standards.
-
-/article.article#computer-aided-diagnostics
-/  .container
-/    = link_to 'Foo', '/foo'
-/    h1 LungStage
-/    .row.text-left-image-right
-/      .col-md-8
-/        p Using our technology, we support research partners to quickly develop and work on algorithms, AI-based models, radiomics, and digital biomarkers. Those support radiologists, oncologists, and other clinicians on having evidence-based and big data-backed information for better decision making.
-/      .col-md-4
-/        = picture('lung-stage.png', alt: 'LungStage', class: 'img-fluid')
-
-
-/article.article#news
-/  .container.news
-/    h1 News
-/    - news_paragraphs[0..1].each do |file_name, date|
-/      h2= date.strftime('%d. %h %Y')
-/      = partial "news/#{file_name}.html.md", localized: { date: date }

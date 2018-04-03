@@ -79,6 +79,6 @@ configure :build do
   end
 end
 
-after_build do
-  system "for i in $(find source/images -iname '*.webp'); do mv \"$i\"  \"${i//source\//build/}\"; done"
+after_build do |builder|
+  builder.thor.run "for i in $(find source/images -iname '*.webp'); do mv \"$i\"  \"${i//source\//build/}\"; done"
 end

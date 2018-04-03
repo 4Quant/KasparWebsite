@@ -6,6 +6,10 @@
     "author": "Kaspar Vollenweider <vok@panter.ch>",
     "license": "MIT",
     "private": true,
+    "scripts": {
+      "wp-dev": "./node_modules/webpack/bin/webpack.js --mode development --watch -d",
+      "wp-build": "./node_modules/webpack/bin/webpack.js --mode production --bail"
+    },
     "devDependencies": {},
     "dependencies": {
         "axios": "^0.18.0",

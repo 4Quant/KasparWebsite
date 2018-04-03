@@ -1,4 +1,4 @@
-const HamburgerMenu = () => {
+export default () => {
   const header = $('header.header')
   const navToggler = $('header.header .navbar-toggler')
   const mobileNav = $('.hamburger-nav')
@@ -8,5 +8,3 @@ const HamburgerMenu = () => {
     mobileNav.toggleClass('hamburger-nav-open')
   }
 }
-
-export default HamburgerMenu

@@ -1,6 +1,5 @@
 import ScrollMagic from 'scrollmagic'
 
-const MockupScroll = () => {
+export default () => {
   const controller = new ScrollMagic.Controller()
 }
-export default MockupScroll

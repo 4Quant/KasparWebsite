@@ -51,10 +51,7 @@ const options = {
   viewOffset: { top: 54, right: 0, bottom: 0, left: 0 }
 }
 
-
-const ScrollRevealer = () => {
-
+export default () => {
   window.sr = ScrollReveal();
   sr.reveal('.reveal-on-scroll', options)
 }
-export default ScrollRevealer

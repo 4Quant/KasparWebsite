@@ -3,16 +3,16 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    site: './source/javascripts/main.js',
+    site: './source/javascripts/webpack/main.js',
   },
 
   resolve: {
-    root: __dirname + '/source/javascripts',
+    root: __dirname + '/source/javascripts/webpack',
   },
 
   output: {
     path: __dirname + '/.tmp/dist',
-    filename: 'javascripts/main.bundle.js',
+    filename: 'main.bundle.js',
   },
 
   module: {

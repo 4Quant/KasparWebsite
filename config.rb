@@ -17,7 +17,16 @@ ENABLE_EXTENSIONS_NO_OPTS = {
 WEBPACK_COMMAND = { production: 'production --bail', development: 'development --watch -d' }.freeze
 WEBPACK_OPTIONS = {
   name: :webpack, source: '.tmp/dist', latency: 1,
-  command: "./node_modules/webpack/bin/webpack.js --mode #{WEBPACK_COMMAND[config[:environment]]}"
+  command: build? ? 'yarn run wp-build' : 'yarn run wp-dev'
+}.freeze
+
+SPROCKETS_IMPORT_PATHS = ['node_modules', '.tmp/dist'].freeze
+
+SPROCKETS_IGNORE = {
+  development: ['javascripts/webpack/*'],
+  production: [
+    'templates/*', 'javascripts/webpack/*'
+  ]
 }.freeze
 
 FAVICON_MAKER_OPTIONS = { template_dir: 'source/images/', icons: { 'icon.png' => [
@@ -47,15 +56,6 @@ WEBP_OPTIONS = {
     run_before_build: false
   }
 }.freeze
-
-SPROCKETS_IGNORE = {
-  development: ['javascripts/main.js', 'javascripts/inc/*'],
-  production: [
-    'templates/*', 'javascripts/main.js', 'javascripts/inc/*'
-  ]
-}.freeze
-
-SPROCKETS_IMPORT_PATHS = ['node_modules', '.tmp/dist/javascripts'].freeze
 
 # configure Google Analytics tracking id in order to enable: eabled if not "UA-xxx-xxx-xx"
 GOOGLE_ANALYTICS_OPTIONS = { tracking_id: 'UA-xxx-xxx-xx' }.freeze

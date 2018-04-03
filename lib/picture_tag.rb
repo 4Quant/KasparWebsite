@@ -2,7 +2,7 @@ module PictureTag
   # picture tag for webp images with fallback to img
   #
   # lazy: true => enables lazy loading for the image
-  def picture(image, html_attributes)
+  def picture(image, html_attributes = {})
     external = image[0..3] == 'http'
     path = external ? image : image_path(image)
     content_tag(:picture,

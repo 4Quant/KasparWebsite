@@ -1,4 +1,4 @@
-const SlickInit = () => {
+export default () => {
   const options = {
     dots: true,
     arrows: false,
@@ -10,4 +10,3 @@ const SlickInit = () => {
   }
   $('.slicker-slider').slick(options)
 }
-export default SlickInit

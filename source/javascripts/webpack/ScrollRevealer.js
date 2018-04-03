@@ -52,6 +52,8 @@ const options = {
 }
 
 export default () => {
-  window.sr = ScrollReveal();
-  sr.reveal('.reveal-on-scroll', options)
+  if($('.reveal-on-scroll').length > 0) {
+    window.sr = ScrollReveal();
+    sr.reveal('.reveal-on-scroll', options)
+  }
 }

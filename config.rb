@@ -78,3 +78,7 @@ configure :build do
     activate :google_analytics, GOOGLE_ANALYTICS_OPTIONS
   end
 end
+
+after_build do
+  system "for i in $(find source/images -iname '*.webp'); do mv \"$i\"  \"${i//source\//build/}\"; done"
+end

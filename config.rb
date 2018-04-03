@@ -1,5 +1,7 @@
 require 'slim'
 require 'youtube_id'
+require 'lib/picture_tag'
+require 'lib/responsive_embed'
 
 # Global configs via CONSTANTS
 #
@@ -88,54 +90,8 @@ config[:host] = HOST_CONFIG[config[:environment]]
 # Helpers
 #
 helpers do
-  # responsive google slide
-  #
-  def google_slide(link, aspect = '16by9')
-    aspect = '16by9' unless ['16by9', '21by9', '4by3', '1by1'].include?(aspect)
-    partial('partials/responsive_google_slide', locals: { aspect: aspect, src: link })
-  end
-
-  # youtube video responsive embed
-  #
-  # link:
-  #   It supports these url formats
-  #     http://www.youtube.com/v/RCUkmUXMd_k
-  #     http://www.youtube.com/v/RCUkmUXMd_k?version=3&amp;hl=en_US&amp;rel=0
-  #     http://www.youtube.com/embed/RCUkmUXMd_k?rel=0
-  #     http://www.youtube.com/watch?v=RCUkmUXMd_k
-  #     http://www.youtube.com/watch?v=RCUkmUXMd_k&feature=related
-  #     http://www.youtube.com/watch?v=RCUkmUXMd_k#t=0m10s
-  #     http://www.youtube.com/user/ForceD3strategy#p/a/u/0/8WVTOUh53QY
-  #     http://youtu.be/RCUkmUXMd_k
-  #
-  # aspect:
-  #   '16by9', '21by9', '4by3', '1by1'
-  #
-  def youtube(link, aspect = '16by9')
-    aspect = '16by9' unless ['16by9', '21by9', '4by3', '1by1'].include?(aspect)
-    partial('partials/responsive_youtube',
-      locals: { video_id: YoutubeID.from(link), aspect: aspect })
-  end
-
-  # picture tag for webp images with fallback to img
-  #
-  # lazy: true => enables lazy loading for the image
-  def picture(image, html_attributes)
-    external = image[0..3] == 'http'
-    path = external ? image : image_path(image)
-    content_tag(:picture,
-      "#{webp_source_tag(path, external)}#{custom_image_tag(path, html_attributes)}", html_attributes)
-  end
-
-  def custom_image_tag(path, html_attributes)
-    tag(:img, data: { src: path }, alt: html_attributes[:alt])
-  end
-
-  def webp_source_tag(path, external)
-    return if development? || external
-    webp = "#{File.dirname(path)}/#{File.basename(path, File.extname(path))}.webp"
-    tag(:source, data: { srcset: webp }, type: 'image/webp')
-  end
+  include ResponsiveEmbed
+  include PictureTag
 end
 
 configure :build do

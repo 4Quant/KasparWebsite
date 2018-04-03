@@ -63,6 +63,6 @@ module PictureTag
     open("source/#{original}#{type}", 'wb') do |file|
       file << open(uri).read
     end
-    return "#{original}webp" if convert_to_webp("source/#{original}#{type}", "source/#{original}webp")
+    "#{original}webp" if convert_to_webp("source/#{original}#{type}", "source/#{original}webp")
   end
 end

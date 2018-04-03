@@ -2,21 +2,59 @@
 title: Scroll
 ---
 
-article.scroll
+article.article
   .container
-    .scroll-phase
-      = image_tag('scroll/resized_19.jpg', class: '')
-    .scroll-phase
-      = image_tag('scroll/resized_20.jpg', class: '')
-    .scroll-phase
-      = image_tag('scroll/resized_22.jpg', class: '')
-    .scroll-phase
-      = image_tag('scroll/resized_23.jpg', class: '')
-    .scroll-phase
-      = image_tag('scroll/resized_24.jpg', class: '')
-    .scroll-phase
-      = image_tag('scroll/resized_25.jpg', class: '')
-    .scroll-phase
-      = image_tag('scroll/resized_26.jpg', class: '')
-    .scroll-phase
-      = image_tag('scroll/resized_27.jpg', class: '')
+    h1.page-title News
+    markdown:
+      ## Finalist at HighTechXL
+
+      Ohne grossen Text dazu
+
+      ## Philips Healthworks
+
+      4Quant was one of 7 startups selected among 300 applicants to participate in Hamburg super fancy program...tet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+
+      ## Value Proposition Canvas
+
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
+
+      ## LungStage an der ECR 2018
+      Auf der Landingpage hier möchten wir lediglich zwei, drei der letzten Newsmeldungen aufführen. Weitere Newsmeldungen sind über den Footer → Subpage “News” einzusehen.
+
+      Alex Sauter from University Hospital Basel presented fancy stuff done with 4Quant duo dolores et ea rebum. Stet clita kasd gubergren, sed diam nonumy eirmod tempor invidunt ut labore.
+
+article.article
+  .container
+    h1.page-title News
+    markdown:
+      ## Finalist at HighTechXL
+
+      Ohne grossen Text dazu
+
+      ## Philips Healthworks
+
+      4Quant was one of 7 startups selected among 300 applicants to participate in Hamburg super fancy program...tet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+
+      ## Value Proposition Canvas
+
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
+
+      ## LungStage an der ECR 2018
+      Auf der Landingpage hier möchten wir lediglich zwei, drei der letzten Newsmeldungen aufführen. Weitere Newsmeldungen sind über den Footer → Subpage “News” einzusehen.
+
+      Alex Sauter from University Hospital Basel presented fancy stuff done with 4Quant duo dolores et ea rebum. Stet clita kasd gubergren, sed diam nonumy eirmod tempor invidunt ut labore.
+
+article.scroll
+  .container.trigger
+    = image_tag('scroll/resized_19.jpg', class: 'scroll-down-image')
+    = image_tag('scroll/resized_20.jpg', class: 'scroll-down-image')
+    = image_tag('scroll/resized_22.jpg', class: 'scroll-down-image')
+    = image_tag('scroll/resized_23.jpg', class: 'scroll-down-image')
+    = image_tag('scroll/resized_24.jpg', class: 'scroll-down-image')
+    = image_tag('scroll/resized_25.jpg', class: 'scroll-down-image')
+    = image_tag('scroll/resized_26.jpg', class: 'scroll-down-image')
+    = image_tag('scroll/resized_27.jpg', class: 'scroll-down-image')
+
+    .pin-target
+      h1 lung stage blab lab
+      = image_tag('scroll/resized_19.jpg', class: 'image-fluid scroll-target-img')

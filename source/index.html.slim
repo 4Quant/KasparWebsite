@@ -15,6 +15,22 @@ article.article#slides.reveal-on-scroll
     p With default aspect ratio 16by9. Also available aspect ratios: 21by9, 4by3 and 1by1 -> google_slide(your_link, '21by9')
     = google_slide('https://docs.google.com/presentation/d/e/2PACX-1vTf5gU6ckjDNDPCvc-zRCZiJXvjDomlak1yWGt4EoPQPZ2nZu2m-z6CocJoQSXXEZ9Q03oQfA-VOiIJ/embed?start=false&loop=false&delayms=3000')
 
+
+article.scroll.article
+  .container.trigger
+    .scroll-images
+      = image_tag('scroll/resized_19.jpg')
+      = image_tag('scroll/resized_20.jpg')
+      = image_tag('scroll/resized_22.jpg')
+      = image_tag('scroll/resized_23.jpg')
+      = image_tag('scroll/resized_24.jpg')
+      = image_tag('scroll/resized_25.jpg')
+      = image_tag('scroll/resized_26.jpg')
+      = image_tag('scroll/resized_27.jpg')
+    .pin-target.text-center
+      h1 lung stage blab lab
+      = image_tag('scroll/resized_19.jpg', class: 'image-fluid scroll-target-img')
+
 article.article#social-proof
   .container.text-center.reveal-on-scroll
     .slicker-slider.reveal-on-scroll*{ data: { slick: '{"initialSlide": 1, centerMode: true}' } }

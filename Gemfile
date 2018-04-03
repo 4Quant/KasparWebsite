@@ -16,6 +16,7 @@ gem 'middleman-pry'
 gem 'slim'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', platforms: [:mswin, :mingw]
+gem 'youtube_id'
 
 source 'https://rails-assets.org' do
 end

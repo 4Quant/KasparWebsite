@@ -138,6 +138,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    youtube_id (0.1.0)
 
 PLATFORMS
   ruby
@@ -154,6 +155,7 @@ DEPENDENCIES
   slim
   tzinfo-data
   wdm
+  youtube_id
 
 BUNDLED WITH
    1.16.1

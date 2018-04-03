@@ -51,11 +51,11 @@ WEBP_OPTIONS = {
 SPROCKETS_IGNORE = {
   development: ['javascripts/main.js', 'javascripts/inc/*'],
   production: [
-    'templates/*', 'javascripts/main.js', 'javascripts/main.bundle.js', 'javascripts/inc/*'
+    'templates/*', 'javascripts/main.js', 'javascripts/inc/*'
   ]
 }.freeze
 
-SPROCKETS_IMPORT_PATHS = ['node_modules'].freeze
+SPROCKETS_IMPORT_PATHS = ['node_modules', '.tmp/dist/javascripts'].freeze
 
 # configure Google Analytics tracking id in order to enable: eabled if not "UA-xxx-xxx-xx"
 GOOGLE_ANALYTICS_OPTIONS = { tracking_id: 'UA-xxx-xxx-xx' }.freeze

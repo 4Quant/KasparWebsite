@@ -29,10 +29,12 @@ module PictureTag
   end
 
   def convert_to_webp(source, dest)
-    if ['.png', '.jpg', '.jpeg'].include?(File.extname(source))
+    if '.png' == File.extname(source)
       system "cwebp -lossless '#{source}' -o '#{dest}'"
+    elsif ['.jpg', '.jpeg'].include?(File.extname(source))
+      system "convert '#{source}' -quality 70 '#{dest}'"
     elsif File.extname(source) == '.gif'
-      system "gif2webp -lossy '#{source}' -o '#{dest}'"
+      system "gif2webp -lossy -q 50 -m 5 '#{source}' -o '#{dest}'"
     else
       false
     end

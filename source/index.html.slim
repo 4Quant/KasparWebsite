@@ -18,18 +18,17 @@ article.article#slides.reveal-on-scroll
 
 article.scroll.article
   .container.trigger
-    .scroll-images
-      = image_tag('scroll/resized_19.jpg')
-      = image_tag('scroll/resized_20.jpg')
-      = image_tag('scroll/resized_22.jpg')
-      = image_tag('scroll/resized_23.jpg')
-      = image_tag('scroll/resized_24.jpg')
-      = image_tag('scroll/resized_25.jpg')
-      = image_tag('scroll/resized_26.jpg')
-      = image_tag('scroll/resized_27.jpg')
     .pin-target.text-center
       h1 lung stage blab lab
-      = image_tag('scroll/resized_19.jpg', class: 'image-fluid scroll-target-img')
+      .img-target
+        = image_tag('scroll/resized_19.jpg')
+        = image_tag('scroll/resized_20.jpg')
+        = image_tag('scroll/resized_22.jpg')
+        = image_tag('scroll/resized_23.jpg')
+        = image_tag('scroll/resized_24.jpg')
+        = image_tag('scroll/resized_25.jpg')
+        = image_tag('scroll/resized_26.jpg')
+        = image_tag('scroll/resized_27.jpg')
 
 article.article#social-proof
   .container.text-center.reveal-on-scroll

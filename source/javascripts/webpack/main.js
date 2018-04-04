@@ -3,7 +3,7 @@ import HamburgerMenu from './HamburgerMenu'
 import SlickInit from './SlickInit'
 import ScrollRevealer from './ScrollRevealer'
 import LoadLazyLoader from './LoadLazyLoader'
-import ScrollDownAnimations  from './ScrollDownAnimations'
+import ScrollSlider from './ScrollSlider'
 
 // window onload trigger
 $(() => {
@@ -11,7 +11,6 @@ $(() => {
   SlickInit()
   LoadLazyLoader()
   JumpWithSmoothScroll()
-  // Uncomment to enable scroll revealing
   ScrollRevealer()
-  ScrollDownAnimations()
+  ScrollSlider()
 })

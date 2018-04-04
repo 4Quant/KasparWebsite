@@ -1,12 +1,48 @@
 article.scroll
 
-  .scroll-images
-    display: none
+  .pin-target
+    position: relative
 
-  // picture
-  //   max-width: 100%
-  //   max-hight: 100%
+  .img-target
+    display: flex
+    max-width: 100%
+    flex-wrap: no-wrap
+    overflow: hidden
 
-  //   img,
-  //   source
-  //     width: 100%
+    img
+      display: block
+      order: 3
+      opacity: 1
+
+      &.active
+        order: 0
+        opactity: 1
+        margin-right: 0
+        margin-left: 0
+
+      &.inactive
+        opacity: 0
+
+      &.fade-out
+        animation-name: fade-img-out
+        animation-duration: 1s
+
+      &.fade-in
+        opacity: 0
+        order: 1
+        animation-name: fade-img-in
+        animation-duration: 1s
+
+
+
+@keyframes fade-img-out
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+@keyframes fade-img-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
